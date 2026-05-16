@@ -1,0 +1,8 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "services/workers/Dockerfile"
+buildContext = "services/workers"
+
+[deploy]
+startCommand = "celery -A workers.app worker -l info -Q ingest,classify,report,pdf,sync --concurrency 2"
+restartPolicyType = "ON_FAILURE"

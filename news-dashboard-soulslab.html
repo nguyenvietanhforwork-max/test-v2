@@ -1,0 +1,1209 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Intelligence Letter — A Weekly Dispatch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Editorial palette — inspired by soulslab.co newsletter editorial */
+    --paper:        #F5F1E8;   /* warm cream — page background */
+    --paper-soft:   #EFEADD;   /* secondary cream */
+    --ink:          #1A1815;   /* near-black ink */
+    --ink-soft:     #3D3A33;   /* muted ink */
+    --ink-muted:    #6E6A60;   /* tertiary text */
+    --rule:         #D8D2C2;   /* hairline rule */
+    --rule-soft:    #E5DFCF;
+    --accent:       #B8442E;   /* terracotta accent */
+    --accent-soft:  #F0E0D8;
+    --highlight:    #E8D78C;   /* soft mustard highlight */
+    --serif: "Fraunces", "Cormorant Garamond", "Times New Roman", Georgia, serif;
+    --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: var(--sans);
+    line-height: 1.55;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: var(--ink); text-decoration: none; transition: color .2s ease; }
+  a:hover { color: var(--accent); }
+
+  ::selection { background: var(--highlight); color: var(--ink); }
+
+  /* ────────────────────────────────────────────────────────────────────────
+     Layout primitives
+  ──────────────────────────────────────────────────────────────────────── */
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  @media (max-width: 720px) {
+    .container { padding: 0 22px; }
+  }
+
+  .rule {
+    height: 1px;
+    background: var(--rule);
+    border: 0;
+    margin: 0;
+  }
+  .rule-double {
+    height: 4px;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    margin: 0;
+  }
+
+  /* ────────────────────────────────────────────────────────────────────────
+     Masthead — newsletter style
+  ──────────────────────────────────────────────────────────────────────── */
+  .masthead {
+    padding: 28px 0 18px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    animation: fadeUp .9s ease both;
+  }
+  .masthead-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 24px;
+  }
+  .masthead-meta .meta-left,
+  .masthead-meta .meta-right {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .masthead-meta .dot {
+    width: 3px; height: 3px; border-radius: 50%;
+    background: var(--ink-muted);
+    display: inline-block;
+  }
+  .masthead h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(48px, 8.2vw, 110px);
+    line-height: .96;
+    letter-spacing: -0.025em;
+    margin: 0;
+    font-variation-settings: "opsz" 144;
+  }
+  .masthead h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink-soft);
+  }
+  .masthead-sub {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 19px;
+    color: var(--ink-soft);
+    margin-top: 18px;
+    letter-spacing: 0.01em;
+  }
+  .issue-line {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    align-items: center;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .issue-line .num {
+    font-family: var(--serif);
+    font-size: 16px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink);
+    font-style: italic;
+  }
+
+  /* ────────────────────────────────────────────────────────────────────────
+     Hero / dek — editorial intro
+  ──────────────────────────────────────────────────────────────────────── */
+  .dek {
+    text-align: center;
+    padding: 60px 0 50px;
+    max-width: 720px;
+    margin: 0 auto;
+    animation: fadeUp 1.1s ease .15s both;
+  }
+  .dek-kicker {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  .dek p {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.45;
+    color: var(--ink-soft);
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+  .dek p em { color: var(--ink); font-style: italic; font-weight: 400; }
+
+  /* ────────────────────────────────────────────────────────────────────────
+     Digest strip — at-a-glance stats
+  ──────────────────────────────────────────────────────────────────────── */
+  .digest {
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 28px 0;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .digest-cell {
+    padding: 0 32px;
+    border-right: 1px solid var(--rule);
+    text-align: left;
+    transition: transform .3s ease;
+  }
+  .digest-cell:last-child { border-right: 0; }
+  .digest-cell:hover { transform: translateY(-2px); }
+  .digest-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 10px;
+  }
+  .digest-figure {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+  .digest-note {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-muted);
+    margin-top: 6px;
+  }
+  @media (max-width: 880px) {
+    .digest { grid-template-columns: repeat(2, 1fr); }
+    .digest-cell:nth-child(2) { border-right: 0; }
+    .digest-cell:nth-child(1), .digest-cell:nth-child(2) {
+      border-bottom: 1px solid var(--rule); padding-bottom: 24px; margin-bottom: 24px;
+    }
+  }
+
+  /* ────────────────────────────────────────────────────────────────────────
+     Controls — search & filter
+  ──────────────────────────────────────────────────────────────────────── */
+  .controls-wrap {
+    margin-bottom: 50px;
+  }
+  .controls-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 16px;
+    display: block;
+  }
+  .controls {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .search {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--ink);
+    padding: 14px 4px;
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--ink);
+    width: 100%;
+    font-style: italic;
+  }
+  .search::placeholder {
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+  .search:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+  }
+  select.editorial {
+    background: transparent;
+    color: var(--ink);
+    border: 0;
+    border-bottom: 1px solid var(--ink);
+    padding: 14px 28px 14px 4px;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%231A1815' stroke-width='1' fill='none' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    min-width: 180px;
+  }
+  select.editorial:focus { outline: none; border-bottom-color: var(--accent); }
+
+  /* Chips — editorial taxonomy */
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+  }
+  .chip {
+    background: transparent;
+    color: var(--ink-soft);
+    border: 0;
+    padding: 6px 0;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: color .25s ease;
+  }
+  .chip::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -2px;
+    height: 1px;
+    background: var(--ink);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .35s cubic-bezier(.2,.7,.2,1);
+  }
+  .chip:hover { color: var(--ink); }
+  .chip:hover::after { transform: scaleX(1); }
+  .chip.active { color: var(--accent); }
+  .chip.active::after { transform: scaleX(1); background: var(--accent); }
+  .chip .count {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    margin-left: 6px;
+    color: var(--ink-muted);
+    font-size: 13px;
+  }
+  .chip.active .count { color: var(--accent); }
+
+  .chip-reset {
+    color: var(--accent);
+    background: transparent;
+    border: 0;
+    padding: 6px 0;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .chip-reset:hover { text-decoration: underline; }
+
+  @media (max-width: 720px) {
+    .controls { grid-template-columns: 1fr; }
+    select.editorial { padding-right: 36px; }
+  }
+
+  /* ────────────────────────────────────────────────────────────────────────
+     Stat line under controls
+  ──────────────────────────────────────────────────────────────────────── */
+  .stat-line {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin-top: 30px;
+    text-align: center;
+  }
+  .stat-line b { color: var(--ink); font-style: normal; font-weight: 500; }
+
+  /* ────────────────────────────────────────────────────────────────────────
+     Story sections (grouped by date)
+  ──────────────────────────────────────────────────────────────────────── */
+  .stories {
+    padding: 30px 0 80px;
+  }
+
+  .date-section {
+    margin-bottom: 60px;
+    animation: fadeUp .8s ease both;
+  }
+  .date-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .date-heading .date-num {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .date-heading .date-num em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink-soft);
+  }
+  .date-heading .date-meta {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-left: auto;
+  }
+
+  /* Article cards — magazine layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .grid .card {
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .grid .card:nth-child(3n) { border-right: 0; }
+
+  @media (max-width: 980px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .grid .card:nth-child(3n) { border-right: 1px solid var(--rule); }
+    .grid .card:nth-child(2n) { border-right: 0; }
+  }
+  @media (max-width: 620px) {
+    .grid { grid-template-columns: 1fr; }
+    .grid .card { border-right: 0 !important; }
+  }
+
+  .card {
+    padding: 28px 26px 32px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: background-color .45s ease;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, var(--paper-soft) 100%);
+    opacity: 0;
+    transition: opacity .45s ease;
+    pointer-events: none;
+  }
+  .card:hover::before { opacity: 1; }
+  .card > * { position: relative; z-index: 1; }
+
+  .card.open {
+    background: var(--paper-soft);
+  }
+  .card.open::before { opacity: 1; }
+
+  .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .card-cat {
+    display: inline-block;
+    font-family: var(--sans);
+    font-weight: 600;
+    color: var(--ink);
+    position: relative;
+    padding-left: 16px;
+  }
+  .card-cat::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    width: 8px; height: 1px;
+    background: var(--ink);
+    transform: translateY(-50%);
+  }
+  .card-cat.cat-tax::before     { background: #C19A2B; }
+  .card-cat.cat-trade::before   { background: #2E7D6B; }
+  .card-cat.cat-company::before { background: #2B5797; }
+  .card-cat.cat-market::before  { background: var(--accent); }
+  .card-cat.cat-energy::before  { background: #B58A1C; }
+  .card-cat.cat-intl::before    { background: #6B4A8C; }
+  .card-cat.cat-other::before   { background: var(--ink-muted); }
+
+  .card-meta .dot {
+    width: 2px; height: 2px; border-radius: 50%;
+    background: var(--ink-muted);
+  }
+
+  .card-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.18;
+    letter-spacing: -0.018em;
+    color: var(--ink);
+    margin: 0;
+    transition: color .3s ease;
+  }
+  .card:hover .card-title { color: var(--ink); }
+
+  .card-desc {
+    font-family: var(--sans);
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .card-footer .source {
+    max-width: 55%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .card-footer .author {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink-soft);
+  }
+
+  .card-detail {
+    display: none;
+    margin-top: 4px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    animation: fadeUp .35s ease both;
+  }
+  .card.open .card-detail { display: block; }
+
+  .open-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+    transition: gap .3s ease, color .3s ease;
+  }
+  .open-link::after {
+    content: " →";
+    transition: transform .3s ease;
+    display: inline-block;
+  }
+  .open-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
+  .open-link:hover::after { transform: translateX(4px); }
+
+  /* ────────────────────────────────────────────────────────────────────────
+     Empty state
+  ──────────────────────────────────────────────────────────────────────── */
+  .empty {
+    text-align: center;
+    padding: 100px 20px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin: 30px 0;
+  }
+  .empty h3 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+  }
+  .empty p {
+    font-family: var(--sans);
+    color: var(--ink-muted);
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  /* ────────────────────────────────────────────────────────────────────────
+     Subscribe / CTA — newsletter style
+  ──────────────────────────────────────────────────────────────────────── */
+  .subscribe {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 80px 40px;
+    margin: 100px 0 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .subscribe::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(184,68,46,.16) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 70%, rgba(232,215,140,.10) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .subscribe > * { position: relative; z-index: 1; }
+  .subscribe-kicker {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--highlight);
+    margin-bottom: 22px;
+  }
+  .subscribe h2 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(36px, 5.5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    max-width: 740px;
+    margin-left: auto; margin-right: auto;
+  }
+  .subscribe h2 em {
+    font-style: italic;
+    color: var(--highlight);
+  }
+  .subscribe p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 19px;
+    color: rgba(245,241,232,.7);
+    max-width: 580px;
+    margin: 0 auto 36px;
+    line-height: 1.5;
+  }
+  .subscribe-form {
+    display: flex;
+    max-width: 520px;
+    margin: 0 auto;
+    gap: 0;
+    border-bottom: 1px solid var(--paper);
+  }
+  .subscribe-form input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    padding: 14px 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--paper);
+    outline: none;
+  }
+  .subscribe-form input::placeholder {
+    color: rgba(245,241,232,.5);
+  }
+  .subscribe-form button {
+    background: transparent;
+    border: 0;
+    padding: 14px 0 14px 18px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--highlight);
+    cursor: pointer;
+    transition: color .25s ease, letter-spacing .25s ease;
+  }
+  .subscribe-form button:hover {
+    color: var(--paper);
+    letter-spacing: 0.32em;
+  }
+
+  /* ────────────────────────────────────────────────────────────────────────
+     Colophon / footer
+  ──────────────────────────────────────────────────────────────────────── */
+  .colophon {
+    padding: 60px 0 80px;
+    text-align: center;
+    border-top: 1px solid var(--rule);
+  }
+  .colophon-mark {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .colophon p {
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin: 6px 0;
+  }
+  .colophon code {
+    font-family: "SF Mono", "Menlo", "Consolas", monospace;
+    background: var(--paper-soft);
+    padding: 3px 8px;
+    border-radius: 2px;
+    font-size: 11px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink-soft);
+  }
+
+  /* ────────────────────────────────────────────────────────────────────────
+     Animations
+  ──────────────────────────────────────────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .stagger > * { animation: fadeUp .7s ease both; }
+  .stagger > *:nth-child(1) { animation-delay: .02s; }
+  .stagger > *:nth-child(2) { animation-delay: .06s; }
+  .stagger > *:nth-child(3) { animation-delay: .10s; }
+  .stagger > *:nth-child(4) { animation-delay: .14s; }
+  .stagger > *:nth-child(5) { animation-delay: .18s; }
+  .stagger > *:nth-child(6) { animation-delay: .22s; }
+  .stagger > *:nth-child(7) { animation-delay: .26s; }
+  .stagger > *:nth-child(8) { animation-delay: .30s; }
+  .stagger > *:nth-child(9) { animation-delay: .34s; }
+  .stagger > *:nth-child(n+10) { animation-delay: .38s; }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="masthead-meta">
+      <div class="meta-left">
+        <span id="meta-date">SATURDAY, 16 MAY 2026</span>
+        <span class="dot"></span>
+        <span>HÀ NỘI · SÀI GÒN</span>
+      </div>
+      <div class="meta-right">
+        <span>VOL. I</span>
+        <span class="dot"></span>
+        <span>BẢN TIN HÀNG TUẦN</span>
+      </div>
+    </div>
+    <h1>The Intelligence <em>Letter</em></h1>
+    <div class="masthead-sub">An editorial dispatch of policy, markets &amp; companies — read at your own pace.</div>
+    <div class="issue-line">
+      <span>ISSUE</span>
+      <span class="num">№ 02</span>
+      <span>·</span>
+      <span>FROM <code style="font-family: 'SF Mono', monospace; font-size: 11px; letter-spacing: 0; text-transform: none;">raw/</code> ARCHIVE</span>
+    </div>
+  </header>
+
+  <!-- Dek / editorial intro -->
+  <section class="dek">
+    <div class="dek-kicker">Tuần này · From the desk</div>
+    <p>
+      Một tuần dày đặc <em>tin thuế và pháp lý</em>,
+      thị trường năng lượng nóng theo giá dầu,
+      và những <em>chuyển động doanh nghiệp</em> đáng để dừng lại đọc kỹ.
+    </p>
+  </section>
+
+  <!-- Digest strip -->
+  <section class="digest" id="digest"></section>
+
+  <!-- Controls -->
+  <section class="controls-wrap">
+    <span class="controls-label">Index · Search the issue</span>
+    <div class="controls">
+      <input id="q" class="search" placeholder="Tìm theo tiêu đề, tác giả, mô tả, nguồn…" autocomplete="off" />
+      <select id="sort" class="editorial">
+        <option value="newest">Mới nhất</option>
+        <option value="oldest">Cũ nhất</option>
+        <option value="title">Tên A→Z</option>
+      </select>
+      <select id="age" class="editorial">
+        <option value="all">Tất cả nguồn</option>
+        <option value="news">raw/news/</option>
+        <option value="archive">raw/old news/</option>
+      </select>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="stat-line" id="stat-line"></div>
+  </section>
+
+  <!-- Stories -->
+  <main class="stories">
+    <div id="results"></div>
+  </main>
+</div>
+
+<!-- Subscribe CTA -->
+<section class="subscribe">
+  <div class="subscribe-kicker">Subscribe · The next dispatch</div>
+  <h2>Nhận bản tin <em>tiếp theo</em><br/>thẳng vào hộp thư của bạn.</h2>
+  <p>Một bản tin hàng tuần — chậm, biên tập kỹ, không spam. Lưu giữ những gì đáng đọc lại.</p>
+  <form class="subscribe-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='✓ Đã ghi nhận'; this.querySelector('input').value='';">
+    <input type="email" placeholder="email@cua-ban.com" required />
+    <button type="submit">Subscribe →</button>
+  </form>
+</section>
+
+<!-- Colophon -->
+<footer class="colophon">
+  <div class="container">
+    <div class="colophon-mark">— end of issue —</div>
+    <p>The Intelligence Letter · A snapshot of <code>E:/Application downloads/Value/raw/</code></p>
+    <p style="font-family: var(--serif); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 13px; color: var(--ink-muted); margin-top: 14px;">
+      Để có cập nhật real-time, chạy <code>pwsh ./intelligence-platform/scripts/start-local.ps1</code>
+    </p>
+  </div>
+</footer>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────
+// Data — preserved from the original snapshot of raw/
+// ─────────────────────────────────────────────────────────────────────────
+const ITEMS = [
+  // ── raw/news/ ──
+  { title:"4 thủ tục hành chính được sửa đổi, bổ sung trong lĩnh vực xây dựng",
+    desc:"Bộ Xây dựng công bố sửa đổi 4 thủ tục hành chính nhằm tạo thuận lợi cho cá nhân, tổ chức trong hoạt động xây dựng, bao gồm cấp chứng chỉ và giấy phép cho nhà thầu.",
+    author:"Thanh Xuân", source:"vneconomy.vn", published:"2026-05-15", cat:"tax", age:"news",
+    url:"https://vneconomy.vn/4-thu-tuc-hanh-chinh-duoc-sua-doi-bo-sung-trong-linh-vuc-xay-dung.htm" },
+  { title:"Cơ quan thuế chỉ rõ 6 chiêu hộ kinh doanh né thanh toán, cảnh báo rủi ro pháp lý",
+    desc:"Cơ quan thuế chỉ ra các hình thức thanh toán nhằm né đối chiếu dữ liệu đang khiến hộ kinh doanh đối mặt với rủi ro lớn về thuế, hóa đơn và trách nhiệm pháp lý.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"tax", age:"news",
+    url:"https://vietstock.vn/2026/05/co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-thanh-toan-canh-bao-rui-ro-phap-ly-758-1442812.htm" },
+  { title:"Thuế VAT 'mỗi nơi một kiểu', doanh nghiệp gỗ lo đứt nguồn cung gỗ rừng trồng",
+    desc:"Liên quan đến thuế VAT trong ngành gỗ, doanh nghiệp cho biết mỗi địa phương đang làm một kiểu, khiến doanh nghiệp gặp khó và e ngại trong thu mua gỗ rừng trồng.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"tax", age:"news",
+    url:"https://vietstock.vn/2026/05/thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-dut-nguon-cung-go-rung-trong-758-1442802.htm" },
+  { title:"Luật thuế mới sắp có hiệu lực: 10 hành vi dễ bị quy là trốn thuế",
+    desc:"Cơ quan thuế lưu ý 10 hành vi bị xác định là trốn thuế theo Luật Quản lý thuế 2025 sẽ có hiệu lực từ ngày 1/7, người nộp thuế cần đặc biệt lưu ý.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-12", cat:"tax", age:"news",
+    url:"https://vietstock.vn/2026/05/luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-quy-la-tron-thue-758-1441179.htm" },
+  { title:"Quy định thời điểm xuất hóa đơn: Cần tháo gỡ vướng mắc",
+    desc:"Việc áp dụng cứng nhắc quy định thời điểm lập hóa đơn đang đẩy nhiều doanh nghiệp, hộ kinh doanh vào thế khó, làm tăng chi phí và nguy cơ bị xử phạt rất nặng.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-12", cat:"tax", age:"news",
+    url:"https://vietstock.vn/2026/05/quy-dinh-thoi-diem-xuat-hoa-don-can-thao-go-vuong-mac-758-1441170.htm" },
+  { title:"Sửa Luật Điện lực (2026) — Bài toán hài hòa lợi ích ngành điện và người tiêu dùng",
+    desc:"Dự thảo lần đầu đặt vấn đề cho phép phân bổ chi phí hợp lý chưa được tính đủ vào giá bán lẻ điện ở các kỳ điều chỉnh tiếp theo, sau khi EVN bị lỗ lớn 2022-2023.",
+    author:"Năng lượng Việt Nam Online", source:"nangluongvietnam.vn", published:"2026-05-15", cat:"energy", age:"news",
+    url:"https://nangluongvietnam.vn/sua-luat-dien-luc-nam-2026-phan-tich-bai-toan-hai-hoa-loi-ich-nganh-dien-va-nguoi-tieu-dung-dien-36039.html" },
+  { title:"Xuất khẩu Hà Tĩnh tăng tốc, thép tiếp tục giữ vai trò \"trụ cột\"",
+    desc:"Kim ngạch xuất khẩu Hà Tĩnh tháng 4/2026 đạt 132,5 triệu USD, chủ lực từ thép và phôi thép, tạo đà cho mục tiêu 2,2 tỷ USD năm nay.",
+    author:"Nguyễn Thuấn", source:"vneconomy.vn", published:"2026-05-06", cat:"trade", age:"news",
+    url:"https://vneconomy.vn/xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-tro-tru-cot.htm" },
+  { title:"Xuất khẩu nông lâm thủy sản đạt hơn 23 tỷ USD, giữ vững đà tăng trưởng",
+    desc:"Xuất khẩu nông, lâm, thủy sản 4 tháng đầu năm 2026 đạt 23,04 tỷ USD, tăng 5,4% so với cùng kỳ, dù tháng 4 có dấu hiệu giảm nhẹ.",
+    author:"Chu Khôi", source:"vneconomy.vn", published:"2026-05-06", cat:"trade", age:"news",
+    url:"https://vneconomy.vn/xuat-khau-nong-lam-thuy-san-dat-hon-23-ty-usd-giu-vung-da-tang-truong.htm" },
+  { title:"Nông sản Việt cần thích ứng với Nghị định 280 của Trung Quốc và quy định RCEP mới",
+    desc:"Bộ Nông nghiệp tổ chức hội nghị tại Đắk Lắk, cập nhật quy định mới về an toàn thực phẩm và kiểm dịch trong RCEP và Nghị định 280 của Trung Quốc.",
+    author:"Chu Khôi", source:"vneconomy.vn", published:"2026-05-14", cat:"trade", age:"news",
+    url:"https://vneconomy.vn/nong-san-viet-can-thich-ung-voi-nghi-dinh-280-cua-trung-quoc-va-quy-dinh-rcep-moi.htm" },
+  { title:"Nâng cấp chuỗi cung ứng toàn cầu tại Việt Nam — câu chuyện Intel và Fab 9",
+    desc:"Tại Vietnam Connect Forum 2026, Intel và Fab 9 chia sẻ về sự liên kết trong chuỗi cung ứng công nghệ cao, mở ra cơ hội cho doanh nghiệp Việt.",
+    author:"Khánh Vy", source:"vneconomy.vn", published:"2026-05-14", cat:"company", age:"news",
+    url:"https://vneconomy.vn/nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhin-tu-cau-chuyen-hop-luc-giua-intel-va-fab-9.htm" },
+  { title:"Vingroup lập công ty robot phẫu thuật vốn 300 tỷ đồng",
+    desc:"Tập đoàn Vingroup (HOSE: VIC) thông qua kế hoạch góp vốn thành lập CTCP VinSurgical — robot phẫu thuật, thiết bị y tế thông minh và giải pháp y khoa công nghệ cao.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-14", cat:"company", age:"news",
+    url:"https://vietstock.vn/2026/05/vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-dong-737-1442394.htm" },
+  { title:"Chubb Life Việt Nam báo lỗ hơn 171 tỷ năm 2025, lợi nhuận gộp bảo hiểm lao dốc 90%",
+    desc:"Chubb Life Việt Nam báo lỗ hơn 171 tỷ đồng. Doanh nghiệp đã thắt chặt chi tiêu, cắt giảm gần một nửa chi phí khen thưởng đại lý.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"company", age:"news",
+    url:"https://vietstock.vn/2026/05/chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-loi-nhuan-gop-bao-hiem-lao-doc-90-737-1442771.htm" },
+  { title:"Phó TGĐ Vietnam Airlines: 2026 dự kiến lỗ luỹ kế khoảng 30.000 tỷ nếu giữ sản lượng",
+    desc:"\"Vietnam Airlines có lợi nhuận một ít trong quý 1 thì sang quý 2 đã lỗ rồi, và 6 tháng đầu năm là sẽ lỗ một ít.\" - Ông Tuấn tiết lộ.",
+    author:"CafeF", source:"cafef.vn", published:"2026-05-15", cat:"company", age:"news",
+    url:"https://cafef.vn/pho-tgd-vietnam-airlines-nam-2026-du-kien-lo-khoang-30000-ty-neu-giu-nguyen-san-luong-khai-thac-nhu-ke-hoach-188260515103741235.chn" },
+  { title:"Doanh nghiệp phân đạm tỏa sáng khi giá dầu \"nhảy múa\"",
+    desc:"Giá dầu thế giới tăng trên 120 USD/thùng do xung đột Trung Đông; eo biển Hormuz đóng cửa khiến >30% sản lượng phân bón toàn cầu nghẽn cung. Giá urê Q1/2026 tăng mạnh.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"company", age:"news",
+    url:"https://vietstock.vn/2026/05/doanh-nghiep-phan-dam-toa-sang-khi-gia-dau-nhay-mua-737-1442211.htm" },
+  { title:"DatVietVAC và cuộc đua khai thác IP 360 độ trong nền kinh tế fandom",
+    desc:"Có một thay đổi lớn đang diễn ra trong ngành giải trí toàn cầu: nội dung không còn là đích đến cuối cùng, mà trở thành điểm khởi đầu cho cả một hệ sinh thái tiêu dùng văn hóa.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"company", age:"news",
+    url:"https://vietstock.vn/2026/05/datvietvac-va-cuoc-dua-khai-thac-ip-360-do-trong-nen-kinh-te-fandom-737-1442402.htm" },
+  { title:"'Đưa đường, dẫn lối' cho trái phiếu doanh nghiệp",
+    desc:"Nền kinh tế cần 38,5 triệu tỉ đồng vốn cho tăng trưởng hai con số. Xây dựng thị trường trái phiếu doanh nghiệp minh bạch, định giá rủi ro là yêu cầu bắt buộc.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"market", age:"news",
+    url:"https://vietstock.vn/2026/05/8216dua-duong-dan-loi8217-cho-trai-phieu-doanh-nghiep-3118-1442768.htm" },
+  { title:"Thách thức với sandbox cho FinTech",
+    desc:"Nghị định 94/2025/NĐ-CP cho phép áp dụng cơ chế thử nghiệm có kiểm soát (sandbox) trong lĩnh vực FinTech. Vai trò sandbox thể hiện trong nhiều văn bản pháp lý 2025.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-13", cat:"market", age:"news",
+    url:"https://vietstock.vn/2026/05/thach-thuc-voi-sandbox-cho-fintech-757-1441792.htm" },
+  { title:"Exclusive: US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough",
+    desc:"US cleared ~10 Chinese firms to buy Nvidia's H200 chip, but no delivery has been made. CEO Jensen Huang joined Trump's Beijing trip to unlock the stalled deal.",
+    author:"Reuters", source:"reuters.com", published:"2026-05-14", cat:"intl", age:"news",
+    url:"https://www.reuters.com/business/retail-consumer/us-clears-h200-chip-sales-10-china-firms-nvidia-ceo-looks-breakthrough-2026-05-14/" },
+  { title:"Tax refunds help to lift US retail sales; drag from rising inflation looms",
+    desc:"U.S. retail sales increased solidly for a third straight month in April, though part of the rise was due to a sharp rise in inflation since the start of the U.S.-backed war with Iran.",
+    author:"Lucia Mutikani / Reuters", source:"reuters.com", published:"2026-05-14", cat:"intl", age:"news",
+    url:"https://www.reuters.com/business/us-retail-sales-increase-again-april-partly-lifted-by-higher-prices-2026-05-14/" },
+
+  // ── raw/ root ──
+  { title:"VASEP kiến nghị gỡ rào cản để xuất khẩu thủy sản đạt 12 tỷ USD trong năm 2026",
+    desc:"Xuất khẩu thủy sản 4T/2026 đạt 3,7 tỷ USD (+15% YoY). Trung Quốc +52,3%, Hoa Kỳ -7,4%. VASEP kiến nghị tháo gỡ rào cản thể chế, nguyên liệu, thủ tục hành chính.",
+    author:"Chu Khôi", source:"vneconomy.vn", published:"2026-05-12", cat:"trade", age:"root",
+    url:"https://vneconomy.vn/vasep-kien-nghi-go-rao-can-de-xuat-khau-thuy-san-dat-12-ty-usd-trong-nam-2026.htm" },
+  { title:"FedEx bets on Viettel Post to strengthen capabilities in Vietnam",
+    desc:"The newly announced partnership between FedEx and Viettel Post signals a shift toward more integrated logistics solutions in Vietnam — bridging operational gaps and unlocking growth.",
+    author:"Vietnam Investment Review", source:"vir.com.vn", published:"2026-04-28", cat:"company", age:"root",
+    url:"https://vir.com.vn/fedex-bets-on-viettel-post-to-strengthen-capabilities-in-vietnam-151485.html" },
+  { title:"Why the world needs China to save more, not less",
+    desc:"The IMF assumes China should save less. Jeffrey Sachs argues China's saving is key to financing the developing world's need for green infrastructure.",
+    author:"Jeffrey D. Sachs", source:"scmp.com", published:"2026-05-13", cat:"intl", age:"root",
+    url:"https://www.scmp.com/opinion/china-opinion/article/3353281/why-world-needs-china-save-more-not-less" },
+  { title:"FDI tại Việt Nam: Hướng tới lợi ích công bằng và bền vững",
+    desc:"Việt Nam nổi lên như điểm đến FDI chiến lược nhờ chính sách linh hoạt và nền tảng vĩ mô ổn định, hướng tới lợi ích công bằng và bền vững.",
+    author:"TS. Võ Đình Trí", source:"vneconomy.vn", published:"2026-05-13", cat:"intl", age:"root",
+    url:"https://vneconomy.vn/fdi-tai-viet-nam-huong-toi-loi-ich-cong-bang-va-ben-vung.htm" },
+
+  // ── raw/old news/ archive ──
+  { title:"Tỷ phú Phạm Nhật Vượng lập thêm một \"Vin\" mới, chuyên về công nghệ kỹ thuật cao",
+    desc:"Vingroup thành lập công ty con VinSurgical với vốn điều lệ 300 tỷ đồng, phát triển robot phẫu thuật và thiết bị y tế thông minh.",
+    author:"CafeF", source:"cafef.vn", published:"2026-05-14", cat:"company", age:"archive",
+    url:"https://cafef.vn/ty-phu-pham-nhat-vuong-lap-them-mot-vin-moi-chuyen-ve-cong-nghe-ky-thuat-cao-188260514001513171.chn" },
+  { title:"Vì sao VinFast ra giá 530 triệu USD khi chuyển nhượng mảng sản xuất xe tại Việt Nam?",
+    desc:"Thương vụ VinFast chuyển nhượng mảng sản xuất tại Việt Nam với mức giá 530 triệu USD, cao gấp 5 lần định giá trung bình của đơn vị tư vấn độc lập, đệ trình lên SEC.",
+    author:"CafeF", source:"cafef.vn", published:"2026-05-14", cat:"company", age:"archive",
+    url:"https://cafef.vn/vi-sao-vinfast-ra-gia-530-trieu-usd-khi-chuyen-nhuong-mang-san-xuat-xe-tai-viet-nam-188260514001327032.chn" },
+  { title:"Hòa Phát khởi công KCN đầu tiên tại Hải Phòng, quy mô 245ha, vốn ~3.400 tỷ đồng",
+    desc:"Hạ tầng kỹ thuật giai đoạn 1 sẽ hoàn thành và bàn giao mặt bằng cho nhà đầu tư đầu tiên từ quý IV/2026.",
+    author:"CafeF", source:"cafef.vn", published:"2026-05-14", cat:"company", age:"archive",
+    url:"https://cafef.vn/hoa-phat-khoi-cong-kcn-dau-tien-tai-hai-phong-quy-mo-245ha-tong-von-dau-tu-gan-3400-ty-dong-188260514110527194.chn" },
+  { title:"EVN có thể sẽ tăng giá điện để xử lý khoản lỗ lũy kế gần 45.000 tỷ đồng",
+    desc:"Giá điện trong tương lai có thể phải \"gánh\" thêm các chi phí đầu vào phát sinh từ nhiều năm trước.",
+    author:"CafeF", source:"cafef.vn", published:"2026-05-13", cat:"energy", age:"archive",
+    url:"https://cafef.vn/tap-doan-dien-luc-viet-nam-evn-co-the-se-tang-gia-dien-de-xu-ly-khoan-lo-luy-ke-gan-45000-ty-dong-18826051319315621.chn" },
+  { title:"Nuclear Energy Renaissance in Southeast Asia: A Role for China?",
+    desc:"As Southeast Asian countries ponder the use of nuclear power, China looks set to be a key player.",
+    author:"Fulcrum.sg", source:"fulcrum.sg", published:"2026-05-13", cat:"intl", age:"archive",
+    url:"https://fulcrum.sg/nuclear-energy-renaissance-in-southeast-asia-a-role-for-china/" },
+  { title:"Vượt Thái Lan và Singapore, Việt Nam dẫn đầu Đông Nam Á về tăng trưởng khách quốc tế",
+    desc:"Với mức tăng gần 15% lượng khách quốc tế trong 4 tháng đầu năm, Việt Nam là điểm đến duy nhất tại Đông Nam Á duy trì tăng trưởng hai con số.",
+    author:"VietnamBiz", source:"vietnambiz.vn", published:"2026-05-11", cat:"trade", age:"archive",
+    url:"https://vietnambiz.vn/vuot-thai-lan-va-singapore-viet-nam-dan-dau-dong-nam-a-ve-tang-truong-khach-quoc-te-2026511105555324.htm" },
+];
+
+const CATS = [
+  { id:"tax",     label:"Thuế & Pháp lý" },
+  { id:"trade",   label:"Xuất khẩu & Thương mại" },
+  { id:"company", label:"Doanh nghiệp" },
+  { id:"market",  label:"Tài chính & Thị trường" },
+  { id:"energy",  label:"Năng lượng" },
+  { id:"intl",    label:"Quốc tế" },
+];
+
+// ── State ────────────────────────────────────────────────────────────────
+const state = {
+  q: "",
+  cats: new Set(),
+  sort: localStorage.getItem("ip-sort") || "newest",
+  age: localStorage.getItem("ip-age") || "all",
+  open: new Set(),
+};
+
+// ── Rendering helpers ────────────────────────────────────────────────────
+function fmtDate(s) {
+  const [y,m,d] = s.split("-");
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  return `${parseInt(d,10)} ${months[parseInt(m,10)-1]} ${y}`;
+}
+function fmtDateLong(s) {
+  const [y,m,d] = s.split("-");
+  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  return { day: parseInt(d,10), month: months[parseInt(m,10)-1], year: y };
+}
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+}
+
+// ── Digest strip ─────────────────────────────────────────────────────────
+function renderDigest() {
+  const total = ITEMS.length;
+  const newsCount = ITEMS.filter(x => x.age==="news").length;
+  const archiveCount = ITEMS.filter(x => x.age==="archive").length;
+  const cats = new Set(ITEMS.map(x => x.cat)).size;
+  const sources = new Set(ITEMS.map(x => x.source)).size;
+  document.getElementById("digest").innerHTML = `
+    <div class="digest-cell">
+      <div class="digest-label">Total stories</div>
+      <div class="digest-figure">${total}</div>
+      <div class="digest-note">curated this issue</div>
+    </div>
+    <div class="digest-cell">
+      <div class="digest-label">In rotation</div>
+      <div class="digest-figure">${newsCount}</div>
+      <div class="digest-note">from <em>raw/news/</em></div>
+    </div>
+    <div class="digest-cell">
+      <div class="digest-label">Categories</div>
+      <div class="digest-figure">${cats}</div>
+      <div class="digest-note">beats covered</div>
+    </div>
+    <div class="digest-cell">
+      <div class="digest-label">Sources</div>
+      <div class="digest-figure">${sources}</div>
+      <div class="digest-note">trusted publications</div>
+    </div>
+  `;
+}
+
+// ── Chips ────────────────────────────────────────────────────────────────
+function renderChips() {
+  const counts = {};
+  for (const c of CATS) counts[c.id] = 0;
+  for (const it of ITEMS) counts[it.cat] = (counts[it.cat]||0) + 1;
+  const wrap = document.getElementById("chips");
+  wrap.innerHTML = "";
+  for (const c of CATS) {
+    const el = document.createElement("button");
+    el.type = "button";
+    el.className = "chip" + (state.cats.has(c.id) ? " active" : "");
+    el.innerHTML = `${c.label}<span class="count">${counts[c.id]||0}</span>`;
+    el.onclick = () => {
+      if (state.cats.has(c.id)) state.cats.delete(c.id);
+      else state.cats.add(c.id);
+      renderChips(); renderResults();
+    };
+    wrap.appendChild(el);
+  }
+  if (state.cats.size > 0) {
+    const reset = document.createElement("button");
+    reset.type = "button";
+    reset.className = "chip-reset";
+    reset.textContent = "× Clear filters";
+    reset.onclick = () => { state.cats.clear(); renderChips(); renderResults(); };
+    wrap.appendChild(reset);
+  }
+}
+
+// ── Filter / sort ────────────────────────────────────────────────────────
+function matches(it) {
+  if (state.cats.size > 0 && !state.cats.has(it.cat)) return false;
+  if (state.age !== "all" && it.age !== state.age) return false;
+  if (state.q) {
+    const hay = (it.title + " " + it.desc + " " + it.author + " " + it.source).toLowerCase();
+    if (!hay.includes(state.q.toLowerCase())) return false;
+  }
+  return true;
+}
+
+// ── Results ──────────────────────────────────────────────────────────────
+function renderResults() {
+  let list = ITEMS.filter(matches);
+  if (state.sort === "newest") list.sort((a,b) => b.published.localeCompare(a.published));
+  else if (state.sort === "oldest") list.sort((a,b) => a.published.localeCompare(b.published));
+  else if (state.sort === "title") list.sort((a,b) => a.title.localeCompare(b.title));
+
+  const total = ITEMS.length;
+  document.getElementById("stat-line").innerHTML =
+    `Đang hiển thị <b>${list.length}</b> trên tổng <b>${total}</b> bài.`;
+
+  const root = document.getElementById("results");
+  root.innerHTML = "";
+  if (list.length === 0) {
+    root.innerHTML = `
+      <div class="empty">
+        <h3>Không có bài nào trùng khớp</h3>
+        <p>Hãy thử bỏ một vài bộ lọc.</p>
+      </div>`;
+    return;
+  }
+
+  if (state.sort === "title") {
+    // Flat grid, no date heading
+    const section = document.createElement("div");
+    section.className = "date-section";
+    const grid = document.createElement("div");
+    grid.className = "grid stagger";
+    for (const it of list) grid.appendChild(buildCard(it));
+    section.appendChild(grid);
+    root.appendChild(section);
+    return;
+  }
+
+  // Group by date
+  const byDate = new Map();
+  for (const it of list) {
+    if (!byDate.has(it.published)) byDate.set(it.published, []);
+    byDate.get(it.published).push(it);
+  }
+  const dates = [...byDate.keys()];
+
+  for (const date of dates) {
+    const section = document.createElement("div");
+    section.className = "date-section";
+    const d = fmtDateLong(date);
+    section.innerHTML = `
+      <div class="date-heading">
+        <div class="date-num">${d.day} <em>${d.month}</em> ${d.year}</div>
+        <div class="date-meta">${byDate.get(date).length} ${byDate.get(date).length === 1 ? "story" : "stories"}</div>
+      </div>
+    `;
+    const grid = document.createElement("div");
+    grid.className = "grid stagger";
+    for (const it of byDate.get(date)) grid.appendChild(buildCard(it));
+    section.appendChild(grid);
+    root.appendChild(section);
+  }
+}
+
+function buildCard(it) {
+  const key = it.url || it.title;
+  const card = document.createElement("article");
+  card.className = "card" + (state.open.has(key) ? " open" : "");
+  card.onclick = (e) => {
+    if (e.target.tagName === "A") return;
+    if (state.open.has(key)) state.open.delete(key); else state.open.add(key);
+    renderResults();
+  };
+  const catLabel = CATS.find(c => c.id === it.cat)?.label || "Khác";
+  const ageBadge = it.age === "news" ? "raw/news/" : it.age === "root" ? "raw/" : "archive";
+  card.innerHTML = `
+    <div class="card-meta">
+      <span class="card-cat cat-${it.cat}">${catLabel}</span>
+      <span class="dot"></span>
+      <span>${ageBadge}</span>
+    </div>
+    <h3 class="card-title">${escapeHtml(it.title)}</h3>
+    <div class="card-desc">${escapeHtml(it.desc)}</div>
+    <div class="card-footer">
+      <span class="source">${escapeHtml(it.source)}</span>
+      <span class="author">— ${escapeHtml(it.author)}</span>
+    </div>
+    <div class="card-detail">
+      "${escapeHtml(it.desc)}"
+      <br/>
+      <a class="open-link" href="${it.url}" target="_blank" rel="noreferrer noopener">Đọc nguồn gốc</a>
+    </div>
+  `;
+  return card;
+}
+
+// ── Wire up ──────────────────────────────────────────────────────────────
+document.getElementById("q").addEventListener("input", e => { state.q = e.target.value; renderResults(); });
+document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; localStorage.setItem("ip-sort", state.sort); renderResults(); });
+document.getElementById("age").addEventListener("change", e => { state.age = e.target.value; localStorage.setItem("ip-age", state.age); renderResults(); });
+document.getElementById("sort").value = state.sort;
+document.getElementById("age").value = state.age;
+
+// Pretty today date
+(function setToday(){
+  const d = new Date();
+  const weekdays = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+  const months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+  const wd = weekdays[d.getDay()];
+  const day = d.getDate();
+  const mo = months[d.getMonth()];
+  const yr = d.getFullYear();
+  const el = document.getElementById("meta-date");
+  if (el) el.textContent = `${wd}, ${day} ${mo} ${yr}`;
+})();
+
+renderDigest();
+renderChips();
+renderResults();
+</script>
+</body>
+</html>

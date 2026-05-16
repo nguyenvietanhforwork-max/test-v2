@@ -1,0 +1,55 @@
+{
+  "name": "daily-report",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            { "field": "cronExpression", "expression": "0 6 * * *" }
+          ]
+        }
+      },
+      "id": "cron",
+      "name": "Cron 06:00 ICT",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [240, 320]
+    },
+    {
+      "parameters": {
+        "url": "={{$env.AGENTS_BASE_URL}}/build-report",
+        "method": "POST",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ date: $now.format('yyyy-MM-dd'), type: 'master', force: false }) }}",
+        "options": { "timeout": 180000 }
+      },
+      "id": "build-report",
+      "name": "POST /build-report",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [500, 320]
+    },
+    {
+      "parameters": {
+        "url": "={{$env.API_BASE_URL}}/v1/webhooks/n8n/job-complete",
+        "method": "POST",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ type: 'report.ready', data: { report_id: $json.report_id, date: $json.date, type: $json.type } }) }}"
+      },
+      "id": "notify",
+      "name": "Notify API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [760, 320]
+    }
+  ],
+  "connections": {
+    "Cron 06:00 ICT": { "main": [[{ "node": "POST /build-report", "type": "main", "index": 0 }]] },
+    "POST /build-report": { "main": [[{ "node": "Notify API", "type": "main", "index": 0 }]] }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "tags": [{ "name": "intelligence" }]
+}

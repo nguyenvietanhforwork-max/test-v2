@@ -1,0 +1,152 @@
+# Render Blueprint — one-click deploy for Atlas backend + workers.
+# Push to GitHub, click "New → Blueprint" in Render dashboard, point at this repo.
+#
+# Note: Render's free Postgres tier is fine for dev/preview. For prod use Supabase
+# (set SUPABASE_DB_URL on the api/worker services and delete the postgres block).
+
+services:
+  # ---------- FastAPI gateway ----------
+  - type: web
+    name: atlas-api
+    runtime: docker
+    plan: starter                          # bump to standard for prod
+    region: singapore                      # closest to VN users
+    dockerfilePath: ./apps/api/Dockerfile
+    dockerContext: ./apps/api
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: ENV
+        value: prod
+      - key: LOG_LEVEL
+        value: info
+      - key: SUPABASE_DB_URL              # paste from Supabase → Settings → Database → Connection string (pooler)
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: USE_SUPABASE_REALTIME
+        value: "true"
+      - key: STORAGE_BACKEND
+        value: supabase
+      - key: SUPABASE_STORAGE_BUCKET
+        value: atlas-pdfs
+      - key: PDF_SERVICE_URL
+        value: https://atlas-pdf.onrender.com
+      - key: REDIS_URL                    # Upstash free Redis URL
+        sync: false
+      - key: MEILI_HOST
+        sync: false
+      - key: MEILI_MASTER_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: '["https://atlas.vercel.app","http://localhost:3000"]'
+
+  # ---------- Celery worker (LangGraph pipeline) ----------
+  - type: worker
+    name: atlas-worker
+    runtime: docker
+    plan: starter
+    region: singapore
+    dockerfilePath: ./infra/docker/worker.Dockerfile
+    dockerContext: ./
+    autoDeploy: true
+    envVars:
+      - fromService:
+          name: atlas-api
+          type: web
+          envVarKey: SUPABASE_DB_URL
+        key: SUPABASE_DB_URL
+      - fromService:
+          name: atlas-api
+          type: web
+          envVarKey: REDIS_URL
+        key: REDIS_URL
+      - fromService:
+          name: atlas-api
+          type: web
+          envVarKey: ANTHROPIC_API_KEY
+        key: ANTHROPIC_API_KEY
+      - fromService:
+          name: atlas-api
+          type: web
+          envVarKey: OPENAI_API_KEY
+        key: OPENAI_API_KEY
+      - key: STORAGE_BACKEND
+        value: supabase
+      - key: SUPABASE_STORAGE_BUCKET
+        value: atlas-pdfs
+      - fromService:
+          name: atlas-api
+          type: web
+          envVarKey: PDF_SERVICE_URL
+        key: PDF_SERVICE_URL
+      - fromService:
+          name: atlas-api
+          type: web
+          envVarKey: SUPABASE_URL
+        key: SUPABASE_URL
+      - fromService:
+          name: atlas-api
+          type: web
+          envVarKey: SUPABASE_SERVICE_ROLE_KEY
+        key: SUPABASE_SERVICE_ROLE_KEY
+
+  # ---------- Celery beat (cron scheduler) ----------
+  - type: worker
+    name: atlas-beat
+    runtime: docker
+    plan: starter
+    region: singapore
+    dockerfilePath: ./infra/docker/worker.Dockerfile
+    dockerContext: ./
+    autoDeploy: true
+    dockerCommand: celery -A packages.automation.worker.app beat --loglevel=info
+    envVars:
+      - fromService: { name: atlas-api, type: web, envVarKey: REDIS_URL }
+        key: REDIS_URL
+      - fromService: { name: atlas-api, type: web, envVarKey: SUPABASE_DB_URL }
+        key: SUPABASE_DB_URL
+      - fromService: { name: atlas-api, type: web, envVarKey: SUPABASE_URL }
+        key: SUPABASE_URL
+      - fromService: { name: atlas-api, type: web, envVarKey: SUPABASE_SERVICE_ROLE_KEY }
+        key: SUPABASE_SERVICE_ROLE_KEY
+      - fromService: { name: atlas-api, type: web, envVarKey: ANTHROPIC_API_KEY }
+        key: ANTHROPIC_API_KEY
+      - fromService: { name: atlas-api, type: web, envVarKey: OPENAI_API_KEY }
+        key: OPENAI_API_KEY
+      - fromService: { name: atlas-api, type: web, envVarKey: PDF_SERVICE_URL }
+        key: PDF_SERVICE_URL
+      - key: STORAGE_BACKEND
+        value: supabase
+      - key: SUPABASE_STORAGE_BUCKET
+        value: atlas-pdfs
+
+  # ---------- PDF microservice ----------
+  - type: web
+    name: atlas-pdf
+    runtime: docker
+    plan: starter
+    region: singapore
+    dockerfilePath: ./infra/docker/pdf.Dockerfile
+    dockerContext: ./packages/automation/pdf/service
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - fromService: { name: atlas-api, type: web, envVarKey: SUPABASE_URL }
+        key: SUPABASE_URL
+      - fromService: { name: atlas-api, type: web, envVarKey: SUPABASE_SERVICE_ROLE_KEY }
+        key: SUPABASE_SERVICE_ROLE_KEY
+      - key: STORAGE_BACKEND
+        value: supabase
+      - key: SUPABASE_STORAGE_BUCKET
+        value: atlas-pdfs

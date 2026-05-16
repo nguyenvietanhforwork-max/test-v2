@@ -1,0 +1,60 @@
+/* Atlas design tokens — referenced by Tailwind config */
+
+:root[data-theme="cinema"] {
+  --bg-0: #07080B;
+  --bg-1: #0C0E13;
+  --bg-2: #12151C;
+  --bg-3: #1A1E27;
+  --bg-glass: rgba(18, 21, 28, 0.62);
+
+  --line-1: rgba(255,255,255,0.04);
+  --line-2: rgba(255,255,255,0.08);
+  --line-3: rgba(255,255,255,0.14);
+  --line-strong: rgba(255,255,255,0.22);
+
+  --fg-0: #F5F7FA;
+  --fg-1: #C4CAD3;
+  --fg-2: #8089A0;
+  --fg-3: #525A70;
+
+  --accent: #E8B864;
+  --accent-soft: rgba(232,184,100,0.12);
+  --accent-line: rgba(232,184,100,0.32);
+  --cyan: #6FC4E0;
+  --violet: #9D7BE8;
+  --pos: #4ADE80;
+  --neg: #F87171;
+  --warn: #FBBF24;
+}
+
+:root[data-theme="dark"] {
+  --bg-0: #0A0A0A;
+  --bg-1: #111111;
+  --bg-2: #181818;
+  --bg-3: #202020;
+  --bg-glass: rgba(20,20,20,0.66);
+  --line-1: rgba(255,255,255,0.05);
+  --line-2: rgba(255,255,255,0.09);
+  --line-3: rgba(255,255,255,0.16);
+  --line-strong: rgba(255,255,255,0.24);
+  --fg-0: #F5F5F5; --fg-1: #C8C8C8; --fg-2: #828282; --fg-3: #525252;
+  --accent: #E8B864; --accent-soft: rgba(232,184,100,0.12); --accent-line: rgba(232,184,100,0.32);
+  --cyan: #6FC4E0; --violet: #9D7BE8;
+  --pos: #4ADE80; --neg: #F87171; --warn: #FBBF24;
+}
+
+:root[data-theme="light"] {
+  --bg-0: #FAFBFC;
+  --bg-1: #FFFFFF;
+  --bg-2: #F4F5F7;
+  --bg-3: #ECEEF2;
+  --bg-glass: rgba(255,255,255,0.72);
+  --line-1: rgba(0,0,0,0.04);
+  --line-2: rgba(0,0,0,0.08);
+  --line-3: rgba(0,0,0,0.16);
+  --line-strong: rgba(0,0,0,0.24);
+  --fg-0: #0B0C10; --fg-1: #2E3340; --fg-2: #6C7488; --fg-3: #98A0B0;
+  --accent: #B4810B; --accent-soft: rgba(180,129,11,0.10); --accent-line: rgba(180,129,11,0.28);
+  --cyan: #1F8DA8; --violet: #6A48C6;
+  --pos: #16A34A; --neg: #DC2626; --warn: #B45309;
+}

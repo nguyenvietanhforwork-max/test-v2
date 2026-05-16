@@ -1,0 +1,9 @@
+{
+  "id": "intelligence-platform",
+  "name": "Intelligence Platform",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Connects this vault to the Intelligence Platform. Adds inline status, send-to-platform, and open-generated-report commands.",
+  "author": "Intelligence",
+  "isDesktopOnly": false
+}

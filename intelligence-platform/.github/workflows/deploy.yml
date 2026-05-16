@@ -1,0 +1,43 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy-railway:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service:
+          - { name: api, config: infra/railway/api.railway.toml }
+          - { name: agents, config: infra/railway/agents.railway.toml }
+          - { name: workers, config: infra/railway/workers.railway.toml }
+          - { name: pdf-engine, config: infra/railway/pdf-engine.railway.toml }
+          - { name: watcher, config: infra/railway/watcher.railway.toml }
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Railway CLI
+        run: curl -fsSL https://railway.app/install.sh | sh
+      - name: Deploy ${{ matrix.service.name }}
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: |
+          railway link --project ${{ secrets.RAILWAY_PROJECT_ID }} --service ${{ matrix.service.name }}
+          railway up --config ${{ matrix.service.config }}
+
+  migrate:
+    runs-on: ubuntu-latest
+    needs: deploy-railway
+    environment: production   # manual approval gate
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Supabase CLI
+        run: curl -fsSL https://github.com/supabase/cli/releases/latest/download/supabase_linux_amd64.tar.gz | tar xz -C /usr/local/bin
+      - name: Apply migrations
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+        run: |
+          supabase link --project-ref ${{ secrets.SUPABASE_PROJECT_REF }}
+          supabase db push

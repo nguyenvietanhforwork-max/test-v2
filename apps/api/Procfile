@@ -1,0 +1,4 @@
+web: alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT --proxy-headers
+worker: celery -A packages.automation.worker.app worker --loglevel=info --concurrency=4
+beat: celery -A packages.automation.worker.app beat --loglevel=info
+release: alembic upgrade head

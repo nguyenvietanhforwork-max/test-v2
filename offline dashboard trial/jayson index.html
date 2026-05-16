@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JayVault Intelligence Dashboard</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f5ef;
+      --surface: #fffefa;
+      --surface-2: #ebe7dc;
+      --surface-3: #ddd8cb;
+      --text: #17191f;
+      --muted: #606978;
+      --border: #d6d0c4;
+      --accent: #057d75;
+      --accent-2: #9b5e12;
+      --blue: #365da6;
+      --good: #2f7d50;
+      --warn: #a86a16;
+      --bad: #a94442;
+      --shadow: 0 18px 50px rgba(23, 25, 31, 0.08);
+      --radius: 8px;
+      --focus: 0 0 0 3px rgba(5, 125, 117, 0.2);
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #11130f;
+      --surface: #191c18;
+      --surface-2: #23271f;
+      --surface-3: #30362c;
+      --text: #f4f1e8;
+      --muted: #aeb7aa;
+      --border: #3a4035;
+      --accent: #5cc8bb;
+      --accent-2: #dda85a;
+      --blue: #8ea7f0;
+      --good: #7dcd95;
+      --warn: #e0af69;
+      --bad: #e18a86;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.26);
+      --focus: 0 0 0 3px rgba(92, 200, 187, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100%;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+      letter-spacing: 0;
+    }
+
+    button,
+    select {
+      cursor: pointer;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    summary:focus-visible,
+    a:focus-visible {
+      outline: none;
+      box-shadow: var(--focus);
+    }
+
+    .app-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--border);
+      background: color-mix(in srgb, var(--surface) 90%, transparent);
+      backdrop-filter: blur(16px);
+    }
+
+    .topbar-inner {
+      width: min(1540px, calc(100% - 32px));
+      min-height: 68px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      min-width: 0;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.1;
+      font-weight: 760;
+    }
+
+    .brand p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .button {
+      min-height: 38px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: none;
+    }
+
+    .button:hover {
+      border-color: var(--accent);
+    }
+
+    .button.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: var(--surface);
+    }
+
+    [data-theme="dark"] .button.primary {
+      color: #0d1714;
+    }
+
+    .layout {
+      width: min(1540px, calc(100% - 32px));
+      margin: 22px auto 36px;
+      display: grid;
+      grid-template-columns: 292px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 88px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-header {
+      padding: 14px 14px 10px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    .panel-subtitle {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .timeline-list {
+      max-height: 52vh;
+      overflow: auto;
+      padding: 8px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .day-button {
+      width: 100%;
+      min-height: 54px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      background: transparent;
+      color: var(--text);
+      padding: 9px 10px;
+      text-align: left;
+      display: grid;
+      gap: 3px;
+    }
+
+    .day-button:hover {
+      background: var(--surface-2);
+    }
+
+    .day-button.active {
+      border-color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+    }
+
+    .day-button strong {
+      font-size: 13px;
+    }
+
+    .day-button span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      padding: 12px;
+    }
+
+    .metric {
+      min-height: 72px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface-2);
+      padding: 10px;
+      display: grid;
+      align-content: space-between;
+      gap: 8px;
+    }
+
+    .metric strong {
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .main {
+      min-width: 0;
+      display: grid;
+      gap: 16px;
+    }
+
+    .toolbar {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      padding: 12px;
+      display: grid;
+      grid-template-columns: minmax(220px, 1.2fr) repeat(4, minmax(140px, 0.6fr)) auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .field {
+      min-width: 0;
+      display: grid;
+      gap: 5px;
+    }
+
+    .field label {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      min-height: 38px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface-2);
+      color: var(--text);
+      padding: 8px 10px;
+    }
+
+    .narrative {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 13%, var(--surface)) 0%, var(--surface) 52%, color-mix(in srgb, var(--accent-2) 10%, var(--surface)) 100%);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: end;
+    }
+
+    .narrative-kicker {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 760;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+
+    .narrative h2 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.12;
+      font-weight: 820;
+    }
+
+    .narrative p {
+      max-width: 860px;
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    .narrative-meta {
+      min-width: 180px;
+      border-left: 1px solid var(--border);
+      padding-left: 18px;
+      display: grid;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .narrative-meta strong {
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .category-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .category-section {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .category-section > summary {
+      min-height: 56px;
+      list-style: none;
+      padding: 15px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+    }
+
+    .category-section[open] > summary {
+      border-bottom-color: var(--border);
+    }
+
+    .category-section > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .summary-main {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .summary-main h3 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 780;
+    }
+
+    .summary-main span,
+    .count-pill {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .count-pill {
+      min-width: 34px;
+      min-height: 26px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface-2);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 9px;
+      font-weight: 700;
+    }
+
+    .chevron {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .category-section[open] .chevron {
+      transform: rotate(90deg);
+    }
+
+    .industry-group {
+      padding: 12px 14px 14px;
+      display: grid;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .industry-group:last-child {
+      border-bottom: none;
+    }
+
+    .industry-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .item-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .news-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: color-mix(in srgb, var(--surface) 80%, var(--surface-2));
+      overflow: hidden;
+    }
+
+    .news-item > summary {
+      list-style: none;
+      min-height: 58px;
+      padding: 12px;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .news-item > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .item-title {
+      min-width: 0;
+    }
+
+    .item-title strong {
+      display: block;
+      overflow-wrap: anywhere;
+      font-size: 14px;
+    }
+
+    .item-title span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .item-body {
+      border-top: 1px solid var(--border);
+      padding: 12px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .item-body p {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .item-body .muted {
+      color: var(--muted);
+    }
+
+    .tag-row,
+    .action-row,
+    .entity-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .tag,
+    .entity {
+      min-height: 24px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--muted);
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .action-row a {
+      min-height: 32px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--blue);
+      padding: 6px 9px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 720;
+    }
+
+    .empty-state {
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      background: color-mix(in srgb, var(--surface) 70%, transparent);
+      padding: 22px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .empty-state strong {
+      display: block;
+      color: var(--text);
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .footer {
+      width: min(1540px, calc(100% - 32px));
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 1160px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.65fr);
+      }
+
+      .timeline-list {
+        max-height: 260px;
+      }
+
+      .toolbar {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .toolbar .button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner,
+      .layout,
+      .footer {
+        width: min(100% - 20px, 1540px);
+      }
+
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 0;
+      }
+
+      .top-actions {
+        width: 100%;
+        justify-content: stretch;
+      }
+
+      .top-actions .button {
+        flex: 1;
+      }
+
+      .sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .toolbar {
+        grid-template-columns: 1fr;
+      }
+
+      .narrative {
+        grid-template-columns: 1fr;
+      }
+
+      .narrative h2 {
+        font-size: 23px;
+      }
+
+      .narrative-meta {
+        min-width: 0;
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 14px;
+      }
+
+      .news-item > summary {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell" data-theme="light">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <h1>JayVault Intelligence</h1>
+          <p id="generatedMeta">No processed dashboard data yet</p>
+        </div>
+        <div class="top-actions">
+          <a class="button" href="AGENTS.md">AGENTS.md</a>
+          <a class="button" href="Processed/MASTER%20Report/">MASTER Report</a>
+          <button class="button primary" type="button" id="themeToggle">Dark Mode</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" aria-label="Dashboard navigation">
+        <section class="panel" aria-labelledby="timelineTitle">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title" id="timelineTitle">Timeline</h2>
+              <p class="panel-subtitle" id="timelineSubtitle">0 processing days</p>
+            </div>
+          </div>
+          <div class="timeline-list" id="timelineList"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="metricsTitle">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title" id="metricsTitle">Coverage</h2>
+              <p class="panel-subtitle">Processed intelligence</p>
+            </div>
+          </div>
+          <div class="metric-grid" id="metricGrid"></div>
+        </section>
+      </aside>
+
+      <main class="main">
+        <section class="toolbar" aria-label="Filters">
+          <div class="field">
+            <label for="searchInput">Search</label>
+            <input id="searchInput" type="search" placeholder="Search titles, companies, themes">
+          </div>
+          <div class="field">
+            <label for="categoryFilter">Category</label>
+            <select id="categoryFilter"></select>
+          </div>
+          <div class="field">
+            <label for="industryFilter">Industry</label>
+            <select id="industryFilter"></select>
+          </div>
+          <div class="field">
+            <label for="geographyFilter">Geography</label>
+            <select id="geographyFilter"></select>
+          </div>
+          <div class="field">
+            <label for="sortSelect">Sort</label>
+            <select id="sortSelect">
+              <option value="category">Category</option>
+              <option value="industry">Industry</option>
+              <option value="title">Title</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+          <button class="button" type="button" id="resetButton">Reset</button>
+        </section>
+
+        <section class="narrative" aria-labelledby="dailyHeadline">
+          <div>
+            <p class="narrative-kicker" id="selectedDateLabel">Current Day</p>
+            <h2 id="dailyHeadline">No processed intelligence yet</h2>
+            <p id="dailySummary">Add source files to the raw folders and run an agent processing cycle to populate this dashboard.</p>
+          </div>
+          <div class="narrative-meta">
+            <span><strong id="dayItemCount">0</strong> items</span>
+            <span><strong id="daySectorCount">0</strong> sectors</span>
+            <span><strong id="daySourceCount">0</strong> sources</span>
+          </div>
+        </section>
+
+        <section class="category-grid" id="categoryGrid" aria-label="News groups"></section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <span>JayVault dashboard data is generated from processed reports and wiki notes.</span>
+      <span id="footerMeta">Vault: Jayvault</span>
+    </footer>
+  </div>
+
+  <script>
+    const vaultData = {
+      vaultName: "Jayvault",
+      generatedAt: "2026-05-14T00:00:00+07:00",
+      dashboardVersion: "1.0.0",
+      days: []
+    };
+
+    const CATEGORY_ORDER = [
+      "Vietnam Enterprise News",
+      "Global Enterprise News",
+      "Vietnam Macro News",
+      "Global Macro News"
+    ];
+
+    const state = {
+      activeDate: null,
+      query: "",
+      category: "All",
+      industry: "All",
+      geography: "All",
+      sort: "category"
+    };
+
+    const elements = {
+      appShell: document.querySelector(".app-shell"),
+      generatedMeta: document.getElementById("generatedMeta"),
+      footerMeta: document.getElementById("footerMeta"),
+      timelineList: document.getElementById("timelineList"),
+      timelineSubtitle: document.getElementById("timelineSubtitle"),
+      metricGrid: document.getElementById("metricGrid"),
+      searchInput: document.getElementById("searchInput"),
+      categoryFilter: document.getElementById("categoryFilter"),
+      industryFilter: document.getElementById("industryFilter"),
+      geographyFilter: document.getElementById("geographyFilter"),
+      sortSelect: document.getElementById("sortSelect"),
+      resetButton: document.getElementById("resetButton"),
+      themeToggle: document.getElementById("themeToggle"),
+      selectedDateLabel: document.getElementById("selectedDateLabel"),
+      dailyHeadline: document.getElementById("dailyHeadline"),
+      dailySummary: document.getElementById("dailySummary"),
+      dayItemCount: document.getElementById("dayItemCount"),
+      daySectorCount: document.getElementById("daySectorCount"),
+      daySourceCount: document.getElementById("daySourceCount"),
+      categoryGrid: document.getElementById("categoryGrid")
+    };
+
+    const emptyDay = {
+      date: new Date().toISOString().slice(0, 10),
+      headline: "No processed intelligence yet",
+      summary: "Add source files to raw/news, raw/PDF Files, or raw/Social Media Post, then run an agent processing cycle.",
+      categories: CATEGORY_ORDER.map((name) => ({ name, industries: [] }))
+    };
+
+    function getDays() {
+      const days = Array.isArray(vaultData.days) ? vaultData.days : [];
+      return days.length > 0 ? days : [emptyDay];
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function formatDate(value) {
+      if (!value) return "Unknown date";
+      const date = new Date(`${value}T00:00:00`);
+      if (Number.isNaN(date.getTime())) return value;
+      return date.toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "2-digit"
+      });
+    }
+
+    function formatDateTime(value) {
+      if (!value) return "Not generated";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return value;
+      return date.toLocaleString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    }
+
+    function normalizePath(path) {
+      return String(path || "").replace(/\\/g, "/");
+    }
+
+    function encodePath(path) {
+      return normalizePath(path)
+        .split("/")
+        .map((part) => encodeURIComponent(part))
+        .join("/");
+    }
+
+    function obsidianLink(path) {
+      const vault = encodeURIComponent(vaultData.vaultName || "Jayvault");
+      const file = encodeURIComponent(normalizePath(path).replace(/\.md$/i, ""));
+      return `obsidian://open?vault=${vault}&file=${file}`;
+    }
+
+    function flattenItems(days = getDays()) {
+      return days.flatMap((day) => {
+        const categories = Array.isArray(day.categories) ? day.categories : [];
+        return categories.flatMap((category) => {
+          const categoryName = category.name || category.category || "Unclassified";
+          const industries = Array.isArray(category.industries) && category.industries.length > 0
+            ? category.industries
+            : [{ name: category.industry || "Other", items: category.items || [] }];
+
+          return industries.flatMap((industry) => {
+            const industryName = industry.name || industry.industry || "Other";
+            const items = Array.isArray(industry.items) ? industry.items : [];
+            return items.map((item) => ({
+              ...item,
+              date: day.date,
+              category: item.category || categoryName,
+              industry: item.industry || industryName,
+              dayHeadline: day.headline,
+              daySummary: day.summary
+            }));
+          });
+        });
+      });
+    }
+
+    function unique(values) {
+      return Array.from(new Set(values.filter(Boolean))).sort((a, b) => a.localeCompare(b));
+    }
+
+    function getDay(date) {
+      return getDays().find((day) => day.date === date) || getDays()[0];
+    }
+
+    function getItemSearchText(item) {
+      return [
+        item.title,
+        item.summary,
+        item.details,
+        item.marketImpact,
+        item.category,
+        item.industry,
+        item.geography,
+        ...(item.companies || []),
+        ...(item.tags || []),
+        ...(item.risks || []),
+        ...(item.opportunities || [])
+      ].join(" ").toLowerCase();
+    }
+
+    function itemMatchesFilters(item) {
+      const query = state.query.trim().toLowerCase();
+      const queryMatch = query.length === 0 || getItemSearchText(item).includes(query);
+      const categoryMatch = state.category === "All" || item.category === state.category;
+      const industryMatch = state.industry === "All" || item.industry === state.industry;
+      const geographyMatch = state.geography === "All" || item.geography === state.geography;
+      return queryMatch && categoryMatch && industryMatch && geographyMatch;
+    }
+
+    function sortItems(items) {
+      const sorted = [...items];
+      const comparators = {
+        category: (a, b) => {
+          const categoryDelta = CATEGORY_ORDER.indexOf(a.category) - CATEGORY_ORDER.indexOf(b.category);
+          return categoryDelta || a.industry.localeCompare(b.industry) || a.title.localeCompare(b.title);
+        },
+        industry: (a, b) => a.industry.localeCompare(b.industry) || a.title.localeCompare(b.title),
+        title: (a, b) => a.title.localeCompare(b.title),
+        newest: (a, b) => String(b.processedAt || b.date).localeCompare(String(a.processedAt || a.date))
+      };
+      return sorted.sort(comparators[state.sort] || comparators.category);
+    }
+
+    function groupBy(items, getter) {
+      return items.reduce((groups, item) => {
+        const key = getter(item) || "Other";
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(item);
+        return groups;
+      }, new Map());
+    }
+
+    function countSources(items) {
+      return new Set(items.map((item) => {
+        const source = item.source || {};
+        return source.url || source.rawPath || source.label || item.id || item.title;
+      })).size;
+    }
+
+    function renderOptions(select, values, current) {
+      const options = ["All", ...values];
+      select.innerHTML = options
+        .map((value) => `<option value="${escapeHtml(value)}"${value === current ? " selected" : ""}>${escapeHtml(value)}</option>`)
+        .join("");
+    }
+
+    function renderFilters() {
+      const items = flattenItems();
+      renderOptions(elements.categoryFilter, CATEGORY_ORDER, state.category);
+      renderOptions(elements.industryFilter, unique(items.map((item) => item.industry)), state.industry);
+      renderOptions(elements.geographyFilter, unique(items.map((item) => item.geography)), state.geography);
+      elements.searchInput.value = state.query;
+      elements.sortSelect.value = state.sort;
+    }
+
+    function renderMetrics() {
+      const items = flattenItems();
+      const notes = new Set(items.flatMap((item) => (item.wikiNotes || []).map((note) => note.path || note.title)));
+      const reports = new Set(items.flatMap((item) => (item.reports || []).map((report) => report.path || report.title)));
+      const sectors = new Set(items.map((item) => item.industry).filter(Boolean));
+      const metrics = [
+        ["News Items", items.length],
+        ["Wiki Notes", notes.size],
+        ["Reports", reports.size],
+        ["Sectors", sectors.size]
+      ];
+
+      elements.metricGrid.innerHTML = metrics
+        .map(([label, value]) => `
+          <div class="metric">
+            <strong>${escapeHtml(value)}</strong>
+            <span>${escapeHtml(label)}</span>
+          </div>
+        `)
+        .join("");
+    }
+
+    function renderTimeline() {
+      const days = getDays().slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
+      if (!state.activeDate) state.activeDate = days[0]?.date || emptyDay.date;
+
+      elements.timelineSubtitle.textContent = `${days.length} processing ${days.length === 1 ? "day" : "days"}`;
+      elements.timelineList.innerHTML = days
+        .map((day) => {
+          const itemCount = flattenItems([day]).length;
+          const isActive = day.date === state.activeDate;
+          return `
+            <button class="day-button${isActive ? " active" : ""}" type="button" data-date="${escapeHtml(day.date)}">
+              <strong>${escapeHtml(formatDate(day.date))}</strong>
+              <span>${escapeHtml(itemCount)} items</span>
+            </button>
+          `;
+        })
+        .join("");
+
+      elements.timelineList.querySelectorAll("[data-date]").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.activeDate = button.dataset.date;
+          render();
+        });
+      });
+    }
+
+    function renderNarrative(dayItems) {
+      const day = getDay(state.activeDate);
+      const sectors = new Set(dayItems.map((item) => item.industry).filter(Boolean));
+      elements.selectedDateLabel.textContent = formatDate(day.date);
+      elements.dailyHeadline.textContent = day.headline || dayItems[0]?.title || "No processed intelligence yet";
+      elements.dailySummary.textContent = day.summary || "No narrative has been generated for this processing date.";
+      elements.dayItemCount.textContent = dayItems.length;
+      elements.daySectorCount.textContent = sectors.size;
+      elements.daySourceCount.textContent = countSources(dayItems);
+    }
+
+    function sourceLinks(item) {
+      const source = item.source || {};
+      const links = [];
+      if (source.url) {
+        links.push(`<a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">Open source</a>`);
+      }
+      if (source.rawPath) {
+        links.push(`<a href="${escapeHtml(encodePath(source.rawPath))}">Source file</a>`);
+      }
+      return links;
+    }
+
+    function wikiLinks(item) {
+      return (item.wikiNotes || []).map((note) => {
+        if (!note.path) return "";
+        return `<a href="${escapeHtml(obsidianLink(note.path))}">${escapeHtml(note.title || "Open note")}</a>`;
+      }).filter(Boolean);
+    }
+
+    function reportLinks(item) {
+      return (item.reports || []).map((report) => {
+        if (!report.path) return "";
+        const anchor = report.anchor ? `#${encodeURIComponent(report.anchor)}` : "";
+        return `<a href="${escapeHtml(encodePath(report.path) + anchor)}">${escapeHtml(report.title || "Open report")}</a>`;
+      }).filter(Boolean);
+    }
+
+    function renderItem(item) {
+      const companies = item.companies || [];
+      const tags = item.tags || [];
+      const risks = item.risks || [];
+      const opportunities = item.opportunities || [];
+      const actions = [...sourceLinks(item), ...wikiLinks(item), ...reportLinks(item)];
+
+      return `
+        <details class="news-item">
+          <summary>
+            <div class="item-title">
+              <strong>${escapeHtml(item.title || "Untitled item")}</strong>
+              <span>${escapeHtml(item.summary || item.marketImpact || "No summary available")}</span>
+            </div>
+            <span class="count-pill">${escapeHtml(item.geography || "N/A")}</span>
+          </summary>
+          <div class="item-body">
+            ${item.details ? `<p>${escapeHtml(item.details)}</p>` : ""}
+            ${item.marketImpact ? `<p><strong>Market impact:</strong> ${escapeHtml(item.marketImpact)}</p>` : ""}
+            ${risks.length ? `<p class="muted"><strong>Risks:</strong> ${escapeHtml(risks.join("; "))}</p>` : ""}
+            ${opportunities.length ? `<p class="muted"><strong>Opportunities:</strong> ${escapeHtml(opportunities.join("; "))}</p>` : ""}
+            ${companies.length ? `<div class="entity-row">${companies.map((company) => `<span class="entity">${escapeHtml(company)}</span>`).join("")}</div>` : ""}
+            ${tags.length ? `<div class="tag-row">${tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>` : ""}
+            ${actions.length ? `<div class="action-row">${actions.join("")}</div>` : ""}
+          </div>
+        </details>
+      `;
+    }
+
+    function renderCategory(name, items, index) {
+      const grouped = groupBy(sortItems(items), (item) => item.industry || "Other");
+      const industryMarkup = Array.from(grouped.entries())
+        .map(([industry, industryItems]) => `
+          <div class="industry-group">
+            <div class="industry-heading">
+              <span>${escapeHtml(industry)}</span>
+              <span>${escapeHtml(industryItems.length)} ${industryItems.length === 1 ? "item" : "items"}</span>
+            </div>
+            <div class="item-list">
+              ${industryItems.map(renderItem).join("")}
+            </div>
+          </div>
+        `)
+        .join("");
+
+      return `
+        <details class="category-section" ${index === 0 ? "open" : ""}>
+          <summary>
+            <div class="summary-main">
+              <span class="chevron">></span>
+              <div>
+                <h3>${escapeHtml(name)}</h3>
+                <span>${escapeHtml(grouped.size)} ${grouped.size === 1 ? "industry" : "industries"}</span>
+              </div>
+            </div>
+            <span class="count-pill">${escapeHtml(items.length)}</span>
+          </summary>
+          ${items.length ? industryMarkup : `
+            <div class="industry-group">
+              <div class="empty-state">
+                <strong>No matching items</strong>
+                <span>This group will populate after processed sources are written to reports and dashboard data.</span>
+              </div>
+            </div>
+          `}
+        </details>
+      `;
+    }
+
+    function renderCategories(dayItems) {
+      const filtered = sortItems(dayItems.filter(itemMatchesFilters));
+      const grouped = groupBy(filtered, (item) => item.category || "Unclassified");
+      const categories = state.category === "All"
+        ? CATEGORY_ORDER
+        : [state.category];
+
+      elements.categoryGrid.innerHTML = categories
+        .map((category, index) => renderCategory(category, grouped.get(category) || [], index))
+        .join("");
+    }
+
+    function renderMeta() {
+      const itemCount = flattenItems().length;
+      const generated = formatDateTime(vaultData.generatedAt);
+      elements.generatedMeta.textContent = `${itemCount} items | Generated ${generated}`;
+      elements.footerMeta.textContent = `Vault: ${vaultData.vaultName || "Jayvault"} | Dashboard ${vaultData.dashboardVersion || "1.0.0"}`;
+    }
+
+    function render() {
+      renderMeta();
+      renderFilters();
+      renderMetrics();
+      renderTimeline();
+      const dayItems = flattenItems([getDay(state.activeDate)]);
+      renderNarrative(dayItems);
+      renderCategories(dayItems);
+    }
+
+    function setTheme(theme) {
+      elements.appShell.dataset.theme = theme;
+      elements.themeToggle.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
+      localStorage.setItem("jayvault-theme", theme);
+    }
+
+    elements.searchInput.addEventListener("input", (event) => {
+      state.query = event.target.value;
+      renderCategories(flattenItems([getDay(state.activeDate)]));
+    });
+
+    elements.categoryFilter.addEventListener("change", (event) => {
+      state.category = event.target.value;
+      render();
+    });
+
+    elements.industryFilter.addEventListener("change", (event) => {
+      state.industry = event.target.value;
+      render();
+    });
+
+    elements.geographyFilter.addEventListener("change", (event) => {
+      state.geography = event.target.value;
+      render();
+    });
+
+    elements.sortSelect.addEventListener("change", (event) => {
+      state.sort = event.target.value;
+      render();
+    });
+
+    elements.resetButton.addEventListener("click", () => {
+      state.query = "";
+      state.category = "All";
+      state.industry = "All";
+      state.geography = "All";
+      state.sort = "category";
+      render();
+    });
+
+    elements.themeToggle.addEventListener("click", () => {
+      const nextTheme = elements.appShell.dataset.theme === "dark" ? "light" : "dark";
+      setTheme(nextTheme);
+    });
+
+    setTheme(localStorage.getItem("jayvault-theme") || "light");
+    render();
+  </script>
+</body>
+</html>

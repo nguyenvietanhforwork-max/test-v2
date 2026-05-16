@@ -1,0 +1,35 @@
+@import "../styles/tokens.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body { @apply bg-bg-0 text-fg-0 antialiased; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    background:
+      radial-gradient(1200px 600px at 20% -10%, rgba(232,184,100,0.06), transparent 60%),
+      radial-gradient(900px 500px at 90% 110%, rgba(157,123,232,0.05), transparent 60%),
+      var(--bg-0);
+    min-height: 100vh;
+  }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  .serif { font-family: 'Instrument Serif', serif; font-style: italic; }
+}
+
+@layer utilities {
+  .glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid var(--line-2);
+  }
+  .ring-amber { box-shadow: 0 0 0 1px var(--accent-line), 0 0 32px rgba(232,184,100,0.12); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 999px; border: 2px solid var(--bg-0); }
+::-webkit-scrollbar-thumb:hover { background: var(--line-3); }

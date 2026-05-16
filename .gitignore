@@ -1,0 +1,51 @@
+# Atlas — repo ignore
+
+# Pre-existing
+.cache/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+outputs/*.pdf
+outputs/metrics.jsonl
+outputs/healthcheck.json
+
+# Environments
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+.next/
+.turbo/
+dist/
+out/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Atlas runtime (generated artifacts)
+Processed/**/*.pdf
+
+# Local outputs from agents
+outputs/lint-*.md
+outputs/eval-*.md
+
+# Pipeline caches
+.langgraph/
+.celery-beat-schedule
