@@ -1,0 +1,146 @@
+# Atlas — full-stack dev compose.
+# Usage:
+#   cp .env.example .env
+#   docker compose up -d
+#   open http://localhost:3000
+
+x-py-env: &py_env
+  POSTGRES_HOST: postgres
+  POSTGRES_USER: ${POSTGRES_USER:-atlas}
+  POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-atlas}
+  POSTGRES_DB: ${POSTGRES_DB:-atlas}
+  REDIS_URL: redis://redis:6379/0
+  MEILI_HOST: http://meili:7700
+  MEILI_MASTER_KEY: ${MEILI_MASTER_KEY:-change-me}
+  MINIO_ENDPOINT: minio:9000
+  MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minio}
+  MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minio12345}
+  MINIO_BUCKET: atlas-pdfs
+  ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+  OPENAI_API_KEY: ${OPENAI_API_KEY}
+  JWT_SECRET: ${JWT_SECRET:-change-me}
+  VAULT_RAW: /vault/raw
+  VAULT_WIKI: /vault/wiki
+  VAULT_PROCESSED: /vault/Processed
+  PDF_SERVICE_URL: http://pdf:4000
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-atlas}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-atlas}
+      POSTGRES_DB: ${POSTGRES_DB:-atlas}
+    ports: ["5432:5432"]
+    volumes: ["pg_data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports: ["6379:6379"]
+    volumes: ["redis_data:/data"]
+    healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 5s, timeout: 3s, retries: 10 }
+
+  meili:
+    image: getmeili/meilisearch:v1.6
+    restart: unless-stopped
+    environment:
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY:-change-me}
+      MEILI_ENV: development
+    ports: ["7700:7700"]
+    volumes: ["meili_data:/meili_data"]
+
+  minio:
+    image: minio/minio
+    restart: unless-stopped
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-minio}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-minio12345}
+    command: server /data --console-address ":9001"
+    ports: ["9000:9000", "9001:9001"]
+    volumes: ["minio_data:/data"]
+
+  api:
+    build: { context: ./apps/api, dockerfile: Dockerfile }
+    restart: unless-stopped
+    environment: *py_env
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis:    { condition: service_healthy }
+    ports: ["8000:8000"]
+    volumes:
+      - ./apps/api:/app
+      - ./raw:/vault/raw:ro
+      - ./wiki:/vault/wiki:ro
+      - ./Processed:/vault/Processed
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+  worker:
+    build: { context: ., dockerfile: infra/docker/worker.Dockerfile }
+    restart: unless-stopped
+    environment: *py_env
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis:    { condition: service_healthy }
+    volumes:
+      - ./apps/api:/workspace/apps/api
+      - ./packages:/workspace/packages
+      - ./raw:/vault/raw
+      - ./wiki:/vault/wiki
+      - ./Processed:/vault/Processed
+    command: ["celery", "-A", "packages.automation.worker.app", "worker", "--loglevel=info", "--concurrency=4"]
+
+  beat:
+    build: { context: ., dockerfile: infra/docker/worker.Dockerfile }
+    restart: unless-stopped
+    environment: *py_env
+    depends_on: [redis]
+    volumes:
+      - ./apps/api:/workspace/apps/api
+      - ./packages:/workspace/packages
+    command: ["celery", "-A", "packages.automation.worker.app", "beat", "--loglevel=info"]
+
+  watcher:
+    build: { context: ., dockerfile: infra/docker/watcher.Dockerfile }
+    restart: unless-stopped
+    environment: *py_env
+    depends_on: [redis]
+    volumes:
+      - ./packages:/workspace/packages
+      - ./raw:/vault/raw
+    command: ["python", "-m", "packages.automation.watcher.observer"]
+
+  pdf:
+    build: { context: ./packages/automation/pdf/service, dockerfile: ../../../../infra/docker/pdf.Dockerfile }
+    restart: unless-stopped
+    environment:
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minio}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minio12345}
+      MINIO_BUCKET: atlas-pdfs
+    depends_on: [minio]
+    ports: ["4000:4000"]
+
+  web:
+    build: { context: ./apps/web, dockerfile: ../../infra/docker/web.Dockerfile }
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000/api/v1
+      NEXT_PUBLIC_WS_URL: ws://localhost:8000/ws/stream
+    depends_on: [api]
+    ports: ["3000:3000"]
+    volumes:
+      - ./apps/web:/app
+    command: ["pnpm", "dev"]
+
+volumes:
+  pg_data:
+  redis_data:
+  meili_data:
+  minio_data:
