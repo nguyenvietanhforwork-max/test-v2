@@ -1,0 +1,16 @@
+{
+  "RepoPath": "E:\\Application downloads\\Value",
+  "WatchPath": "raw",
+  "FilePattern": "*.md",
+  "RemoteName": "origin",
+  "RemoteUrl": "https://github.com/nguyenvietanhforwork-max/test-v2.git",
+  "Branch": "main",
+  "IntervalSeconds": 60,
+  "MaxRetries": 5,
+  "RetryBaseDelaySeconds": 5,
+  "MaxLogSizeMB": 10,
+  "PullBeforePush": true,
+  "CommitMessageTemplate": "Auto-sync {timestamp} ({changes} files)",
+  "QuietWhenNoChanges": true,
+  "NetworkTestHost": "github.com"
+}

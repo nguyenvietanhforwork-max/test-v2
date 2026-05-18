@@ -49,3 +49,27 @@ outputs/eval-*.md
 # Pipeline caches
 .langgraph/
 .celery-beat-schedule
+logs/
+*.lock
+outputs/sync-dashboard.html
+
+# v3: generated artifacts policy
+# - generated/*.json   are COMMITTED (they're the dashboard's data feed, small)
+# - generated/embeddings/*.npy   are NOT committed (large, regenerable)
+generated/embeddings/
+!generated/embeddings/.gitkeep
+
+# v3: feedback inbox processed archive (regenerable)
+feedback/inbox/processed/
+
+# v3: intelligence-platform legacy .env (in case it gets archived)
+legacy/intelligence-platform/.env
+**/.env
+
+# v3: cleanup script logs
+logs/cleanup-legacy-*.log
+
+# Python virtual environment
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt

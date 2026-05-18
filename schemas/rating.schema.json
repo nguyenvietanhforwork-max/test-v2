@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://atlas.local/schemas/rating.schema.json",
+  "title": "Report Rating",
+  "description": "Every record in feedback/ratings.json. Mirrors the v2 dashboard's preferences.json export shape, extended with prompt/model versioning per ADR-007.",
+  "type": "object",
+  "required": ["rated_at", "report_id", "criteria"],
+  "properties": {
+    "rated_at": { "type": "string", "format": "date-time" },
+    "report_id": {
+      "type": "string",
+      "description": "Either content/reports/<id>.md or a v2-dashboard inline item id (e.g. 'thutuc-xaydung'). Both forms are accepted during the markdown migration.",
+      "minLength": 3
+    },
+    "criteria": {
+      "type": "object",
+      "description": "1..5 Likert ratings on three editorial dimensions.",
+      "required": ["data_density", "insight_quality", "writing_style"],
+      "properties": {
+        "data_density": { "type": "integer", "minimum": 1, "maximum": 5, "description": "How much hard data / specifics vs. fluff." },
+        "insight_quality": { "type": "integer", "minimum": 1, "maximum": 5, "description": "How much the report changes the reader's view." },
+        "writing_style": { "type": "integer", "minimum": 1, "maximum": 5, "description": "Editorial clarity, voice, executive tone." }
+      },
+      "additionalProperties": false
+    },
+    "length_appropriateness": {
+      "type": "string",
+      "enum": ["too short", "just right", "too long"]
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Free-form tags chosen by user (e.g. 'buried lede', 'great context', 'missing context', 'too jargony')."
+    },
+    "notes": { "type": "string", "description": "Free-form notes from the user." },
+    "prompt_version": { "$ref": "semantic.schema.json#/definitions/PromptVersion" },
+    "model": { "$ref": "semantic.schema.json#/definitions/ModelId" },
+    "template_version": { "type": "string" },
+    "rater": {
+      "type": "string",
+      "description": "Optional rater identifier; default is the single human user."
+    },
+    "client": {
+      "type": "string",
+      "enum": ["dashboard-local-export", "dashboard-api-push", "manual"],
+      "description": "How the rating was submitted."
+    }
+  },
+  "additionalProperties": false
+}

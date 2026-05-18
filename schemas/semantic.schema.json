@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://atlas.local/schemas/semantic.schema.json",
+  "title": "Semantic sub-schemas",
+  "description": "Shared types referenced by report.schema.json, rating.schema.json, and others.",
+  "definitions": {
+    "Entity": {
+      "type": "object",
+      "description": "A company, person, government body, ticker, or other named referent.",
+      "required": ["name", "type"],
+      "properties": {
+        "name": { "type": "string" },
+        "type": { "type": "string", "enum": ["company", "person", "government", "fund", "asset", "country", "currency", "ticker", "other"] },
+        "ticker": { "type": "string", "description": "Stock ticker if applicable (e.g., 'VHM:HOSE')." },
+        "aliases": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "wiki_ref": { "type": "string", "description": "Path to the entity's page in content/wiki/, e.g. 'content/wiki/entities/vinhomes.md'." }
+      },
+      "additionalProperties": false
+    },
+    "Theme": {
+      "type": "string",
+      "description": "Macro theme slug (kebab-case).",
+      "examples": ["vimo-vn", "global-macro", "fed-policy", "china-tech", "vn-real-estate", "logistics-asia"]
+    },
+    "Topic": {
+      "type": "string",
+      "description": "Specific topic slug, narrower than a theme.",
+      "examples": ["land-pricing-reform", "VAT-uniformity", "FDI-flows", "EV-supply-chain"]
+    },
+    "Score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "0..1 normalized score."
+    },
+    "Confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "RelatedReport": {
+      "type": "object",
+      "required": ["report_id"],
+      "properties": {
+        "report_id": { "type": "string" },
+        "relation": { "type": "string", "enum": ["follow-up", "context", "contradiction", "supersedes", "superseded-by", "see-also"] },
+        "similarity": { "$ref": "#/definitions/Score" }
+      },
+      "additionalProperties": false
+    },
+    "PromptVersion": {
+      "type": "string",
+      "description": "Versioned prompt identifier, e.g. 'summarization/topic-sentence-bullets@v3'.",
+      "pattern": "^[a-z-]+/[a-z0-9-]+@v[0-9]+(\\.[0-9]+)?$"
+    },
+    "ModelId": {
+      "type": "string",
+      "description": "LLM model identifier, e.g. 'claude-sonnet-4-6', 'gpt-4o-mini'."
+    },
+    "EmbeddingRef": {
+      "type": "object",
+      "required": ["model", "dim"],
+      "properties": {
+        "model": { "type": "string", "examples": ["text-embedding-3-large"] },
+        "dim": { "type": "integer", "examples": [3072] },
+        "path": { "type": "string", "description": "Relative path under generated/embeddings/" },
+        "computed_at": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

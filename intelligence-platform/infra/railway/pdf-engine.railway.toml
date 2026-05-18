@@ -1,8 +1,0 @@
-[build]
-builder = "DOCKERFILE"
-dockerfilePath = "services/pdf-engine/Dockerfile"
-buildContext = "services/pdf-engine"
-
-[deploy]
-startCommand = "node dist/server.js"
-healthcheckPath = "/healthz"

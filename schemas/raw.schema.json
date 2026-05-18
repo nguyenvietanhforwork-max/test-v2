@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://atlas.local/schemas/raw.schema.json",
+  "title": "Raw clipping",
+  "description": "The shape of a raw/news/**/*.md file after Obsidian Web Clipper writes it. Most fields are optional because the clipper varies by source.",
+  "type": "object",
+  "required": ["title"],
+  "properties": {
+    "title": { "type": "string", "minLength": 1 },
+    "source": { "type": "string", "description": "Publication slug, e.g. 'vneconomy.vn'." },
+    "author": { "type": "string" },
+    "published": { "type": "string", "description": "Publication date. May not be ISO-formatted; tolerate strings." },
+    "url": { "type": "string", "format": "uri" },
+    "clipped_at": { "type": "string", "format": "date-time" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "language": { "type": "string", "examples": ["vi", "en"] }
+  },
+  "additionalProperties": true,
+  "note": "raw/ is immutable and the clipper may emit arbitrary extra fields. additionalProperties is intentionally true."
+}

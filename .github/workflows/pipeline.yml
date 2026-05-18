@@ -1,0 +1,157 @@
+name: Intelligence Pipeline
+
+# When this runs:
+#   - Every day at 06:00 ICT (= 23:00 UTC prior day) — daily brief generation
+#   - On push to main that touches raw/ — re-run when new clippings land via git
+#   - Manually via the Actions tab (workflow_dispatch)
+#
+# What it does:
+#   1. Checks out the repo with write permission
+#   2. Sets up Python + installs scripts/ dependencies
+#   3. Runs scripts/clean.py     (raw/ → cleaned/)
+#   4. Runs scripts/summarize.py (cleaned/ → content/reports/)  — costs API tokens
+#   5. Runs scripts/build_index.py + build_graph.py (markdown → generated/)
+#   6. (Optional) runs scripts/analyze_feedback.py if feedback/inbox/ has files
+#   7. Commits changes back to main
+#   8. Push triggers Vercel's GitHub integration → dashboard rebuilds
+#
+# Required secrets:
+#   ANTHROPIC_API_KEY  — for summarize.py
+#   OPENAI_API_KEY     — for generate_embeddings.py (optional)
+#
+# Cost note: summarize.py only re-summarizes cleaned/ files that don't yet
+# have a corresponding content/reports/ entry, so re-runs are cheap.
+
+on:
+  schedule:
+    # 23:00 UTC = 06:00 ICT (UTC+7)
+    - cron: "0 23 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "raw/**"
+      - "cleaned/**"
+      - "prompts/**"
+      - "scripts/**"
+      - "schemas/**"
+  workflow_dispatch:
+    inputs:
+      stages:
+        description: "Which stages to run (comma-separated: clean,summarize,index,graph,feedback)"
+        required: false
+        default: "clean,summarize,index,graph,feedback"
+      date:
+        description: "Optional date filter (YYYY-MM-DD)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write   # allow the bot to push generated content back
+
+concurrency:
+  group: intelligence-pipeline
+  cancel-in-progress: false   # don't kill a half-finished pipeline run
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Determine stages
+        id: stages
+        run: |
+          STAGES="${{ github.event.inputs.stages || 'clean,summarize,index,graph,feedback' }}"
+          DATE_FILTER="${{ github.event.inputs.date }}"
+          echo "stages=$STAGES" >> "$GITHUB_OUTPUT"
+          echo "date_filter=$DATE_FILTER" >> "$GITHUB_OUTPUT"
+          echo "Running stages: $STAGES"
+          [ -n "$DATE_FILTER" ] && echo "Date filter: $DATE_FILTER"
+
+      - name: Stage 1 — clean
+        if: contains(steps.stages.outputs.stages, 'clean')
+        run: |
+          if [ -n "${{ steps.stages.outputs.date_filter }}" ]; then
+            python scripts/clean.py --since "${{ steps.stages.outputs.date_filter }}"
+          else
+            python scripts/clean.py
+          fi
+
+      - name: Stage 2 — summarize
+        if: contains(steps.stages.outputs.stages, 'summarize')
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DEFAULT_MODEL: claude-sonnet-4-6
+        run: |
+          if [ -n "${{ steps.stages.outputs.date_filter }}" ]; then
+            python scripts/summarize.py --date "${{ steps.stages.outputs.date_filter }}"
+          else
+            python scripts/summarize.py
+          fi
+
+      - name: Stage 3 — build index
+        if: contains(steps.stages.outputs.stages, 'index')
+        run: python scripts/build_index.py
+
+      - name: Stage 4 — build graph
+        if: contains(steps.stages.outputs.stages, 'graph')
+        run: python scripts/build_graph.py
+
+      - name: Stage 5 — analyze feedback
+        if: contains(steps.stages.outputs.stages, 'feedback')
+        run: |
+          if [ -d feedback/inbox ] && [ "$(ls -A feedback/inbox/preferences-*.json 2>/dev/null | wc -l)" -gt 0 ]; then
+            python scripts/analyze_feedback.py
+          else
+            echo "No new preferences in feedback/inbox/ — skipping analyze_feedback"
+          fi
+
+      - name: Sync generated/ → apps/dashboard/data/
+        # Vercel only serves apps/dashboard/. Mirror generated/ → apps/dashboard/data/
+        # so the dashboard can fetch /data/index.json from production.
+        run: |
+          mkdir -p apps/dashboard/data
+          cp generated/index.json          apps/dashboard/data/index.json          2>/dev/null || true
+          cp generated/search-index.json   apps/dashboard/data/search-index.json   2>/dev/null || true
+          cp generated/graph.json          apps/dashboard/data/graph.json          2>/dev/null || true
+          cp generated/embeddings-ready.json apps/dashboard/data/embeddings-ready.json 2>/dev/null || true
+
+      - name: Commit + push if changed
+        run: |
+          git config user.name  "atlas-bot"
+          git config user.email "bot@atlas.local"
+          git add -A content/reports/ cleaned/ generated/ apps/dashboard/data/ feedback/ratings.json feedback/analytics/ feedback/datasets/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          STAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          git commit -m "pipeline: refresh content+generated ($STAMP) [skip ci]"
+          git push
+
+      - name: Summary
+        run: |
+          echo "::group::Pipeline summary"
+          echo "Reports:    $(find content/reports -type f -name '*.md' 2>/dev/null | wc -l)"
+          echo "Cleaned:    $(find cleaned -type f -name '*.md' 2>/dev/null | wc -l)"
+          echo "Index size: $(stat -c%s generated/index.json 2>/dev/null || echo 0) bytes"
+          echo "Ratings:    $(jq '.ratings | length' feedback/ratings.json 2>/dev/null || echo 0)"
+          echo "::endgroup::"

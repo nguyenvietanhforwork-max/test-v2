@@ -1,0 +1,6 @@
+{
+  "generated_at": null,
+  "schema_version": 1,
+  "items": [],
+  "note": "Stub. Populated by `python scripts/build_index.py` once content/reports/*.md exist. While empty, the dashboard falls back to its inlined ITEMS array."
+}

@@ -1,0 +1,95 @@
+name: Deploy Sanity Check
+
+# Runs on every push to main BEFORE Vercel's auto-deploy completes.
+# Purpose: catch broken JSON / broken schemas / missing canonical dashboard
+# before they reach production. Does NOT deploy — Vercel's GitHub integration
+# handles that automatically.
+#
+# Failure here doesn't block Vercel (Vercel runs in parallel), but it shows
+# a red X on the commit and you can revert.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install minimal deps
+        run: pip install jsonschema pyyaml
+
+      - name: Canonical dashboard exists
+        run: |
+          if [ ! -f apps/dashboard/index.html ]; then
+            echo "::error::apps/dashboard/index.html is missing. Run scripts/cleanup-legacy.ps1 -Apply or copy news-dashboard-v2.html to apps/dashboard/index.html."
+            exit 1
+          fi
+          BYTES=$(stat -c%s apps/dashboard/index.html)
+          if [ "$BYTES" -lt 10000 ]; then
+            echo "::error::apps/dashboard/index.html is suspiciously small ($BYTES bytes). Expected ~80KB+."
+            exit 1
+          fi
+          echo "OK — apps/dashboard/index.html exists ($BYTES bytes)."
+
+      - name: Validate JSON Schemas
+        run: |
+          python - <<'PY'
+          import json, sys, pathlib
+          ok = True
+          for p in pathlib.Path("schemas").glob("*.schema.json"):
+              try:
+                  json.loads(p.read_text(encoding="utf-8"))
+                  print(f"  ✓ {p.name}")
+              except json.JSONDecodeError as e:
+                  print(f"  ✗ {p.name}: {e}", file=sys.stderr)
+                  ok = False
+          sys.exit(0 if ok else 1)
+          PY
+
+      - name: Validate generated/*.json
+        run: |
+          python - <<'PY'
+          import json, sys, pathlib
+          ok = True
+          for p in pathlib.Path("generated").glob("*.json"):
+              try:
+                  json.loads(p.read_text(encoding="utf-8"))
+                  print(f"  ✓ {p.name}")
+              except json.JSONDecodeError as e:
+                  print(f"  ✗ {p.name}: {e}", file=sys.stderr)
+                  ok = False
+          sys.exit(0 if ok else 1)
+          PY
+
+      - name: Validate every report frontmatter against schemas/report.schema.json
+        run: |
+          if [ ! -d content/reports ]; then
+            echo "No content/reports/ yet — skipping report validation."
+            exit 0
+          fi
+          python scripts/build_index.py --validate-only
+
+      - name: Confirm no node_modules / __pycache__ committed
+        run: |
+          if find . -type d \( -name node_modules -o -name __pycache__ -o -name .next \) -not -path "./legacy/*" 2>/dev/null | grep -q .; then
+            echo "::error::node_modules / __pycache__ / .next found in tree. Add to .gitignore + remove from index."
+            find . -type d \( -name node_modules -o -name __pycache__ -o -name .next \) -not -path "./legacy/*"
+            exit 1
+          fi
+          echo "Clean — no regeneratable junk in tree."
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "Sanity check complete. Vercel will auto-deploy from this commit in parallel."

@@ -1,0 +1,7 @@
+{
+  "generated_at": null,
+  "schema_version": 1,
+  "nodes": [],
+  "edges": [],
+  "note": "Stub. Built by `python scripts/build_graph.py` from entities and themes in content/reports/*.md frontmatter."
+}

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Auto-sync Dashboard</title>
+<meta http-equiv="refresh" content="10">
+<style>
+:root{color-scheme:dark}
+body{font-family:'Segoe UI',Tahoma,sans-serif;background:#0e1116;color:#e6edf3;padding:24px;max-width:920px;margin:auto}
+h1{margin:0 0 6px 0}.sub{color:#8b949e;margin-bottom:18px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px 18px;margin-bottom:16px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:4px 0;border-bottom:1px dashed #21262d}
+.row:last-child{border-bottom:none}.label{color:#8b949e}
+.mono{font-family:Consolas,'Courier New',monospace;font-size:13px;word-break:break-all}
+table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:6px 8px;border-bottom:1px solid #21262d;font-size:13px}
+th{color:#8b949e;font-weight:600}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.3px}
+.pill.success{background:#1f3a25;color:#3fb950}.pill.no-change{background:#1f2a3a;color:#58a6ff}
+.pill.error{background:#3a1f1f;color:#f85149}.pill.warn{background:#3a2f1f;color:#d29922}
+.pill.running{background:#2f2f3a;color:#bbb}.pill.init{background:#2f2f3a;color:#bbb}
+h3{margin:0 0 10px 0;font-size:14px;color:#8b949e;text-transform:uppercase;letter-spacing:.5px}
+</style>
+</head>
+<body>
+<h1>Auto-sync GitHub</h1>
+<div class="sub">Auto-refresh moi 10 giay. Du lieu nhung truc tiep boi auto-sync.ps1.</div>
+<div class="card" id="overview"></div>
+<div class="card">
+<h3>Recent events</h3>
+<table id="events"><thead><tr><th>Thoi gian</th><th>Status</th><th>Changes</th><th>Message</th></tr></thead><tbody></tbody></table>
+</div>
+<script>
+window.SYNC_STATUS = {"PID":36524,"Branch":"main","LastStatus":"no-change","LastAttemptAt":"2026-05-18T22:52:45.8071399+07:00","ConsecutiveFails":0,"StartedAt":"2026-05-18T21:37:37.4421229+07:00","LastFailureAt":null,"TotalFailures":0,"TotalCommits":0,"RepoPath":"E:\\Application downloads\\Value","LastChanges":0,"RemoteUrl":"https://github.com/nguyenvietanhforwork-max/test-v2.git","LastSuccessAt":"2026-05-18T22:52:45.8071399+07:00","LastMessage":"Khong co thay doi","Recent":[{"changes":0,"status":"no-change","message":"Khong co thay doi","ts":"2026-05-18 22:52:45"},{"changes":0,"status":"running","message":"Bat dau cycle","ts":"2026-05-18 22:52:45"},{"changes":0,"status":"no-change","message":"Khong co thay doi","ts":"2026-05-18 22:51:45"},{"changes":0,"status":"running","message":"Bat dau cycle","ts":"2026-05-18 22:51:45"},{"changes":0,"status":"no-change","message":"Khong co thay doi","ts":"2026-05-18 22:50:45"},{"changes":0,"status":"running","message":"Bat dau cycle","ts":"2026-05-18 22:50:45"},{"changes":0,"status":"no-change","message":"Khong co thay doi","ts":"2026-05-18 22:49:45"},{"changes":0,"status":"running","message":"Bat dau cycle","ts":"2026-05-18 22:49:45"},{"changes":0,"status":"no-change","message":"Khong co thay doi","ts":"2026-05-18 22:48:45"},{"changes":0,"status":"running","message":"Bat dau cycle","ts":"2026-05-18 22:48:45"},{"changes":0,"status":"no-change","message":"Khong co thay doi","ts":"2026-05-18 22:47:45"},{"changes":0,"status":"running","message":"Bat dau cycle","ts":"2026-05-18 22:47:45"},{"changes":0,"status":"no-change","message":"Khong co thay doi","ts":"2026-05-18 22:46:45"},{"changes":0,"status":"running","message":"Bat dau cycle","ts":"2026-05-18 22:46:45"},{"changes":0,"status":"no-change","message":"Khong co thay doi","ts":"2026-05-18 22:45:45"},{"changes":0,"status":"running","message":"Bat dau cycle","ts":"2026-05-18 22:45:45"},{"changes":0,"status":"no-change","message":"Khong co thay doi","ts":"2026-05-18 22:44:45"},{"changes":0,"status":"running","message":"Bat dau cycle","ts":"2026-05-18 22:44:45"},{"changes":0,"status":"no-change","message":"Khong co thay doi","ts":"2026-05-18 22:43:45"},{"changes":0,"status":"running","message":"Bat dau cycle","ts":"2026-05-18 22:43:45"}]};
+function esc(s){return String(s==null?'':s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+(function render(){
+  var s=window.SYNC_STATUS||{};var st=s.LastStatus||'init';
+  var pill='<span class="pill '+esc(st)+'">'+esc(st)+'</span>';
+  var rows=[
+    ['Status',pill,false],
+    ['Branch',esc(s.Branch||'-'),true],
+    ['Remote',esc(s.RemoteUrl||'-'),true],
+    ['Repo',esc(s.RepoPath||'-'),true],
+    ['Last attempt',esc(s.LastAttemptAt||'-'),false],
+    ['Last success',esc(s.LastSuccessAt||'-'),false],
+    ['Last failure',esc(s.LastFailureAt||'-'),false],
+    ['Total commits',esc(s.TotalCommits),false],
+    ['Total failures',esc(s.TotalFailures),false],
+    ['Consecutive fails',esc(s.ConsecutiveFails),false],
+    ['PID',esc(s.PID),true],
+    ['Last message',esc(s.LastMessage),true]
+  ];
+  document.getElementById('overview').innerHTML=rows.map(function(r){
+    return '<div class="row"><span class="label">'+r[0]+'</span><span'+(r[2]?' class="mono"':'')+'>'+r[1]+'</span></div>';
+  }).join('');
+  var ev=(s.Recent||[]).map(function(e){
+    return '<tr><td class="mono">'+esc(e.ts)+'</td><td><span class="pill '+esc(e.status)+'">'+esc(e.status)+'</span></td><td>'+esc(e.changes)+'</td><td class="mono">'+esc(e.message)+'</td></tr>';
+  }).join('');
+  document.querySelector('#events tbody').innerHTML=ev||'<tr><td colspan="4" class="label">Chua co event nao.</td></tr>';
+})();
+</script>
+</body>
+</html>

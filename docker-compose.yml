@@ -127,17 +127,24 @@ services:
     depends_on: [minio]
     ports: ["4000:4000"]
 
-  web:
-    build: { context: ./apps/web, dockerfile: ../../infra/docker/web.Dockerfile }
+  # NOTE: 'web' service removed in v3 restructure (2026-05-18).
+  # The canonical dashboard is now the static single-file at apps/dashboard/index.html.
+  # Serve it locally with any static server:
+  #   python -m http.server 3000 --directory apps/dashboard
+  # Or just open apps/dashboard/index.html directly in a browser.
+  # Production: Vercel serves apps/dashboard/ — see vercel.json.
+  # Retired Next.js dashboard lives in legacy/nextjs-dashboard/web/ (ADR-002).
+
+  dashboard:
+    image: python:3.12-alpine
     restart: unless-stopped
-    environment:
-      NEXT_PUBLIC_API_URL: http://localhost:8000/api/v1
-      NEXT_PUBLIC_WS_URL: ws://localhost:8000/ws/stream
     depends_on: [api]
     ports: ["3000:3000"]
     volumes:
-      - ./apps/web:/app
-    command: ["pnpm", "dev"]
+      - ./apps/dashboard:/app/dashboard:ro
+      - ./generated:/app/generated:ro
+    working_dir: /app
+    command: ["python", "-m", "http.server", "3000"]
 
 volumes:
   pg_data:
