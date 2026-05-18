@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Intelligence Platform — News Dashboard</title>
+<style>
+  :root {
+    --bg: #0b0d12;
+    --panel: #11141b;
+    --panel-2: #161a23;
+    --border: #1f2530;
+    --border-2: #2a3140;
+    --text: #e6e9ef;
+    --muted: #8a93a3;
+    --accent: #7aa2ff;
+    --accent-2: #5eead4;
+    --danger: #f87171;
+    --warn: #fbbf24;
+    --good: #34d399;
+    --chip: #1e2330;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--text); }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif; margin: 0; line-height: 1.5; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    backdrop-filter: blur(14px); background: rgba(11,13,18,.78);
+    border-bottom: 1px solid var(--border);
+  }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 18px 24px; }
+  .title-row { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .title { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+  .subtitle { color: var(--muted); font-size: 13px; }
+  .stat { color: var(--muted); font-size: 13px; }
+  .stat b { color: var(--text); font-weight: 600; }
+
+  .controls { margin-top: 14px; display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: center; }
+  .search {
+    background: var(--panel-2); border: 1px solid var(--border-2); border-radius: 10px;
+    padding: 10px 14px; color: var(--text); font-size: 14px; width: 100%;
+  }
+  .search:focus { outline: none; border-color: var(--accent); }
+  select {
+    background: var(--panel-2); color: var(--text); border: 1px solid var(--border-2);
+    border-radius: 10px; padding: 10px 12px; font-size: 14px;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .chip {
+    background: var(--chip); color: var(--text); border: 1px solid var(--border-2);
+    border-radius: 999px; padding: 6px 12px; font-size: 13px; cursor: pointer;
+    user-select: none; transition: all .15s;
+  }
+  .chip:hover { border-color: var(--accent); }
+  .chip.active { background: var(--accent); color: #07101e; border-color: var(--accent); font-weight: 600; }
+  .chip .count { opacity: .65; margin-left: 6px; font-variant-numeric: tabular-nums; }
+  .chip.active .count { opacity: .8; }
+
+  main.wrap { padding-top: 22px; padding-bottom: 60px; }
+  .section-title { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin: 28px 0 10px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+    padding: 16px 18px; transition: border-color .15s, transform .15s;
+    cursor: pointer; display: flex; flex-direction: column; gap: 10px;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .card.open { border-color: var(--accent); background: var(--panel-2); }
+  .card-meta { display: flex; gap: 10px; align-items: center; font-size: 12px; color: var(--muted); }
+  .card-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--muted); }
+  .card-cat {
+    display: inline-block; padding: 2px 8px; border-radius: 6px;
+    font-size: 11px; font-weight: 600; letter-spacing: .03em;
+  }
+  .cat-tax       { background: rgba(251,191,36,.16); color: var(--warn); }
+  .cat-trade     { background: rgba(94,234,212,.14); color: var(--accent-2); }
+  .cat-company   { background: rgba(122,162,255,.16); color: var(--accent); }
+  .cat-market    { background: rgba(248,113,113,.14); color: var(--danger); }
+  .cat-energy    { background: rgba(253,224,71,.14); color: #fde047; }
+  .cat-intl      { background: rgba(190,150,255,.18); color: #c4b5fd; }
+  .cat-other     { background: rgba(148,163,184,.18); color: #cbd5e1; }
+  .card-title { font-size: 15.5px; font-weight: 600; letter-spacing: -0.005em; }
+  .card-desc { font-size: 13.5px; color: #c2c8d4; }
+  .card-footer { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); margin-top: auto; padding-top: 6px; }
+  .card-footer .source { max-width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card-footer .author { font-weight: 500; color: #aab4c5; }
+  .card-detail {
+    display: none; margin-top: 10px; padding-top: 12px; border-top: 1px dashed var(--border-2);
+    font-size: 13px; color: #d2d7e2;
+  }
+  .card.open .card-detail { display: block; }
+  .open-link {
+    display: inline-block; margin-top: 10px; padding: 6px 12px; border-radius: 8px;
+    background: var(--accent); color: #07101e; font-weight: 600; font-size: 12.5px;
+  }
+  .open-link:hover { text-decoration: none; opacity: .9; }
+
+  .empty {
+    text-align: center; color: var(--muted); padding: 60px 20px; border: 1px dashed var(--border-2);
+    border-radius: 12px; margin-top: 20px;
+  }
+  .footer { color: var(--muted); font-size: 12px; margin-top: 40px; text-align: center; }
+  .footer code { background: var(--panel-2); padding: 2px 6px; border-radius: 4px; color: #aab4c5; }
+  @media (max-width: 640px) {
+    .controls { grid-template-columns: 1fr; }
+    .title { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="title-row">
+      <span class="title">📰 Intelligence Platform — News Dashboard</span>
+      <span class="subtitle">Snapshot from <code style="background:var(--panel-2);padding:2px 6px;border-radius:4px;color:#aab4c5">E:/Application downloads/Value/raw/</code></span>
+      <span class="stat" id="stat-line"></span>
+    </div>
+    <div class="controls">
+      <input id="q" class="search" placeholder="🔍  Tìm theo tiêu đề, tác giả, mô tả, nguồn…" autocomplete="off" />
+      <select id="sort">
+        <option value="newest">Mới nhất</option>
+        <option value="oldest">Cũ nhất</option>
+        <option value="title">Tên A→Z</option>
+      </select>
+      <select id="age">
+        <option value="all">Tất cả</option>
+        <option value="news">Chỉ tin mới (raw/news/)</option>
+        <option value="archive">Chỉ archive (raw/old news/)</option>
+      </select>
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="results"></div>
+  <div class="footer">
+    Dashboard tĩnh — đọc từ snapshot của <code>raw/</code>.
+    Để có cập nhật real-time + summarization tự động, chạy: <code>pwsh ./intelligence-platform/scripts/start-local.ps1</code>.
+  </div>
+</main>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────
+// Data baked from the user's raw/ folder at session time.
+// Categories: tax, trade, company, market, energy, intl, other
+// "age" field: news = raw/news/, archive = raw/old news/, root = raw/ root
+// ─────────────────────────────────────────────────────────────────────────
+const ITEMS = [
+  // ── raw/news/ (current, watched by ingestion service) ──
+  { title:"4 thủ tục hành chính được sửa đổi, bổ sung trong lĩnh vực xây dựng",
+    desc:"Bộ Xây dựng công bố sửa đổi 4 thủ tục hành chính nhằm tạo thuận lợi cho cá nhân, tổ chức trong hoạt động xây dựng, bao gồm cấp chứng chỉ và giấy phép cho nhà thầu.",
+    author:"Thanh Xuân", source:"vneconomy.vn", published:"2026-05-15", cat:"tax", age:"news",
+    url:"https://vneconomy.vn/4-thu-tuc-hanh-chinh-duoc-sua-doi-bo-sung-trong-linh-vuc-xay-dung.htm" },
+
+  { title:"Cơ quan thuế chỉ rõ 6 chiêu hộ kinh doanh né thanh toán, cảnh báo rủi ro pháp lý",
+    desc:"Cơ quan thuế chỉ ra các hình thức thanh toán nhằm né đối chiếu dữ liệu đang khiến hộ kinh doanh đối mặt với rủi ro lớn về thuế, hóa đơn và trách nhiệm pháp lý.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"tax", age:"news",
+    url:"https://vietstock.vn/2026/05/co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-thanh-toan-canh-bao-rui-ro-phap-ly-758-1442812.htm" },
+
+  { title:"Thuế VAT 'mỗi nơi một kiểu', doanh nghiệp gỗ lo đứt nguồn cung gỗ rừng trồng",
+    desc:"Liên quan đến thuế VAT trong ngành gỗ, doanh nghiệp cho biết mỗi địa phương đang làm một kiểu, khiến doanh nghiệp gặp khó và e ngại trong thu mua gỗ rừng trồng.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"tax", age:"news",
+    url:"https://vietstock.vn/2026/05/thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-dut-nguon-cung-go-rung-trong-758-1442802.htm" },
+
+  { title:"Luật thuế mới sắp có hiệu lực: 10 hành vi dễ bị quy là trốn thuế",
+    desc:"Cơ quan thuế lưu ý 10 hành vi bị xác định là trốn thuế theo Luật Quản lý thuế 2025 sẽ có hiệu lực từ ngày 1/7, người nộp thuế cần đặc biệt lưu ý.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-12", cat:"tax", age:"news",
+    url:"https://vietstock.vn/2026/05/luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-quy-la-tron-thue-758-1441179.htm" },
+
+  { title:"Quy định thời điểm xuất hóa đơn: Cần tháo gỡ vướng mắc",
+    desc:"Việc áp dụng cứng nhắc quy định thời điểm lập hóa đơn đang đẩy nhiều doanh nghiệp, hộ kinh doanh vào thế khó, làm tăng chi phí và nguy cơ bị xử phạt rất nặng.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-12", cat:"tax", age:"news",
+    url:"https://vietstock.vn/2026/05/quy-dinh-thoi-diem-xuat-hoa-don-can-thao-go-vuong-mac-758-1441170.htm" },
+
+  { title:"Sửa Luật Điện lực (2026) — Bài toán hài hòa lợi ích ngành điện và người tiêu dùng",
+    desc:"Dự thảo lần đầu đặt vấn đề cho phép phân bổ chi phí hợp lý chưa được tính đủ vào giá bán lẻ điện ở các kỳ điều chỉnh tiếp theo, sau khi EVN bị lỗ lớn 2022-2023.",
+    author:"Năng lượng Việt Nam Online", source:"nangluongvietnam.vn", published:"2026-05-15", cat:"energy", age:"news",
+    url:"https://nangluongvietnam.vn/sua-luat-dien-luc-nam-2026-phan-tich-bai-toan-hai-hoa-loi-ich-nganh-dien-va-nguoi-tieu-dung-dien-36039.html" },
+
+  { title:"Xuất khẩu Hà Tĩnh tăng tốc, thép tiếp tục giữ vai trò \"trụ cột\"",
+    desc:"Kim ngạch xuất khẩu Hà Tĩnh tháng 4/2026 đạt 132,5 triệu USD, chủ lực từ thép và phôi thép, tạo đà cho mục tiêu 2,2 tỷ USD năm nay.",
+    author:"Nguyễn Thuấn", source:"vneconomy.vn", published:"2026-05-06", cat:"trade", age:"news",
+    url:"https://vneconomy.vn/xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-tro-tru-cot.htm" },
+
+  { title:"Xuất khẩu nông lâm thủy sản đạt hơn 23 tỷ USD, giữ vững đà tăng trưởng",
+    desc:"Xuất khẩu nông, lâm, thủy sản 4 tháng đầu năm 2026 đạt 23,04 tỷ USD, tăng 5,4% so với cùng kỳ, dù tháng 4 có dấu hiệu giảm nhẹ.",
+    author:"Chu Khôi", source:"vneconomy.vn", published:"2026-05-06", cat:"trade", age:"news",
+    url:"https://vneconomy.vn/xuat-khau-nong-lam-thuy-san-dat-hon-23-ty-usd-giu-vung-da-tang-truong.htm" },
+
+  { title:"Nông sản Việt cần thích ứng với Nghị định 280 của Trung Quốc và quy định RCEP mới",
+    desc:"Bộ Nông nghiệp tổ chức hội nghị tại Đắk Lắk, cập nhật quy định mới về an toàn thực phẩm và kiểm dịch trong RCEP và Nghị định 280 của Trung Quốc.",
+    author:"Chu Khôi", source:"vneconomy.vn", published:"2026-05-14", cat:"trade", age:"news",
+    url:"https://vneconomy.vn/nong-san-viet-can-thich-ung-voi-nghi-dinh-280-cua-trung-quoc-va-quy-dinh-rcep-moi.htm" },
+
+  { title:"Nâng cấp chuỗi cung ứng toàn cầu tại Việt Nam — câu chuyện Intel và Fab 9",
+    desc:"Tại Vietnam Connect Forum 2026, Intel và Fab 9 chia sẻ về sự liên kết trong chuỗi cung ứng công nghệ cao, mở ra cơ hội cho doanh nghiệp Việt.",
+    author:"Khánh Vy", source:"vneconomy.vn", published:"2026-05-14", cat:"company", age:"news",
+    url:"https://vneconomy.vn/nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhin-tu-cau-chuyen-hop-luc-giua-intel-va-fab-9.htm" },
+
+  { title:"Vingroup lập công ty robot phẫu thuật vốn 300 tỷ đồng",
+    desc:"Tập đoàn Vingroup (HOSE: VIC) thông qua kế hoạch góp vốn thành lập CTCP VinSurgical — robot phẫu thuật, thiết bị y tế thông minh và giải pháp y khoa công nghệ cao.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-14", cat:"company", age:"news",
+    url:"https://vietstock.vn/2026/05/vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-dong-737-1442394.htm" },
+
+  { title:"Chubb Life Việt Nam báo lỗ hơn 171 tỷ năm 2025, lợi nhuận gộp bảo hiểm lao dốc 90%",
+    desc:"Chubb Life Việt Nam báo lỗ hơn 171 tỷ đồng. Doanh nghiệp đã thắt chặt chi tiêu, cắt giảm gần một nửa chi phí khen thưởng đại lý.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"company", age:"news",
+    url:"https://vietstock.vn/2026/05/chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-loi-nhuan-gop-bao-hiem-lao-doc-90-737-1442771.htm" },
+
+  { title:"Phó TGĐ Vietnam Airlines: 2026 dự kiến lỗ luỹ kế khoảng 30.000 tỷ nếu giữ sản lượng",
+    desc:"\"Vietnam Airlines có lợi nhuận một ít trong quý 1 thì sang quý 2 đã lỗ rồi, và 6 tháng đầu năm là sẽ lỗ một ít.\" - Ông Tuấn tiết lộ.",
+    author:"CafeF", source:"cafef.vn", published:"2026-05-15", cat:"company", age:"news",
+    url:"https://cafef.vn/pho-tgd-vietnam-airlines-nam-2026-du-kien-lo-khoang-30000-ty-neu-giu-nguyen-san-luong-khai-thac-nhu-ke-hoach-188260515103741235.chn" },
+
+  { title:"Doanh nghiệp phân đạm tỏa sáng khi giá dầu \"nhảy múa\"",
+    desc:"Giá dầu thế giới tăng trên 120 USD/thùng do xung đột Trung Đông; eo biển Hormuz đóng cửa khiến >30% sản lượng phân bón toàn cầu nghẽn cung. Giá urê Q1/2026 tăng mạnh.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"company", age:"news",
+    url:"https://vietstock.vn/2026/05/doanh-nghiep-phan-dam-toa-sang-khi-gia-dau-nhay-mua-737-1442211.htm" },
+
+  { title:"DatVietVAC và cuộc đua khai thác IP 360 độ trong nền kinh tế fandom",
+    desc:"Có một thay đổi lớn đang diễn ra trong ngành giải trí toàn cầu: nội dung không còn là đích đến cuối cùng, mà trở thành điểm khởi đầu cho cả một hệ sinh thái tiêu dùng văn hóa.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"company", age:"news",
+    url:"https://vietstock.vn/2026/05/datvietvac-va-cuoc-dua-khai-thac-ip-360-do-trong-nen-kinh-te-fandom-737-1442402.htm" },
+
+  { title:"'Đưa đường, dẫn lối' cho trái phiếu doanh nghiệp",
+    desc:"Nền kinh tế cần 38,5 triệu tỉ đồng vốn cho tăng trưởng hai con số. Xây dựng thị trường trái phiếu doanh nghiệp minh bạch, định giá rủi ro là yêu cầu bắt buộc.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-15", cat:"market", age:"news",
+    url:"https://vietstock.vn/2026/05/8216dua-duong-dan-loi8217-cho-trai-phieu-doanh-nghiep-3118-1442768.htm" },
+
+  { title:"Thách thức với sandbox cho FinTech",
+    desc:"Nghị định 94/2025/NĐ-CP cho phép áp dụng cơ chế thử nghiệm có kiểm soát (sandbox) trong lĩnh vực FinTech. Vai trò sandbox thể hiện trong nhiều văn bản pháp lý 2025.",
+    author:"Vietstock", source:"vietstock.vn", published:"2026-05-13", cat:"market", age:"news",
+    url:"https://vietstock.vn/2026/05/thach-thuc-voi-sandbox-cho-fintech-757-1441792.htm" },
+
+  { title:"Exclusive: US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough",
+    desc:"US cleared ~10 Chinese firms to buy Nvidia's H200 chip, but no delivery has been made. CEO Jensen Huang joined Trump's Beijing trip to unlock the stalled deal.",
+    author:"Reuters", source:"reuters.com", published:"2026-05-14", cat:"intl", age:"news",
+    url:"https://www.reuters.com/business/retail-consumer/us-clears-h200-chip-sales-10-china-firms-nvidia-ceo-looks-breakthrough-2026-05-14/" },
+
+  { title:"Tax refunds help to lift US retail sales; drag from rising inflation looms",
+    desc:"U.S. retail sales increased solidly for a third straight month in April, though part of the rise was due to a sharp rise in inflation since the start of the U.S.-backed war with Iran.",
+    author:"Lucia Mutikani / Reuters", source:"reuters.com", published:"2026-05-14", cat:"intl", age:"news",
+    url:"https://www.reuters.com/business/us-retail-sales-increase-again-april-partly-lifted-by-higher-prices-2026-05-14/" },
+
+  // ── raw/ root (not auto-watched by ingestion service) ──
+  { title:"VASEP kiến nghị gỡ rào cản để xuất khẩu thủy sản đạt 12 tỷ USD trong năm 2026",
+    desc:"Xuất khẩu thủy sản 4T/2026 đạt 3,7 tỷ USD (+15% YoY). Trung Quốc +52,3%, Hoa Kỳ -7,4%. VASEP kiến nghị tháo gỡ rào cản thể chế, nguyên liệu, thủ tục hành chính.",
+    author:"Chu Khôi", source:"vneconomy.vn", published:"2026-05-12", cat:"trade", age:"root",
+    url:"https://vneconomy.vn/vasep-kien-nghi-go-rao-can-de-xuat-khau-thuy-san-dat-12-ty-usd-trong-nam-2026.htm" },
+
+  { title:"FedEx bets on Viettel Post to strengthen capabilities in Vietnam",
+    desc:"The newly announced partnership between FedEx and Viettel Post signals a shift toward more integrated logistics solutions in Vietnam — bridging operational gaps and unlocking growth.",
+    author:"Vietnam Investment Review", source:"vir.com.vn", published:"2026-04-28", cat:"company", age:"root",
+    url:"https://vir.com.vn/fedex-bets-on-viettel-post-to-strengthen-capabilities-in-vietnam-151485.html" },
+
+  { title:"Why the world needs China to save more, not less",
+    desc:"The IMF assumes China should save less. Jeffrey Sachs argues China's saving is key to financing the developing world's need for green infrastructure.",
+    author:"Jeffrey D. Sachs", source:"scmp.com", published:"2026-05-13", cat:"intl", age:"root",
+    url:"https://www.scmp.com/opinion/china-opinion/article/3353281/why-world-needs-china-save-more-not-less" },
+
+  { title:"FDI tại Việt Nam: Hướng tới lợi ích công bằng và bền vững",
+    desc:"Việt Nam nổi lên như điểm đến FDI chiến lược nhờ chính sách linh hoạt và nền tảng vĩ mô ổn định, hướng tới lợi ích công bằng và bền vững.",
+    author:"TS. Võ Đình Trí", source:"vneconomy.vn", published:"2026-05-13", cat:"intl", age:"root",
+    url:"https://vneconomy.vn/fdi-tai-viet-nam-huong-toi-loi-ich-cong-bang-va-ben-vung.htm" },
+
+  // ── raw/old news/ (archive sample) ──
+  { title:"Tỷ phú Phạm Nhật Vượng lập thêm một \"Vin\" mới, chuyên về công nghệ kỹ thuật cao",
+    desc:"Vingroup thành lập công ty con VinSurgical với vốn điều lệ 300 tỷ đồng, phát triển robot phẫu thuật và thiết bị y tế thông minh.",
+    author:"CafeF", source:"cafef.vn", published:"2026-05-14", cat:"company", age:"archive",
+    url:"https://cafef.vn/ty-phu-pham-nhat-vuong-lap-them-mot-vin-moi-chuyen-ve-cong-nghe-ky-thuat-cao-188260514001513171.chn" },
+
+  { title:"Vì sao VinFast ra giá 530 triệu USD khi chuyển nhượng mảng sản xuất xe tại Việt Nam?",
+    desc:"Thương vụ VinFast chuyển nhượng mảng sản xuất tại Việt Nam với mức giá 530 triệu USD, cao gấp 5 lần định giá trung bình của đơn vị tư vấn độc lập, đệ trình lên SEC.",
+    author:"CafeF", source:"cafef.vn", published:"2026-05-14", cat:"company", age:"archive",
+    url:"https://cafef.vn/vi-sao-vinfast-ra-gia-530-trieu-usd-khi-chuyen-nhuong-mang-san-xuat-xe-tai-viet-nam-188260514001327032.chn" },
+
+  { title:"Hòa Phát khởi công KCN đầu tiên tại Hải Phòng, quy mô 245ha, vốn ~3.400 tỷ đồng",
+    desc:"Hạ tầng kỹ thuật giai đoạn 1 sẽ hoàn thành và bàn giao mặt bằng cho nhà đầu tư đầu tiên từ quý IV/2026.",
+    author:"CafeF", source:"cafef.vn", published:"2026-05-14", cat:"company", age:"archive",
+    url:"https://cafef.vn/hoa-phat-khoi-cong-kcn-dau-tien-tai-hai-phong-quy-mo-245ha-tong-von-dau-tu-gan-3400-ty-dong-188260514110527194.chn" },
+
+  { title:"EVN có thể sẽ tăng giá điện để xử lý khoản lỗ lũy kế gần 45.000 tỷ đồng",
+    desc:"Giá điện trong tương lai có thể phải \"gánh\" thêm các chi phí đầu vào phát sinh từ nhiều năm trước.",
+    author:"CafeF", source:"cafef.vn", published:"2026-05-13", cat:"energy", age:"archive",
+    url:"https://cafef.vn/tap-doan-dien-luc-viet-nam-evn-co-the-se-tang-gia-dien-de-xu-ly-khoan-lo-luy-ke-gan-45000-ty-dong-18826051319315621.chn" },
+
+  { title:"Nuclear Energy Renaissance in Southeast Asia: A Role for China?",
+    desc:"As Southeast Asian countries ponder the use of nuclear power, China looks set to be a key player.",
+    author:"Fulcrum.sg", source:"fulcrum.sg", published:"2026-05-13", cat:"intl", age:"archive",
+    url:"https://fulcrum.sg/nuclear-energy-renaissance-in-southeast-asia-a-role-for-china/" },
+
+  { title:"Vượt Thái Lan và Singapore, Việt Nam dẫn đầu Đông Nam Á về tăng trưởng khách quốc tế",
+    desc:"Với mức tăng gần 15% lượng khách quốc tế trong 4 tháng đầu năm, Việt Nam là điểm đến duy nhất tại Đông Nam Á duy trì tăng trưởng hai con số.",
+    author:"VietnamBiz", source:"vietnambiz.vn", published:"2026-05-11", cat:"trade", age:"archive",
+    url:"https://vietnambiz.vn/vuot-thai-lan-va-singapore-viet-nam-dan-dau-dong-nam-a-ve-tang-truong-khach-quoc-te-2026511105555324.htm" },
+];
+
+const CATS = [
+  { id:"tax",     label:"Thuế & Pháp lý" },
+  { id:"trade",   label:"Xuất khẩu & Thương mại" },
+  { id:"company", label:"Doanh nghiệp" },
+  { id:"market",  label:"Tài chính & Thị trường" },
+  { id:"energy",  label:"Năng lượng" },
+  { id:"intl",    label:"Quốc tế" },
+];
+
+// ── State ────────────────────────────────────────────────────────────────
+const state = {
+  q: "",
+  cats: new Set(),
+  sort: localStorage.getItem("ip-sort") || "newest",
+  age: localStorage.getItem("ip-age") || "all",
+  open: new Set(),
+};
+
+// ── Rendering ────────────────────────────────────────────────────────────
+function fmtDate(s) {
+  // 2026-05-15 → "15 May 2026"
+  const [y,m,d] = s.split("-");
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  return `${parseInt(d,10)} ${months[parseInt(m,10)-1]} ${y}`;
+}
+
+function renderChips() {
+  const counts = {};
+  for (const c of CATS) counts[c.id] = 0;
+  for (const it of ITEMS) counts[it.cat] = (counts[it.cat]||0) + 1;
+  const wrap = document.getElementById("chips");
+  wrap.innerHTML = "";
+  for (const c of CATS) {
+    const el = document.createElement("div");
+    el.className = "chip" + (state.cats.has(c.id) ? " active" : "");
+    el.innerHTML = `${c.label}<span class="count">${counts[c.id]||0}</span>`;
+    el.onclick = () => {
+      if (state.cats.has(c.id)) state.cats.delete(c.id);
+      else state.cats.add(c.id);
+      renderChips(); renderResults();
+    };
+    wrap.appendChild(el);
+  }
+  // "All" reset chip
+  if (state.cats.size > 0) {
+    const reset = document.createElement("div");
+    reset.className = "chip";
+    reset.style.borderColor = "var(--accent)";
+    reset.style.color = "var(--accent)";
+    reset.innerHTML = "× Xóa lọc";
+    reset.onclick = () => { state.cats.clear(); renderChips(); renderResults(); };
+    wrap.appendChild(reset);
+  }
+}
+
+function matches(it) {
+  if (state.cats.size > 0 && !state.cats.has(it.cat)) return false;
+  if (state.age !== "all" && it.age !== state.age) return false;
+  if (state.q) {
+    const hay = (it.title + " " + it.desc + " " + it.author + " " + it.source).toLowerCase();
+    if (!hay.includes(state.q.toLowerCase())) return false;
+  }
+  return true;
+}
+
+function renderResults() {
+  let list = ITEMS.filter(matches);
+  if (state.sort === "newest") list.sort((a,b) => b.published.localeCompare(a.published));
+  else if (state.sort === "oldest") list.sort((a,b) => a.published.localeCompare(b.published));
+  else if (state.sort === "title") list.sort((a,b) => a.title.localeCompare(b.title));
+
+  const newsCount = ITEMS.filter(x => x.age==="news").length;
+  const archiveCount = ITEMS.filter(x => x.age==="archive").length;
+  const rootCount = ITEMS.filter(x => x.age==="root").length;
+  document.getElementById("stat-line").innerHTML =
+    `<b>${ITEMS.length}</b> bài · <b>${newsCount}</b> trong news/ · <b>${rootCount}</b> tại raw/ · <b>${archiveCount}</b> archive · Hiển thị <b>${list.length}</b>`;
+
+  const root = document.getElementById("results");
+  root.innerHTML = "";
+  if (list.length === 0) {
+    root.innerHTML = `<div class="empty">Không có tin nào khớp bộ lọc.</div>`;
+    return;
+  }
+
+  // Group by publish date
+  const byDate = new Map();
+  for (const it of list) {
+    if (!byDate.has(it.published)) byDate.set(it.published, []);
+    byDate.get(it.published).push(it);
+  }
+  // already sorted by sort key above, but keep dates in that order
+  const dates = state.sort === "title" ? [...byDate.keys()] : [...byDate.keys()];
+
+  for (const date of dates) {
+    const sec = document.createElement("div");
+    sec.className = "section-title";
+    sec.textContent = state.sort === "title" ? "" : fmtDate(date);
+    if (state.sort !== "title") root.appendChild(sec);
+
+    const grid = document.createElement("div");
+    grid.className = "grid";
+    for (const it of byDate.get(date)) {
+      const key = it.url || it.title;
+      const card = document.createElement("article");
+      card.className = "card" + (state.open.has(key) ? " open" : "");
+      card.onclick = (e) => {
+        if (e.target.tagName === "A") return;
+        if (state.open.has(key)) state.open.delete(key); else state.open.add(key);
+        renderResults();
+      };
+      const catLabel = CATS.find(c => c.id === it.cat)?.label || "Khác";
+      const ageBadge = it.age === "news" ? "📥 raw/news/" : it.age === "root" ? "📁 raw/" : "🗄 archive";
+      card.innerHTML = `
+        <div class="card-meta">
+          <span class="card-cat cat-${it.cat}">${catLabel}</span>
+          <span class="dot"></span>
+          <span>${fmtDate(it.published)}</span>
+          <span class="dot"></span>
+          <span>${ageBadge}</span>
+        </div>
+        <div class="card-title">${escapeHtml(it.title)}</div>
+        <div class="card-desc">${escapeHtml(it.desc)}</div>
+        <div class="card-footer">
+          <span class="source">📰 ${escapeHtml(it.source)}</span>
+          <span class="author">${escapeHtml(it.author)}</span>
+        </div>
+        <div class="card-detail">
+          <a class="open-link" href="${it.url}" target="_blank" rel="noreferrer noopener">Đọc nguồn gốc →</a>
+        </div>
+      `;
+      grid.appendChild(card);
+    }
+    root.appendChild(grid);
+  }
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+}
+
+// ── Wire up ──────────────────────────────────────────────────────────────
+document.getElementById("q").addEventListener("input", e => { state.q = e.target.value; renderResults(); });
+document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; localStorage.setItem("ip-sort", state.sort); renderResults(); });
+document.getElementById("age").addEventListener("change", e => { state.age = e.target.value; localStorage.setItem("ip-age", state.age); renderResults(); });
+document.getElementById("sort").value = state.sort;
+document.getElementById("age").value = state.age;
+
+renderChips();
+renderResults();
+</script>
+</body>
+</html>

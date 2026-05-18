@@ -1,0 +1,1527 @@
+<!doctype html>
+<html lang="en" data-theme="cinema">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Atlas · Intelligence Terminal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ATLAS · INTELLIGENCE TERMINAL
+   SoulsLab cinematic dark × Bloomberg Terminal density
+   ============================================================ */
+
+:root[data-theme="cinema"] {
+  --bg-0: #07080B;
+  --bg-1: #0C0E13;
+  --bg-2: #12151C;
+  --bg-3: #1A1E27;
+  --bg-glass: rgba(18, 21, 28, 0.62);
+
+  --line-1: rgba(255,255,255,0.04);
+  --line-2: rgba(255,255,255,0.08);
+  --line-3: rgba(255,255,255,0.14);
+  --line-strong: rgba(255,255,255,0.22);
+
+  --fg-0: #F5F7FA;
+  --fg-1: #C4CAD3;
+  --fg-2: #8089A0;
+  --fg-3: #525A70;
+
+  --accent: #E8B864;
+  --accent-soft: rgba(232,184,100,0.12);
+  --accent-line: rgba(232,184,100,0.32);
+  --cyan: #6FC4E0;
+  --violet: #9D7BE8;
+  --pos: #4ADE80;
+  --neg: #F87171;
+  --warn: #FBBF24;
+
+  --ind-banking: #6FC4E0;
+  --ind-real-estate: #E8B864;
+  --ind-technology: #9D7BE8;
+  --ind-energy: #F59E0B;
+  --ind-pharma: #4ADE80;
+  --ind-automotive: #F87171;
+  --ind-retail: #FB923C;
+  --ind-steel: #94A3B8;
+  --ind-securities: #2DD4BF;
+  --ind-manufacturing: #A78BFA;
+  --ind-logistics: #38BDF8;
+  --ind-agriculture: #84CC16;
+  --ind-construction: #FACC15;
+  --ind-utilities: #60A5FA;
+  --ind-aviation: #C084FC;
+  --ind-fnb: #F472B6;
+  --ind-insurance: #22D3EE;
+  --ind-chemicals: #FB7185;
+  --ind-textiles: #E879F9;
+  --ind-mining: #D4D4D8;
+  --ind-telecom: #818CF8;
+  --ind-shipping: #4FD1C5;
+  --ind-healthcare: #34D399;
+  --ind-education: #FCD34D;
+  --ind-fisheries: #67E8F9;
+  --ind-industrial-parks: #FDE047;
+  --ind-consumer-goods: #F0ABFC;
+  --ind-other: #A1A1AA;
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg-0); color: var(--fg-0); height: 100%; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(232,184,100,0.06), transparent 60%),
+    radial-gradient(900px 500px at 90% 110%, rgba(157,123,232,0.05), transparent 60%),
+    var(--bg-0);
+}
+
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+.serif { font-family: 'Instrument Serif', serif; font-style: italic; }
+
+/* ---------- Layout shell ---------- */
+
+.shell {
+  display: grid;
+  grid-template-columns: 240px 1fr 320px;
+  grid-template-rows: 56px 1fr;
+  height: 100vh;
+}
+
+.topbar {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--line-1);
+  background: linear-gradient(180deg, rgba(12,14,19,0.96), rgba(12,14,19,0.78));
+  backdrop-filter: blur(24px) saturate(140%);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -0.02em; }
+.brand-mark {
+  width: 24px; height: 24px;
+  background: conic-gradient(from 220deg, var(--accent), var(--violet), var(--cyan), var(--accent));
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px var(--line-strong) inset, 0 4px 18px rgba(232,184,100,0.18);
+  position: relative;
+}
+.brand-mark::after {
+  content: ""; position: absolute; inset: 5px;
+  background: var(--bg-0); border-radius: 3px;
+}
+.brand-text { font-size: 15px; }
+.brand-text .dim { color: var(--fg-2); font-weight: 500; }
+
+.topbar-spacer { flex: 1; }
+.topbar-meta { display: flex; align-items: center; gap: 16px; color: var(--fg-2); font-size: 12.5px; }
+.topbar-meta .pip { color: var(--fg-3); }
+
+.live-dot {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(74,222,128,0.08);
+  border: 1px solid rgba(74,222,128,0.18);
+  color: var(--pos);
+  font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.live-dot::before {
+  content: ""; width: 6px; height: 6px; border-radius: 999px;
+  background: var(--pos);
+  box-shadow: 0 0 0 0 rgba(74,222,128,0.6);
+  animation: pulse 1.6s var(--ease-out) infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); }
+  100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+}
+
+.kbd {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  background: var(--bg-2);
+  border: 1px solid var(--line-2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--fg-1);
+}
+
+.cmd-trigger {
+  display: flex; align-items: center; gap: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--line-2);
+  background: var(--bg-2);
+  color: var(--fg-2);
+  font-size: 13px;
+  cursor: pointer;
+  transition: border 220ms var(--ease-out), background 220ms var(--ease-out);
+  min-width: 280px;
+}
+.cmd-trigger:hover { border-color: var(--line-3); background: var(--bg-3); }
+.cmd-trigger svg { color: var(--fg-2); }
+
+.icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--line-2);
+  background: var(--bg-2);
+  color: var(--fg-1);
+  cursor: pointer;
+  transition: all 220ms var(--ease-out);
+}
+.icon-btn:hover { border-color: var(--line-3); background: var(--bg-3); }
+
+/* ---------- Sidebar ---------- */
+
+.sidebar {
+  border-right: 1px solid var(--line-1);
+  padding: 24px 12px;
+  display: flex; flex-direction: column; gap: 4px;
+  overflow-y: auto;
+}
+.sidebar-label {
+  padding: 0 12px 8px;
+  font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--fg-3); font-weight: 600;
+}
+.nav-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--fg-1);
+  cursor: pointer;
+  font-size: 13.5px;
+  transition: all 180ms var(--ease-out);
+  position: relative;
+}
+.nav-item .nav-count { margin-left: auto; color: var(--fg-3); font-size: 11.5px; font-family: 'JetBrains Mono', monospace; }
+.nav-item:hover { background: var(--bg-2); color: var(--fg-0); }
+.nav-item.active {
+  background: var(--accent-soft);
+  color: var(--fg-0);
+}
+.nav-item.active::before {
+  content: ""; position: absolute; left: -12px; top: 8px; bottom: 8px; width: 2px;
+  background: var(--accent); border-radius: 2px;
+  box-shadow: 0 0 12px var(--accent);
+}
+.nav-item.active .nav-count { color: var(--accent); }
+
+.sidebar-section { margin-top: 22px; }
+.sidebar-foot {
+  margin-top: auto;
+  padding: 12px;
+  border: 1px solid var(--line-1);
+  border-radius: 10px;
+  background: var(--bg-1);
+}
+.sidebar-foot .row { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg-2); }
+.sidebar-foot .row + .row { margin-top: 6px; }
+
+/* ---------- Canvas ---------- */
+
+.canvas {
+  overflow-y: auto;
+  padding: 28px 32px 120px;
+  background:
+    radial-gradient(800px 400px at 50% -20%, rgba(232,184,100,0.05), transparent 60%),
+    transparent;
+}
+
+/* Daily brief hero */
+.hero {
+  border: 1px solid var(--line-2);
+  border-radius: 14px;
+  padding: 28px 32px;
+  background:
+    linear-gradient(135deg, rgba(232,184,100,0.06), rgba(157,123,232,0.04) 50%, transparent 70%),
+    linear-gradient(180deg, rgba(18,21,28,0.9), rgba(12,14,19,0.78));
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: ""; position: absolute; right: -100px; top: -120px; width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(232,184,100,0.12), transparent 60%);
+  pointer-events: none;
+}
+.hero-meta {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--fg-2); font-weight: 600;
+}
+.hero-meta .dot { color: var(--fg-3); }
+.hero-meta .ind-pill {
+  padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent);
+  border: 1px solid var(--accent-line); letter-spacing: 0.08em;
+}
+.hero h1 {
+  margin-top: 14px;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  max-width: 900px;
+}
+.hero h1 em { font-family: 'Instrument Serif', serif; font-weight: 400; color: var(--accent); font-style: italic; }
+.hero-sub { margin-top: 14px; color: var(--fg-1); max-width: 800px; font-size: 15px; line-height: 1.6; }
+.hero-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line-1);
+}
+.stat-label { font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-3); font-weight: 600; }
+.stat-value { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 600; margin-top: 6px; }
+.stat-delta { font-size: 11.5px; margin-top: 2px; color: var(--fg-2); font-family: 'JetBrains Mono', monospace; }
+.delta-pos { color: var(--pos); }
+.delta-neg { color: var(--neg); }
+
+/* Pipeline strip */
+.pipeline-strip {
+  margin-top: 16px;
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  background: var(--bg-1);
+  font-size: 12.5px;
+}
+.pipeline-strip .label { color: var(--fg-2); letter-spacing: 0.04em; font-weight: 500; }
+.pipeline-steps { display: flex; align-items: center; gap: 8px; flex: 1; }
+.pipeline-step {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--line-1);
+  color: var(--fg-2);
+  font-size: 11.5px;
+  font-weight: 500;
+}
+.pipeline-step .step-dot {
+  width: 6px; height: 6px; border-radius: 999px; background: var(--fg-3);
+}
+.pipeline-step.done { color: var(--pos); border-color: rgba(74,222,128,0.18); }
+.pipeline-step.done .step-dot { background: var(--pos); box-shadow: 0 0 8px var(--pos); }
+.pipeline-step.active { color: var(--accent); border-color: var(--accent-line); background: var(--accent-soft); }
+.pipeline-step.active .step-dot {
+  background: var(--accent); animation: pulse-amber 1.4s infinite var(--ease-out);
+}
+@keyframes pulse-amber {
+  0% { box-shadow: 0 0 0 0 rgba(232,184,100,0.5); }
+  70% { box-shadow: 0 0 0 6px rgba(232,184,100,0); }
+}
+.pipeline-step .chev { color: var(--fg-3); }
+.pipeline-strip .right { display: flex; align-items: center; gap: 10px; color: var(--fg-2); }
+
+/* Section heading */
+.section-head {
+  display: flex; align-items: end; gap: 12px;
+  margin: 40px 0 16px;
+}
+.section-head h2 {
+  font-size: 18px; font-weight: 600; letter-spacing: -0.015em;
+}
+.section-head .count {
+  font-family: 'JetBrains Mono', monospace; color: var(--fg-3); font-size: 12.5px;
+}
+.section-head .grow { flex: 1; height: 1px; background: var(--line-1); align-self: center; margin: 0 8px; }
+.section-head .actions { display: flex; gap: 6px; }
+
+/* Filter chips */
+.chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+.chip {
+  padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: var(--bg-1);
+  color: var(--fg-1);
+  font-size: 12px; font-weight: 500;
+  cursor: pointer;
+  transition: all 180ms var(--ease-out);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.chip .chip-dot { width: 6px; height: 6px; border-radius: 999px; background: var(--fg-3); }
+.chip:hover { border-color: var(--line-3); background: var(--bg-2); }
+.chip.active { border-color: var(--accent-line); background: var(--accent-soft); color: var(--accent); }
+.chip.active .chip-dot { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
+
+/* Industry heatmap */
+.heatmap {
+  display: grid; grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  border: 1px solid var(--line-2);
+  background: var(--bg-1);
+  padding: 16px;
+  border-radius: 12px;
+}
+.heat-cell {
+  aspect-ratio: 16/9;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line-1);
+  background: rgba(255,255,255,0.02);
+  position: relative;
+  cursor: pointer;
+  transition: all 220ms var(--ease-out);
+  overflow: hidden;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.heat-cell:hover { border-color: var(--line-3); transform: translateY(-1px); }
+.heat-cell::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: var(--intensity, 0%);
+  background: linear-gradient(180deg, transparent, var(--heat-color, var(--fg-3)) );
+  opacity: 0.18; pointer-events: none;
+  transition: height 360ms var(--ease-out);
+}
+.heat-cell .heat-name { font-size: 11px; color: var(--fg-1); font-weight: 500; line-height: 1.2; }
+.heat-cell .heat-val { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--fg-0); }
+.heat-cell .heat-delta { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; }
+
+/* News feed */
+.day-group { margin-bottom: 36px; }
+.day-head {
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line-1);
+  margin-bottom: 16px;
+}
+.day-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  color: var(--fg-2);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.day-headline {
+  font-size: 15px; font-weight: 500; color: var(--fg-0); flex: 1;
+}
+.day-headline .em { color: var(--accent); }
+.day-stats { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--fg-3); }
+
+.feed { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.card {
+  position: relative;
+  border: 1px solid var(--line-2);
+  background: var(--bg-1);
+  border-radius: 12px;
+  padding: 18px 18px 16px;
+  transition: all 220ms var(--ease-out);
+  cursor: pointer;
+  overflow: hidden;
+}
+.card:hover {
+  border-color: var(--line-3);
+  background: var(--bg-2);
+  transform: translateY(-1px);
+}
+.card::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--ind-color, var(--fg-3));
+  opacity: 0.7;
+}
+.card.is-new {
+  border-color: var(--accent-line);
+  box-shadow: 0 0 0 1px var(--accent-line), 0 0 32px rgba(232,184,100,0.12);
+}
+.card.is-new .new-pulse {
+  position: absolute; right: 10px; top: 10px;
+  width: 6px; height: 6px; border-radius: 999px; background: var(--accent);
+  box-shadow: 0 0 0 0 rgba(232,184,100,0.6);
+  animation: pulse-amber 1.4s var(--ease-out) infinite;
+}
+
+.card-head {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--fg-3); font-weight: 600;
+  margin-bottom: 12px;
+}
+.card-head .ind-tag { color: var(--ind-color); }
+.card-head .region-tag {
+  padding: 2px 7px; border-radius: 4px; background: var(--bg-3);
+  border: 1px solid var(--line-2); color: var(--fg-1); letter-spacing: 0.08em;
+}
+.card-head .time { margin-left: auto; color: var(--fg-3); font-family: 'JetBrains Mono', monospace; }
+
+.card-thesis {
+  font-size: 16px; font-weight: 600; line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--fg-0);
+  margin-bottom: 12px;
+}
+.card-bullets { color: var(--fg-1); font-size: 13px; line-height: 1.55; }
+.card-bullets li { list-style: none; position: relative; padding-left: 16px; margin: 6px 0; }
+.card-bullets li::before {
+  content: ""; position: absolute; left: 0; top: 9px; width: 6px; height: 1px;
+  background: var(--fg-2);
+}
+.card-bullets li.num::before { content: counter(b); counter-increment: b; color: var(--fg-3); font-family: 'JetBrains Mono', monospace; font-size: 10.5px; top: 1px; width: auto; height: auto; background: none; }
+.card-bullets { counter-reset: b; }
+
+.card-foot {
+  display: flex; align-items: center; gap: 8px;
+  margin-top: 14px; padding-top: 14px;
+  border-top: 1px solid var(--line-1);
+  font-size: 11.5px;
+}
+.entity-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--line-2);
+  background: var(--bg-2);
+  color: var(--fg-1);
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  font-weight: 500;
+}
+.entity-chip .tk { color: var(--accent); font-weight: 600; }
+.entity-chip:hover { border-color: var(--line-3); }
+
+.card-actions { margin-left: auto; display: flex; gap: 4px; }
+.action {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--line-1);
+  background: transparent;
+  color: var(--fg-2);
+  cursor: pointer;
+  transition: all 180ms var(--ease-out);
+}
+.action:hover { border-color: var(--line-3); background: var(--bg-3); color: var(--fg-0); }
+
+.confidence {
+  position: absolute; right: 18px; top: 18px;
+  display: flex; align-items: center; gap: 6px;
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--fg-3); font-weight: 600;
+}
+.conf-bars { display: flex; gap: 2px; }
+.conf-bars span { width: 3px; height: 9px; border-radius: 1px; background: var(--fg-3); opacity: 0.4; }
+.conf-bars span.on { background: var(--accent); opacity: 1; }
+
+/* ---------- Right rail ---------- */
+
+.rail {
+  border-left: 1px solid var(--line-1);
+  padding: 20px 18px 80px;
+  overflow-y: auto;
+  display: flex; flex-direction: column; gap: 18px;
+}
+
+.rail-card {
+  border: 1px solid var(--line-1);
+  background: var(--bg-1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.rail-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line-1);
+}
+.rail-head h3 { font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--fg-1); }
+.rail-head .badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px; padding: 1px 6px;
+  border-radius: 4px; background: var(--accent-soft); color: var(--accent);
+  border: 1px solid var(--accent-line);
+}
+.rail-head .ml-auto { margin-left: auto; color: var(--fg-3); font-family: 'JetBrains Mono', monospace; font-size: 10.5px; }
+
+.rail-list { padding: 6px 0; }
+.rail-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 14px;
+  cursor: pointer;
+  transition: background 180ms var(--ease-out);
+}
+.rail-row:hover { background: var(--bg-2); }
+.rail-row .rank { font-family: 'JetBrains Mono', monospace; color: var(--fg-3); font-size: 10.5px; width: 14px; }
+.rail-row .label { font-size: 13px; color: var(--fg-0); font-weight: 500; flex: 1; }
+.rail-row .label .sub { display: block; color: var(--fg-3); font-size: 11px; margin-top: 1px; font-weight: 400; }
+.rail-row .delta { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 600; }
+.rail-row .spark { width: 64px; height: 18px; }
+
+/* Live feed */
+.live-feed { padding: 6px 14px 12px; }
+.live-event {
+  display: flex; gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--line-1);
+  font-size: 12px;
+}
+.live-event:last-child { border-bottom: none; }
+.live-event .time { font-family: 'JetBrains Mono', monospace; color: var(--fg-3); font-size: 10.5px; min-width: 56px; padding-top: 1px; }
+.live-event .body { color: var(--fg-1); }
+.live-event .body .em { color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+.live-event .body .ev-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em;
+  padding: 1px 5px; border-radius: 3px; margin-right: 6px;
+  background: var(--bg-3); color: var(--fg-2); border: 1px solid var(--line-2);
+}
+.live-event.ev-ok .ev-tag { color: var(--pos); border-color: rgba(74,222,128,0.18); background: rgba(74,222,128,0.08); }
+.live-event.ev-news .ev-tag { color: var(--accent); border-color: var(--accent-line); background: var(--accent-soft); }
+.live-event.ev-warn .ev-tag { color: var(--warn); border-color: rgba(251,191,36,0.18); background: rgba(251,191,36,0.08); }
+
+/* ---------- Command palette ---------- */
+
+.cmd-modal {
+  position: fixed; inset: 0;
+  background: rgba(5,6,9,0.74);
+  backdrop-filter: blur(14px);
+  display: flex; align-items: flex-start; justify-content: center;
+  padding-top: 14vh;
+  z-index: 100;
+  opacity: 0; pointer-events: none;
+  transition: opacity 220ms var(--ease-out);
+}
+.cmd-modal.open { opacity: 1; pointer-events: auto; }
+.cmd-panel {
+  width: min(680px, 92vw);
+  background: var(--bg-glass);
+  border: 1px solid var(--line-3);
+  border-radius: 14px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px var(--line-1) inset;
+  backdrop-filter: blur(28px) saturate(160%);
+  overflow: hidden;
+  transform: translateY(10px) scale(0.98);
+  transition: transform 320ms var(--ease-out);
+}
+.cmd-modal.open .cmd-panel { transform: translateY(0) scale(1); }
+.cmd-input-wrap {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line-2);
+}
+.cmd-input-wrap svg { color: var(--fg-2); }
+.cmd-input {
+  flex: 1; background: transparent; border: none; outline: none; color: var(--fg-0);
+  font-size: 16px; font-family: 'Inter', sans-serif;
+}
+.cmd-input::placeholder { color: var(--fg-3); }
+.cmd-input-wrap .esc { color: var(--fg-3); font-size: 11px; font-family: 'JetBrains Mono', monospace; }
+
+.cmd-results { max-height: 60vh; overflow-y: auto; padding: 8px 0; }
+.cmd-group { padding: 4px 0; }
+.cmd-group-label {
+  padding: 8px 18px 4px; font-size: 10.5px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--fg-3); font-weight: 600;
+}
+.cmd-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 18px;
+  cursor: pointer;
+  color: var(--fg-1);
+  font-size: 13.5px;
+}
+.cmd-row:hover, .cmd-row.focus { background: var(--bg-2); color: var(--fg-0); }
+.cmd-row .ico {
+  width: 28px; height: 28px; border-radius: 6px;
+  background: var(--bg-3); border: 1px solid var(--line-2);
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--fg-1);
+}
+.cmd-row .meta { color: var(--fg-3); font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+.cmd-row .arrow { margin-left: auto; color: var(--fg-3); }
+
+/* ---------- Toast ---------- */
+
+.toast-stack {
+  position: fixed; right: 24px; bottom: 24px;
+  display: flex; flex-direction: column; gap: 8px; z-index: 80;
+}
+.toast {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--accent-line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex; gap: 10px;
+  min-width: 320px; max-width: 380px;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.5);
+  transform: translateX(20px); opacity: 0;
+  animation: slide-in 360ms var(--ease-spring) forwards;
+}
+@keyframes slide-in {
+  to { transform: translateX(0); opacity: 1; }
+}
+.toast .ico {
+  width: 28px; height: 28px; border-radius: 7px;
+  background: var(--accent-soft); border: 1px solid var(--accent-line);
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--accent); flex-shrink: 0;
+}
+.toast .title { font-weight: 600; font-size: 13px; color: var(--fg-0); }
+.toast .body { color: var(--fg-1); font-size: 12.5px; line-height: 1.4; margin-top: 2px; }
+
+/* ---------- Scrollbars ---------- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 999px; border: 2px solid var(--bg-0); }
+::-webkit-scrollbar-thumb:hover { background: var(--line-3); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1280px) {
+  .shell { grid-template-columns: 220px 1fr; }
+  .rail { display: none; }
+}
+@media (max-width: 900px) {
+  .shell { grid-template-columns: 1fr; grid-template-rows: 56px 1fr; }
+  .sidebar { display: none; }
+}
+
+/* ---------- Tiny helpers ---------- */
+.text-pos { color: var(--pos); }
+.text-neg { color: var(--neg); }
+.text-warn { color: var(--warn); }
+.text-muted { color: var(--fg-2); }
+.text-dim { color: var(--fg-3); }
+.divider-v { width: 1px; height: 18px; background: var(--line-2); }
+
+/* Entry animation */
+.enter { animation: enter 360ms var(--ease-out) both; }
+@keyframes enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ========== TOP BAR ========== -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <span class="brand-text">Atlas <span class="dim">/ Intelligence Terminal</span></span>
+    </div>
+    <div class="topbar-spacer"></div>
+    <div class="topbar-meta">
+      <span class="live-dot">Live</span>
+      <span class="mono" id="clock">06:42:18 ICT</span>
+      <span class="pip">·</span>
+      <span class="mono">Fri 15 May 2026</span>
+      <span class="pip">·</span>
+      <span>VN-Index <span class="mono text-pos">+0.74%</span></span>
+      <span class="pip">·</span>
+      <span>USD/VND <span class="mono text-neg">25,418</span></span>
+    </div>
+    <div style="width: 24px;"></div>
+    <button class="cmd-trigger" onclick="openCmd()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <span>Search news, entities, reports…</span>
+      <span style="flex:1"></span>
+      <span class="kbd">⌘ K</span>
+    </button>
+    <div style="width: 12px;"></div>
+    <button class="icon-btn" title="Theme">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    </button>
+    <div style="width: 8px;"></div>
+    <button class="icon-btn" title="Refresh">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
+    </button>
+    <div style="width: 8px;"></div>
+    <button class="icon-btn" title="Settings">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+    </button>
+  </header>
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="sidebar">
+    <div class="sidebar-label">Workspace</div>
+    <a class="nav-item active">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+      Daily Intelligence <span class="nav-count">23</span>
+    </a>
+    <a class="nav-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+      Report Center <span class="nav-count">147</span>
+    </a>
+    <a class="nav-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 7l2 2M15 9l2-2M9 15l-2 2M15 15l2 2"/></svg>
+      Knowledge Graph
+    </a>
+    <a class="nav-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      Semantic Search
+    </a>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Industries</div>
+      <a class="nav-item"><span style="width:8px;height:8px;border-radius:2px;background:var(--ind-banking)"></span>Banking <span class="nav-count">8</span></a>
+      <a class="nav-item"><span style="width:8px;height:8px;border-radius:2px;background:var(--ind-real-estate)"></span>Real Estate <span class="nav-count">5</span></a>
+      <a class="nav-item"><span style="width:8px;height:8px;border-radius:2px;background:var(--ind-technology)"></span>Technology <span class="nav-count">4</span></a>
+      <a class="nav-item"><span style="width:8px;height:8px;border-radius:2px;background:var(--ind-energy)"></span>Energy <span class="nav-count">3</span></a>
+      <a class="nav-item"><span style="width:8px;height:8px;border-radius:2px;background:var(--ind-automotive)"></span>Automotive <span class="nav-count">2</span></a>
+      <a class="nav-item"><span style="width:8px;height:8px;border-radius:2px;background:var(--ind-steel)"></span>Steel <span class="nav-count">2</span></a>
+      <a class="nav-item text-muted" style="font-size:12px">Show all 28 →</a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Macro</div>
+      <a class="nav-item">Vietnam Macro <span class="nav-count">6</span></a>
+      <a class="nav-item">Global Macro <span class="nav-count">9</span></a>
+      <a class="nav-item">Geopolitics <span class="nav-count">3</span></a>
+    </div>
+
+    <div class="sidebar-foot">
+      <div class="row"><span class="text-muted">Vault</span><span style="flex:1"></span><span class="mono text-dim">1,284 files</span></div>
+      <div class="row"><span class="text-muted">Queue</span><span style="flex:1"></span><span class="mono">3 jobs</span></div>
+      <div class="row"><span class="text-muted">Pipeline</span><span style="flex:1"></span><span class="mono text-pos">healthy</span></div>
+      <div class="row"><span class="text-muted">DLQ</span><span style="flex:1"></span><span class="mono text-dim">0</span></div>
+    </div>
+  </aside>
+
+  <!-- ========== CANVAS ========== -->
+  <main class="canvas">
+
+    <!-- Hero / daily brief -->
+    <section class="hero enter">
+      <div class="hero-meta">
+        <span>Morning Brief</span>
+        <span class="dot">·</span>
+        <span class="mono">2026-05-15</span>
+        <span class="dot">·</span>
+        <span class="ind-pill">Daily Thesis</span>
+      </div>
+      <h1>VN equities open at a fresh 16-month high as <em>foreign net buying</em> compounds and banks lead — but bond yields are pricing a hawkish surprise.</h1>
+      <p class="hero-sub">Three signals dominate the tape: (1) foreign desks added <span class="mono text-pos">+412 B VND</span> in five sessions, almost entirely into VCB · TCB · HPG; (2) state-owned bank capital raises are unblocked after the Q1 amendment to circular 03; (3) the SBV's overnight rate ticked to <span class="mono">5.45%</span>, the highest since Dec 2024, suggesting CPI prints are concerning. Watch for the 14:00 ICT MoF auction.</p>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-label">Items Today</div>
+          <div class="stat-value">23</div>
+          <div class="stat-delta delta-pos">+6 vs avg 5d</div>
+        </div>
+        <div>
+          <div class="stat-label">Active Industries</div>
+          <div class="stat-value">14<span class="text-muted" style="font-size:13px">/28</span></div>
+          <div class="stat-delta">Banking · RE · Tech lead</div>
+        </div>
+        <div>
+          <div class="stat-label">Sentiment Index</div>
+          <div class="stat-value text-pos">+0.31</div>
+          <div class="stat-delta delta-pos">+0.08 vs yesterday</div>
+        </div>
+        <div>
+          <div class="stat-label">Pipeline P95</div>
+          <div class="stat-value">3.4<span class="text-muted" style="font-size:13px">s</span></div>
+          <div class="stat-delta">embed · publish · WS push</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pipeline strip -->
+    <div class="pipeline-strip enter" style="animation-delay:80ms">
+      <span class="label">Pipeline</span>
+      <div class="pipeline-steps">
+        <div class="pipeline-step done"><span class="step-dot"></span>extract <span class="text-dim mono">82ms</span></div>
+        <span class="chev text-dim">›</span>
+        <div class="pipeline-step done"><span class="step-dot"></span>classify <span class="text-dim mono">410ms</span></div>
+        <span class="chev text-dim">›</span>
+        <div class="pipeline-step active"><span class="step-dot"></span>summarize <span class="text-dim mono">1.8s</span></div>
+        <span class="chev text-dim">›</span>
+        <div class="pipeline-step"><span class="step-dot"></span>embed</div>
+        <span class="chev text-dim">›</span>
+        <div class="pipeline-step"><span class="step-dot"></span>persist</div>
+        <span class="chev text-dim">›</span>
+        <div class="pipeline-step"><span class="step-dot"></span>publish</div>
+      </div>
+      <div class="right">
+        <span class="text-muted">run</span>
+        <span class="mono">#1847</span>
+        <span class="divider-v"></span>
+        <span class="text-muted">tokens</span>
+        <span class="mono">2.4k</span>
+      </div>
+    </div>
+
+    <!-- Industry heatmap -->
+    <div class="section-head" style="margin-top:32px">
+      <h2>Industry Heatmap</h2>
+      <span class="count">28 sectors · today</span>
+      <span class="grow"></span>
+      <div class="actions">
+        <button class="icon-btn">7d</button>
+        <button class="icon-btn" style="background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent)">1d</button>
+      </div>
+    </div>
+    <div class="heatmap enter" style="animation-delay:120ms" id="heatmap"></div>
+
+    <!-- Filters -->
+    <div class="section-head" style="margin-top:36px">
+      <h2>Intelligence Feed</h2>
+      <span class="count" id="feed-count">23 items · 2 days</span>
+      <span class="grow"></span>
+      <div class="actions">
+        <button class="icon-btn">⇣</button>
+        <button class="icon-btn">▦</button>
+      </div>
+    </div>
+    <div class="chip-row">
+      <div class="chip active"><span class="chip-dot"></span>All</div>
+      <div class="chip"><span class="chip-dot" style="background:var(--ind-banking)"></span>Banking</div>
+      <div class="chip"><span class="chip-dot" style="background:var(--ind-real-estate)"></span>Real Estate</div>
+      <div class="chip"><span class="chip-dot" style="background:var(--ind-technology)"></span>Technology</div>
+      <div class="chip"><span class="chip-dot" style="background:var(--ind-energy)"></span>Energy</div>
+      <div class="chip"><span class="chip-dot" style="background:var(--ind-steel)"></span>Steel</div>
+      <div class="chip">VN Macro</div>
+      <div class="chip">Global Macro</div>
+      <div class="chip">Corporate</div>
+      <div class="chip">High confidence</div>
+    </div>
+
+    <div id="feed"></div>
+
+  </main>
+
+  <!-- ========== RIGHT RAIL ========== -->
+  <aside class="rail">
+    <!-- Trending entities -->
+    <div class="rail-card">
+      <div class="rail-head">
+        <h3>Trending</h3>
+        <span class="badge">24h</span>
+        <span class="ml-auto">mentions</span>
+      </div>
+      <div class="rail-list" id="trending"></div>
+    </div>
+
+    <!-- Watchlist -->
+    <div class="rail-card">
+      <div class="rail-head">
+        <h3>Watchlist</h3>
+        <span class="ml-auto">VN-Index +0.74%</span>
+      </div>
+      <div class="rail-list" id="watchlist"></div>
+    </div>
+
+    <!-- Live pipeline feed -->
+    <div class="rail-card">
+      <div class="rail-head">
+        <h3>Live Pipeline</h3>
+        <span class="badge" style="background:rgba(74,222,128,0.08);color:var(--pos);border-color:rgba(74,222,128,0.18)">streaming</span>
+      </div>
+      <div class="live-feed" id="live-feed"></div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- ========== COMMAND PALETTE ========== -->
+<div class="cmd-modal" id="cmd-modal" onclick="if(event.target.id==='cmd-modal') closeCmd()">
+  <div class="cmd-panel">
+    <div class="cmd-input-wrap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input class="cmd-input" id="cmd-input" placeholder="Search news, entities, reports, or run a command…" autocomplete="off" />
+      <span class="esc">ESC</span>
+    </div>
+    <div class="cmd-results" id="cmd-results"></div>
+  </div>
+</div>
+
+<!-- ========== TOAST STACK ========== -->
+<div class="toast-stack" id="toast-stack"></div>
+
+<script>
+/* ============================================================
+   MOCK DATA — realistic VN + international financial news
+   ============================================================ */
+
+const INDUSTRIES = [
+  { slug: 'banking',          name: 'Banking',          color: 'var(--ind-banking)' },
+  { slug: 'real-estate',      name: 'Real Estate',      color: 'var(--ind-real-estate)' },
+  { slug: 'technology',       name: 'Technology',       color: 'var(--ind-technology)' },
+  { slug: 'energy',           name: 'Energy',           color: 'var(--ind-energy)' },
+  { slug: 'pharma',           name: 'Pharmaceutical',   color: 'var(--ind-pharma)' },
+  { slug: 'automotive',       name: 'Automotive',       color: 'var(--ind-automotive)' },
+  { slug: 'retail',           name: 'Retail',           color: 'var(--ind-retail)' },
+  { slug: 'steel',            name: 'Steel',            color: 'var(--ind-steel)' },
+  { slug: 'securities',       name: 'Securities',       color: 'var(--ind-securities)' },
+  { slug: 'manufacturing',    name: 'Manufacturing',    color: 'var(--ind-manufacturing)' },
+  { slug: 'logistics',        name: 'Logistics',        color: 'var(--ind-logistics)' },
+  { slug: 'agriculture',      name: 'Agriculture',      color: 'var(--ind-agriculture)' },
+  { slug: 'construction',     name: 'Construction',     color: 'var(--ind-construction)' },
+  { slug: 'utilities',        name: 'Utilities',        color: 'var(--ind-utilities)' },
+  { slug: 'aviation',         name: 'Aviation',         color: 'var(--ind-aviation)' },
+  { slug: 'fnb',              name: 'F&B',              color: 'var(--ind-fnb)' },
+  { slug: 'insurance',        name: 'Insurance',        color: 'var(--ind-insurance)' },
+  { slug: 'chemicals',        name: 'Chemicals',        color: 'var(--ind-chemicals)' },
+  { slug: 'textiles',         name: 'Textiles',         color: 'var(--ind-textiles)' },
+  { slug: 'mining',           name: 'Mining',           color: 'var(--ind-mining)' },
+  { slug: 'telecom',          name: 'Telecom',          color: 'var(--ind-telecom)' },
+  { slug: 'shipping',         name: 'Shipping',         color: 'var(--ind-shipping)' },
+  { slug: 'healthcare',       name: 'Healthcare',       color: 'var(--ind-healthcare)' },
+  { slug: 'education',        name: 'Education',        color: 'var(--ind-education)' },
+  { slug: 'fisheries',        name: 'Fisheries',        color: 'var(--ind-fisheries)' },
+  { slug: 'industrial-parks', name: 'Industrial Parks', color: 'var(--ind-industrial-parks)' },
+  { slug: 'consumer-goods',   name: 'Consumer Goods',   color: 'var(--ind-consumer-goods)' },
+  { slug: 'other',            name: 'Other',            color: 'var(--ind-other)' },
+];
+
+const NEWS = [
+  {
+    id: 'n_001', date: '2026-05-15', time: '06:11',
+    industry: 'banking', region: 'VN', bucket: 'CORP', confidence: 3, isNew: true,
+    thesis: 'Vietcombank prices a $1B dual-tranche issuance at +185bps, the tightest spread by a VN bank since 2022.',
+    bullets: [
+      '5y at T+165, 10y at T+205 — orderbook 4.8x covered with 62% Asia ex-Japan allocation',
+      'Proceeds earmarked for SME credit + green project financing under SBV circular 03 amendment',
+      'Read-through positive for TCB, BIDV pipeline; spread compression suggests reopened EM HG market window'
+    ],
+    entities: [
+      { name: 'Vietcombank', ticker: 'VCB' },
+      { name: 'Techcombank', ticker: 'TCB' },
+      { name: 'BIDV', ticker: 'BID' }
+    ],
+    source: 'Reuters · 06:11 ICT'
+  },
+  {
+    id: 'n_002', date: '2026-05-15', time: '05:48',
+    industry: 'real-estate', region: 'VN', bucket: 'CORP', confidence: 2, isNew: true,
+    thesis: 'Vinhomes unlocks Long Bien township phase 2, signaling a Q3 launch with 6,800 units and a step-up in pre-sales target.',
+    bullets: [
+      'Land use right transfer concluded last week, total GFA 1.4M sqm, ASP guided 78-92M VND/sqm',
+      'Funded via VHM\'s March bond rollover (8.45% coupon) + JV with Capitaland on the high-rise blocks',
+      'Implication: VHM 2026 pre-sales likely 105k+ B VND, beating consensus 92k; broker upgrades probable'
+    ],
+    entities: [
+      { name: 'Vinhomes', ticker: 'VHM' },
+      { name: 'Capitaland', ticker: 'CL' }
+    ],
+    source: 'Vneconomy · 05:48 ICT'
+  },
+  {
+    id: 'n_003', date: '2026-05-15', time: '07:02',
+    industry: 'technology', region: 'VN', bucket: 'CORP', confidence: 3,
+    thesis: 'FPT books a $182M multi-year contract with a Japanese mega-bank for core banking modernization.',
+    bullets: [
+      'Five-year statement of work, gross margin guide 28-32% — accretive to FPT Software segment',
+      'Adds to the Japan revenue base now > $1.1B run-rate, surpassing US for the first time',
+      'Read-through: VN IT services premium vs. India peers narrows; CMG, KMS likely to chase mid-tier deals'
+    ],
+    entities: [
+      { name: 'FPT Corp', ticker: 'FPT' }, { name: 'CMG', ticker: 'CMG' }
+    ],
+    source: 'Bloomberg · 07:02 ICT'
+  },
+  {
+    id: 'n_004', date: '2026-05-15', time: '06:30',
+    industry: 'steel', region: 'VN', bucket: 'CORP', confidence: 2, isNew: true,
+    thesis: 'Hòa Phát commissions Dung Quất 2 HRC line ahead of schedule, raising 2026 HRC output guide to 4.2 Mt.',
+    bullets: [
+      'Line 1 ramped in April, line 2 ramping now — total Dung Quất 2 cap +5.6 Mt at run rate by Q4',
+      'Management hints at second-half HRC ASP recovery on China stimulus + EU CBAM-linked sourcing shift',
+      'Watch: HRC-iron-ore spread tightening to $312/t in May vs. $268 trough; HPG OPM should expand 250bps'
+    ],
+    entities: [
+      { name: 'Hòa Phát', ticker: 'HPG' }
+    ],
+    source: 'CafeF · 06:30 ICT'
+  },
+  {
+    id: 'n_005', date: '2026-05-15', time: '06:45',
+    industry: 'automotive', region: 'INT', bucket: 'CORP', confidence: 2, isNew: true,
+    thesis: 'VinFast pulls forward NA gigafactory phase-1 SOP to Q1 2027, conceding ~$200M in incremental capex.',
+    bullets: [
+      'NC site civil works 78% complete; battery pack line shifted in from Hai Phong for de-risking',
+      'Cash burn implication: VFS will likely tap parent for an additional $800M-$1B in H2 2026',
+      'Mixed read for VIC family: VHM cash cycle tightens, but VFS milestone unlocks lender covenants'
+    ],
+    entities: [
+      { name: 'VinFast', ticker: 'VFS' }, { name: 'Vingroup', ticker: 'VIC' }
+    ],
+    source: 'Nikkei · 06:45 ICT'
+  },
+  {
+    id: 'n_006', date: '2026-05-15', time: '04:12',
+    industry: 'energy', region: 'INT', bucket: 'MACRO', confidence: 3,
+    thesis: 'Brent prints fresh 14-month high at $89.40 as OPEC+ signals a deeper August cut.',
+    bullets: [
+      'Saudi delegate flags "voluntary" 500kbpd extension; UAE non-committal but unlikely to break ranks',
+      'US SPR drawdown deferred per DoE Tuesday note — physical tightness compounding',
+      'VN read: PVS, PVD, GAS positive; refining margin (BSR) capped if crack spreads compress further'
+    ],
+    entities: [
+      { name: 'OPEC+', ticker: '' }, { name: 'PV Drilling', ticker: 'PVD' }, { name: 'GAS', ticker: 'GAS' }
+    ],
+    source: 'Bloomberg · 04:12 ICT'
+  },
+  {
+    id: 'n_007', date: '2026-05-15', time: '03:55',
+    industry: 'banking', region: 'INT', bucket: 'MACRO', confidence: 2,
+    thesis: 'Fed dot plot suggests two cuts in 2026, down from three — DXY breaks 105, EM FX vulnerable.',
+    bullets: [
+      'Powell language: "sticky services inflation" and "labor strength" cited twice in pressar',
+      '2y UST +18bps to 4.62%, USD/JPY through 158; carry trades reawakened',
+      'VN implication: SBV likely to widen rate corridor; USD/VND ceiling test at 25,500 within two weeks'
+    ],
+    entities: [
+      { name: 'Federal Reserve', ticker: '' }
+    ],
+    source: 'FT · 03:55 ICT'
+  },
+  {
+    id: 'n_008', date: '2026-05-15', time: '06:20',
+    industry: 'real-estate', region: 'VN', bucket: 'MACRO', confidence: 2,
+    thesis: 'New land law sub-decree drops, formalizing "commercial residential" land conversion path — unlocks ~80k mid-tier projects.',
+    bullets: [
+      'Article 122 amended: 90-day approval window if site is already in commune zoning master plan',
+      'Developers with land-bank in tier-2 cities benefit disproportionately: NLG, DXG, PDR',
+      'Risk: implementation lag at provincial level; first conversions unlikely before Q4 2026'
+    ],
+    entities: [
+      { name: 'Nam Long', ticker: 'NLG' }, { name: 'Đất Xanh', ticker: 'DXG' }, { name: 'Phát Đạt', ticker: 'PDR' }
+    ],
+    source: 'Tuổi Trẻ · 06:20 ICT'
+  },
+  {
+    id: 'n_009', date: '2026-05-15', time: '02:14',
+    industry: 'technology', region: 'INT', bucket: 'CORP', confidence: 3,
+    thesis: 'Nvidia announces Blackwell-Ultra DGX shipments to begin June, ahead of consensus August.',
+    bullets: [
+      'Hyperscaler pre-orders cover full FY27 production — incremental TAM lift +$22B vs guide',
+      'Supply chain read: SK Hynix HBM3e priority, TSMC CoWoS bottleneck eases by Q3',
+      'VN secondhand read: industrial parks (KBC, IDC) benefit from server-rack assembly relocations'
+    ],
+    entities: [
+      { name: 'Nvidia', ticker: 'NVDA' }, { name: 'TSMC', ticker: 'TSM' }
+    ],
+    source: 'Reuters · 02:14 ICT'
+  },
+  {
+    id: 'n_010', date: '2026-05-15', time: '05:30',
+    industry: 'fnb', region: 'VN', bucket: 'CORP', confidence: 2,
+    thesis: 'Masan Consumer files for HoSE relisting via swap with parent MSN, valuation marker ~$5.2B.',
+    bullets: [
+      'Swap ratio 1 MCH : 2.45 MSN; reduces MSN holdco leverage by 0.6x net debt/EBITDA on a pro-forma basis',
+      'Implied MCH FY26 EV/EBITDA 18.4x — slightly premium to SAB, discount to Nestlé Vietnam',
+      'Liquidity unlock thesis for foreign desks waiting on a clean VN consumer story'
+    ],
+    entities: [
+      { name: 'Masan Consumer', ticker: 'MCH' }, { name: 'Masan Group', ticker: 'MSN' }
+    ],
+    source: 'Đầu tư Chứng khoán · 05:30 ICT'
+  },
+
+  // Yesterday
+  {
+    id: 'n_011', date: '2026-05-14', time: '16:32',
+    industry: 'banking', region: 'VN', bucket: 'MACRO', confidence: 3,
+    thesis: 'SBV draft circular allows foreign ownership up to 49% for "weak" banks under restructuring — broader than market expected.',
+    bullets: [
+      'Applies to CB Bank, OceanBank, GP Bank; potential strategic-investor windows for Q3 2026',
+      'Korean, Singapore, Japanese banks already in due-diligence per sources',
+      'Implication: VCB, BID, MBB likely to receive halo bid; SHB and HDB face de-rating risk'
+    ],
+    entities: [
+      { name: 'SBV', ticker: '' }, { name: 'CB Bank', ticker: '' }
+    ],
+    source: 'VnExpress · 16:32 ICT'
+  },
+  {
+    id: 'n_012', date: '2026-05-14', time: '14:18',
+    industry: 'industrial-parks', region: 'VN', bucket: 'CORP', confidence: 2,
+    thesis: 'Kinh Bắc City secures 142 ha investment from a major Korean semiconductor equipment vendor.',
+    bullets: [
+      'Lease term 50 years, ASP ~$135/sqm — 22% premium to KBC corporate average',
+      'Cluster co-location with existing Korean tenants in Quế Võ III; supply contracts pre-signed',
+      'KBC 2026 leased area guide raised from 220 ha → 280 ha'
+    ],
+    entities: [
+      { name: 'Kinh Bắc', ticker: 'KBC' }
+    ],
+    source: 'CafeF · 14:18 ICT'
+  },
+  {
+    id: 'n_013', date: '2026-05-14', time: '13:05',
+    industry: 'aviation', region: 'VN', bucket: 'CORP', confidence: 1,
+    thesis: 'Vietjet Air denies media reports of 737-MAX-10 order delay; deliveries confirmed for late 2026.',
+    bullets: [
+      'Original order: 12 frames, with options on 8 more; first six were re-slotted into Q4 2026 in March',
+      'Boeing supply-chain language remains cautious — Spirit AeroSystems Wichita strike risk',
+      'Implication: VJC capacity guide intact; ASK growth +18% YoY likely holds'
+    ],
+    entities: [
+      { name: 'Vietjet', ticker: 'VJC' }, { name: 'Boeing', ticker: 'BA' }
+    ],
+    source: 'Aviation Week · 13:05 ICT'
+  },
+  {
+    id: 'n_014', date: '2026-05-14', time: '11:42',
+    industry: 'agriculture', region: 'VN', bucket: 'MACRO', confidence: 2,
+    thesis: 'India extends rice export ban through Sept; VN exporters set up to capture 2.6 Mt of incremental Q3 demand.',
+    bullets: [
+      'GoVN's MARD pushes export quota to 8 Mt for full-year 2026 (vs original 7.5 Mt cap)',
+      'Beneficiaries: LTG, AGM, TAR — LTG most levered via Sub-Sahara contracts',
+      'Risk: domestic rice price spike; CPI food index +0.8pp drag on August CPI print'
+    ],
+    entities: [
+      { name: 'Lộc Trời', ticker: 'LTG' }, { name: 'Angimex', ticker: 'AGM' }
+    ],
+    source: 'Reuters · 11:42 ICT'
+  },
+  {
+    id: 'n_015', date: '2026-05-14', time: '09:18',
+    industry: 'pharma', region: 'INT', bucket: 'CORP', confidence: 3,
+    thesis: 'Pfizer Q2 oncology guide upgraded after Padcev EU expansion approval; +$1.2B annual run-rate by 2027.',
+    bullets: [
+      'EMA approval expands first-line urothelial indication; market size doubles vs. prior',
+      'Astellas profit-share kicks in; net-net Pfizer captures 58% of EU revenue',
+      'Read-through to VN: DBD, IMP look for licensing-in opportunities in oncology generics post-LOE'
+    ],
+    entities: [
+      { name: 'Pfizer', ticker: 'PFE' }, { name: 'Astellas', ticker: '4503' }
+    ],
+    source: 'BioPharma Reporter · 09:18 ICT'
+  }
+];
+
+const TRENDING = [
+  { rank: 1, label: 'Vingroup',      sub: 'VIC · Conglomerate', delta: '+42',  pct: '+12.4%', spark: [4,6,5,8,12,9,14,18,22] },
+  { rank: 2, label: 'Vietcombank',   sub: 'VCB · Banking',       delta: '+31',  pct: '+9.1%',  spark: [3,5,4,6,8,11,9,14,17] },
+  { rank: 3, label: 'Hòa Phát',      sub: 'HPG · Steel',         delta: '+24',  pct: '+7.8%',  spark: [2,3,3,5,4,7,9,12,14] },
+  { rank: 4, label: 'FPT Corp',      sub: 'FPT · Technology',    delta: '+18',  pct: '+5.4%',  spark: [4,4,5,6,7,8,8,10,12] },
+  { rank: 5, label: 'Masan Group',   sub: 'MSN · Conglomerate',  delta: '+14',  pct: '+4.2%',  spark: [2,2,3,3,4,5,7,8,9] },
+  { rank: 6, label: 'Vinhomes',      sub: 'VHM · Real Estate',   delta: '+9',   pct: '+2.8%',  spark: [3,2,3,4,3,5,6,7,8] },
+  { rank: 7, label: 'Vietjet',       sub: 'VJC · Aviation',      delta: '-3',   pct: '-1.1%',  spark: [9,8,8,7,7,6,6,5,5] },
+];
+
+const WATCHLIST = [
+  { rank: '★', label: 'VCB', sub: 'Vietcombank',  delta: '+1.84%', pos: true },
+  { rank: '★', label: 'HPG', sub: 'Hòa Phát',     delta: '+2.41%', pos: true },
+  { rank: '★', label: 'FPT', sub: 'FPT Corp',     delta: '+0.92%', pos: true },
+  { rank: '★', label: 'VHM', sub: 'Vinhomes',     delta: '+1.18%', pos: true },
+  { rank: '★', label: 'MSN', sub: 'Masan Group',  delta: '-0.34%', pos: false },
+  { rank: '★', label: 'VJC', sub: 'Vietjet',      delta: '-0.81%', pos: false },
+];
+
+const HEATMAP_DATA = INDUSTRIES.slice(0, 28).map((ind, i) => {
+  const v = [8, 5, 4, 3, 2, 2, 1, 6, 4, 3, 2, 3, 1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 0, 1, 4, 2, 0][i] || 0;
+  const sentiment = [0.4, 0.2, 0.5, 0.3, -0.1, -0.3, 0.1, 0.2, 0.1, 0.0, 0.2, 0.4, -0.1, 0.0, -0.2, 0.3, 0.1, 0.0, 0.1, -0.1, 0.0, 0.1, 0.2, 0.0, 0.1, 0.4, 0.2, 0.0][i] || 0;
+  return { ...ind, volume: v, sentiment };
+});
+
+/* ============================================================
+   RENDERERS
+   ============================================================ */
+
+function indByslug(slug) { return INDUSTRIES.find(i => i.slug === slug) || INDUSTRIES[27]; }
+
+function renderHeatmap() {
+  const el = document.getElementById('heatmap');
+  el.innerHTML = HEATMAP_DATA.map(d => {
+    const intensity = Math.min(85, d.volume * 12 + 8);
+    const sentColor = d.sentiment > 0.1 ? 'var(--pos)' : d.sentiment < -0.1 ? 'var(--neg)' : 'var(--fg-3)';
+    const sentSign = d.sentiment > 0 ? '+' : '';
+    return `
+      <div class="heat-cell" style="--intensity:${intensity}%; --heat-color:${d.color}" title="${d.name}: ${d.volume} items">
+        <div class="heat-name" style="color:${d.color}">${d.name}</div>
+        <div>
+          <div class="heat-val">${d.volume}</div>
+          <div class="heat-delta" style="color:${sentColor}">${sentSign}${d.sentiment.toFixed(2)}</div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function renderFeed() {
+  const el = document.getElementById('feed');
+  const byDate = {};
+  NEWS.forEach(n => { (byDate[n.date] ||= []).push(n); });
+
+  el.innerHTML = Object.entries(byDate).map(([date, items], dayIdx) => {
+    const headline = items[0];
+    const dayLabel = new Date(date + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long' });
+    return `
+      <div class="day-group enter" style="animation-delay:${160 + dayIdx*80}ms">
+        <div class="day-head">
+          <span class="day-date">${date.replace(/-/g, '.')} · ${dayLabel}</span>
+          <span class="day-headline"><span class="em">›</span> ${headline.thesis}</span>
+          <span class="day-stats">${items.length} items · ${new Set(items.map(i=>i.industry)).size} sectors</span>
+        </div>
+        <div class="feed">${items.map(renderCard).join('')}</div>
+      </div>`;
+  }).join('');
+}
+
+function renderCard(n) {
+  const ind = indByslug(n.industry);
+  const bars = Array.from({length: 3}, (_, i) => `<span class="${i < n.confidence ? 'on' : ''}"></span>`).join('');
+  return `
+    <article class="card ${n.isNew ? 'is-new' : ''}" style="--ind-color:${ind.color}" onclick="openCard('${n.id}')">
+      ${n.isNew ? '<span class="new-pulse"></span>' : ''}
+      <div class="card-head">
+        <span class="ind-tag" style="--ind-color:${ind.color};color:${ind.color}">${ind.name}</span>
+        <span class="region-tag">${n.region}</span>
+        <span class="region-tag">${n.bucket}</span>
+        <span class="time">${n.time} ICT</span>
+      </div>
+      <div class="confidence"><span>${['LOW','MID','HIGH'][n.confidence-1] || 'HIGH'}</span><div class="conf-bars">${bars}</div></div>
+      <h3 class="card-thesis">${n.thesis}</h3>
+      <ul class="card-bullets">
+        ${n.bullets.map(b => `<li>${b}</li>`).join('')}
+      </ul>
+      <div class="card-foot">
+        ${n.entities.slice(0, 3).map(e => `<span class="entity-chip">${e.ticker ? `<span class="tk">${e.ticker}</span>` : ''}${e.name}</span>`).join('')}
+        <span class="text-dim">${n.source}</span>
+        <div class="card-actions">
+          <button class="action" title="Open in vault" onclick="event.stopPropagation();ping('vault')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z"/></svg></button>
+          <button class="action" title="Open source" onclick="event.stopPropagation();ping('source')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg></button>
+          <button class="action" title="Open report" onclick="event.stopPropagation();ping('report')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></button>
+        </div>
+      </div>
+    </article>`;
+}
+
+function renderTrending() {
+  const el = document.getElementById('trending');
+  el.innerHTML = TRENDING.map(t => `
+    <div class="rail-row" onclick="ping('entity ${t.label}')">
+      <span class="rank">${t.rank}</span>
+      <div class="label">${t.label}<span class="sub">${t.sub}</span></div>
+      <svg class="spark" viewBox="0 0 64 18">${sparkPath(t.spark)}</svg>
+      <span class="delta ${t.delta.startsWith('+') ? 'text-pos' : 'text-neg'}">${t.delta}</span>
+    </div>
+  `).join('');
+}
+
+function renderWatchlist() {
+  const el = document.getElementById('watchlist');
+  el.innerHTML = WATCHLIST.map(w => `
+    <div class="rail-row">
+      <span class="rank" style="color:var(--accent)">${w.rank}</span>
+      <div class="label">${w.label}<span class="sub">${w.sub}</span></div>
+      <span class="delta ${w.pos ? 'text-pos' : 'text-neg'}">${w.delta}</span>
+    </div>
+  `).join('');
+}
+
+function sparkPath(arr) {
+  const max = Math.max(...arr), min = Math.min(...arr);
+  const w = 64, h = 18;
+  const pts = arr.map((v, i) => {
+    const x = (i / (arr.length - 1)) * w;
+    const y = h - ((v - min) / Math.max(1, max - min)) * (h - 2) - 1;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  });
+  const path = `M ${pts.join(' L ')}`;
+  return `
+    <defs><linearGradient id="sg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="var(--accent)" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
+    </linearGradient></defs>
+    <path d="${path} L ${w},${h} L 0,${h} Z" fill="url(#sg)" />
+    <path d="${path}" fill="none" stroke="var(--accent)" stroke-width="1.4" />
+  `;
+}
+
+/* ============================================================
+   LIVE PIPELINE FEED (simulated)
+   ============================================================ */
+
+const LIVE_TEMPLATES = [
+  { tag: 'INGEST',  cls: 'ev-news', body: (e) => `New clipping <span class="em">${e.file}</span> · ${e.size} kB` },
+  { tag: 'EXTRACT', cls: 'ev-ok',   body: (e) => `Parsed ${e.entities} entities, ${e.tags} tags · <span class="em">${e.lat}ms</span>` },
+  { tag: 'CLASSIFY',cls: 'ev-ok',   body: (e) => `Routed to <span class="em">${e.bucket}</span> / ${e.industry}` },
+  { tag: 'EMBED',   cls: 'ev-ok',   body: (e) => `3072-d vector persisted · <span class="em">${e.tokens}</span> tokens` },
+  { tag: 'PUBLISH', cls: 'ev-news', body: (e) => `WS broadcast · ${e.subs} subscribers · <span class="em">${e.lat}ms</span>` },
+  { tag: 'WIKI',    cls: 'ev-ok',   body: (e) => `Upserted <span class="em">${e.path}</span>` },
+  { tag: 'REPORT',  cls: 'ev-news', body: (e) => `Daily brief recompiled · ${e.sections} sections` },
+  { tag: 'WARN',    cls: 'ev-warn', body: (e) => `Rate limit hint · backoff <span class="em">${e.backoff}ms</span>` }
+];
+
+const SAMPLES = [
+  { file: 'reuters-vcb-issuance.md',     size: 12, entities: 4, tags: 6, lat: 92,  bucket: 'VN/CORP', industry: 'Banking',     tokens: 184, subs: 3, path: 'wiki/Vietnam Enterprises/Banking/Vietcombank.md',   sections: 4, backoff: 320 },
+  { file: 'nikkei-vinfast-na.md',         size: 18, entities: 5, tags: 8, lat: 140, bucket: 'INT/CORP', industry: 'Automotive', tokens: 261, subs: 3, path: 'wiki/Global Enterprises/Automotive/VinFast.md',     sections: 3, backoff: 220 },
+  { file: 'bloomberg-fed-dotplot.md',     size: 9,  entities: 2, tags: 5, lat: 73,  bucket: 'INT/MACRO',industry: 'Banking',     tokens: 142, subs: 3, path: 'wiki/Global Macro/Monetary Policy/FOMC May 2026.md', sections: 5, backoff: 410 },
+  { file: 'vneconomy-vhm-longbien.md',    size: 14, entities: 3, tags: 7, lat: 88,  bucket: 'VN/CORP', industry: 'Real Estate', tokens: 198, subs: 3, path: 'wiki/Vietnam Enterprises/Real Estate/Vinhomes.md',   sections: 4, backoff: 280 }
+];
+
+function pushLive(tag, body, cls) {
+  const feed = document.getElementById('live-feed');
+  const now = new Date();
+  const t = now.toTimeString().slice(0, 8);
+  const div = document.createElement('div');
+  div.className = `live-event ${cls}`;
+  div.innerHTML = `<span class="time mono">${t}</span><div class="body"><span class="ev-tag">${tag}</span>${body}</div>`;
+  feed.prepend(div);
+  while (feed.children.length > 18) feed.removeChild(feed.lastChild);
+}
+
+function fakeEvent() {
+  const sample = SAMPLES[Math.floor(Math.random() * SAMPLES.length)];
+  const tpl = LIVE_TEMPLATES[Math.floor(Math.random() * LIVE_TEMPLATES.length)];
+  pushLive(tpl.tag, tpl.body(sample), tpl.cls);
+}
+
+function seedLiveFeed() {
+  // Pre-fill with a realistic sequence
+  const seq = ['INGEST','EXTRACT','CLASSIFY','EMBED','WIKI','PUBLISH','REPORT','INGEST','EXTRACT','CLASSIFY','EMBED'];
+  let t = new Date(); t.setMinutes(t.getMinutes() - 2);
+  seq.reverse().forEach((tag, i) => {
+    const tpl = LIVE_TEMPLATES.find(x => x.tag === tag);
+    const sample = SAMPLES[i % SAMPLES.length];
+    pushLive(tag, tpl.body(sample), tpl.cls);
+  });
+}
+
+/* ============================================================
+   COMMAND PALETTE
+   ============================================================ */
+
+const CMD_DATA = [
+  { group: 'Pages',     items: [
+    { ico: '◧', label: 'Daily Intelligence', meta: '/' },
+    { ico: '▤', label: 'Report Center',      meta: '/reports' },
+    { ico: '◉', label: 'Knowledge Graph',    meta: '/graph' },
+    { ico: '⌘', label: 'Semantic Search',    meta: '/search' },
+  ]},
+  { group: 'Entities',  items: [
+    { ico: 'VCB', label: 'Vietcombank',  meta: 'Banking · HOSE' },
+    { ico: 'HPG', label: 'Hòa Phát',     meta: 'Steel · HOSE' },
+    { ico: 'FPT', label: 'FPT Corp',     meta: 'Tech · HOSE' },
+    { ico: 'VHM', label: 'Vinhomes',     meta: 'Real Estate · HOSE' },
+  ]},
+  { group: 'Reports',   items: [
+    { ico: '◳', label: 'Daily Brief · 2026-05-15', meta: 'today' },
+    { ico: '◳', label: 'Weekly Synthesis · W19',   meta: 'this week' },
+    { ico: '◳', label: 'Banking Sector Deep Dive', meta: 'May 2026' },
+  ]},
+  { group: 'Actions',   items: [
+    { ico: '↻', label: 'Refresh vault',  meta: 'rescan raw/' },
+    { ico: '⌥', label: 'Build daily brief now', meta: 'run report job' },
+    { ico: '◆', label: 'Reconcile vault ↔ DB', meta: 'maintenance' },
+  ]},
+];
+
+function openCmd() {
+  document.getElementById('cmd-modal').classList.add('open');
+  document.getElementById('cmd-input').focus();
+  renderCmd('');
+}
+function closeCmd() {
+  document.getElementById('cmd-modal').classList.remove('open');
+  document.getElementById('cmd-input').value = '';
+}
+function renderCmd(q) {
+  q = q.toLowerCase().trim();
+  const el = document.getElementById('cmd-results');
+  el.innerHTML = CMD_DATA.map(g => {
+    const items = q ? g.items.filter(i => i.label.toLowerCase().includes(q) || (i.meta||'').toLowerCase().includes(q)) : g.items;
+    if (!items.length) return '';
+    return `
+      <div class="cmd-group">
+        <div class="cmd-group-label">${g.group}</div>
+        ${items.map((i, idx) => `
+          <div class="cmd-row ${idx === 0 && g === CMD_DATA[0] ? 'focus' : ''}" onclick="closeCmd();ping('${i.label}')">
+            <div class="ico mono" style="font-size:11px">${i.ico}</div>
+            <div>${i.label}</div>
+            <div class="meta">${i.meta || ''}</div>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>`).join('')}
+      </div>`;
+  }).join('');
+}
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+
+function toast({ title, body, icon }) {
+  const stack = document.getElementById('toast-stack');
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.innerHTML = `
+    <div class="ico">${icon || '◆'}</div>
+    <div>
+      <div class="title">${title}</div>
+      <div class="body">${body}</div>
+    </div>`;
+  stack.appendChild(t);
+  setTimeout(() => { t.style.opacity = 0; t.style.transform = 'translateX(20px)'; }, 4200);
+  setTimeout(() => t.remove(), 4800);
+}
+
+function ping(label) {
+  toast({ title: 'Action queued', body: `Routed to handler · <span class="mono">${label}</span>`, icon: '⌁' });
+}
+
+function openCard(id) {
+  const n = NEWS.find(x => x.id === id);
+  if (!n) return;
+  toast({ title: n.thesis.slice(0, 60) + '…', body: `Open full record · <span class="mono">${id}</span>`, icon: '◐' });
+}
+
+/* ============================================================
+   CLOCK
+   ============================================================ */
+
+function tickClock() {
+  const el = document.getElementById('clock');
+  const now = new Date();
+  // Display in ICT (UTC+7) — synthesized for the demo, not actually time-zoned.
+  el.textContent = now.toTimeString().slice(0, 8) + ' ICT';
+}
+
+/* ============================================================
+   BOOT
+   ============================================================ */
+
+renderHeatmap();
+renderFeed();
+renderTrending();
+renderWatchlist();
+seedLiveFeed();
+
+setInterval(fakeEvent, 4200);
+setInterval(tickClock, 1000); tickClock();
+
+// Pop a welcome toast
+setTimeout(() => toast({
+  title: 'Pipeline online',
+  body: '6 nodes streaming · WS connected · last ingest <span class="mono">04:12 ICT</span>',
+  icon: '◉'
+}), 700);
+
+// Simulated newly arrived item
+setTimeout(() => toast({
+  title: 'New intelligence',
+  body: '<span class="mono">SBV</span> raised overnight rate to <span class="mono">5.45%</span> — bond yields catching up',
+  icon: '◆'
+}), 6000);
+
+// Cmd-K listener
+document.addEventListener('keydown', (e) => {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openCmd(); }
+  if (e.key === 'Escape') closeCmd();
+});
+document.getElementById('cmd-input').addEventListener('input', (e) => renderCmd(e.target.value));
+
+</script>
+</body>
+</html>

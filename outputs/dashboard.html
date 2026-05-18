@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News Dashboard · 2026-05-13</title>
+<style>
+  :root{
+    --bg:#0f172a; --bg-soft:#111c34; --card:#172447; --card-hover:#1e2d59;
+    --text:#e2e8f0; --muted:#94a3b8; --border:#243661;
+    --accent:#38bdf8; --accent-2:#f472b6;
+    --chip-bg:#1e293b; --chip-text:#cbd5e1;
+    --tag-realestate:#fb923c; --tag-tourism:#34d399; --tag-logistics:#60a5fa;
+    --tag-agri:#a3e635; --tag-energy:#facc15; --tag-industry:#f87171;
+    --tag-auto:#c084fc; --tag-pharma:#22d3ee;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;line-height:1.55}
+  .wrap{max-width:1280px;margin:0 auto;padding:32px 24px 64px}
+  header.hero{display:flex;flex-direction:column;gap:8px;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+  header.hero h1{font-size:28px;margin:0;letter-spacing:-0.02em}
+  header.hero p{margin:0;color:var(--muted);font-size:14px}
+  header.hero .meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:13px;color:var(--muted)}
+  header.hero .meta strong{color:var(--text);font-weight:600}
+
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;align-items:center}
+  .search{flex:1;min-width:240px;display:flex;align-items:center;background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:8px 12px}
+  .search input{flex:1;border:0;background:transparent;color:var(--text);outline:none;font-size:14px}
+  .search svg{width:16px;height:16px;color:var(--muted);margin-right:8px;flex-shrink:0}
+  .filters{display:flex;flex-wrap:wrap;gap:6px}
+  .filter-btn{background:var(--chip-bg);color:var(--chip-text);border:1px solid var(--border);padding:6px 12px;border-radius:999px;cursor:pointer;font-size:13px;transition:all .15s}
+  .filter-btn:hover{border-color:var(--accent)}
+  .filter-btn.active{background:var(--accent);color:#0b1220;border-color:var(--accent);font-weight:600}
+
+  .section{margin-bottom:28px}
+  .section h2{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:18px;letter-spacing:-0.01em}
+  .section h2 .count{font-size:12px;color:var(--muted);font-weight:500;background:var(--chip-bg);padding:2px 8px;border-radius:999px}
+  .topic-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;cursor:pointer;display:flex;flex-direction:column;gap:10px;transition:all .18s ease;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:var(--accent)}
+  .card:hover{background:var(--card-hover);transform:translateY(-2px);border-color:var(--accent)}
+  .card .tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted)}
+  .card .tag .dot{width:8px;height:8px;border-radius:50%}
+  .card h3{margin:0;font-size:16px;line-height:1.35;color:var(--text);font-weight:600}
+  .card p.tease{margin:0;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .card .footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto;font-size:12px;color:var(--muted)}
+  .card .footer .read{color:var(--accent);font-weight:600}
+
+  /* Modal */
+  .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.78);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;z-index:100;overflow-y:auto}
+  .modal-backdrop.open{display:flex}
+  .modal{background:var(--bg-soft);border:1px solid var(--border);border-radius:18px;max-width:780px;width:100%;padding:28px;position:relative;animation:modalIn .22s ease}
+  @keyframes modalIn{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+  .modal .close{position:absolute;top:14px;right:14px;background:transparent;border:0;color:var(--muted);font-size:24px;cursor:pointer;line-height:1;width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background .15s}
+  .modal .close:hover{background:var(--card);color:var(--text)}
+  .modal .modal-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:8px}
+  .modal .modal-tag .dot{width:8px;height:8px;border-radius:50%}
+  .modal h2{margin:0 0 6px;font-size:22px;line-height:1.3;letter-spacing:-0.01em}
+  .modal .modal-meta{font-size:13px;color:var(--muted);margin-bottom:18px}
+  .modal .modal-meta a{color:var(--accent);text-decoration:none}
+  .modal .modal-meta a:hover{text-decoration:underline}
+  .modal .content section{margin-bottom:18px}
+  .modal .content section:last-child{margin-bottom:0}
+  .modal .content h4{margin:0 0 6px;font-size:14px;color:var(--accent);font-weight:700;letter-spacing:0.01em}
+  .modal .content p{margin:0;font-size:14.5px;line-height:1.65;color:#cbd5e1}
+  .modal .modal-footer{margin-top:20px;padding-top:18px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  .modal .modal-footer .src-btn{background:var(--accent);color:#0b1220;padding:9px 16px;border-radius:10px;font-weight:600;font-size:13px;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .modal .modal-footer .src-btn:hover{background:#7dd3fc}
+
+  .empty{padding:60px 0;text-align:center;color:var(--muted);font-size:14px}
+
+  /* Tag colors */
+  [data-topic="realestate"]{--tag:var(--tag-realestate)}
+  [data-topic="tourism"]{--tag:var(--tag-tourism)}
+  [data-topic="logistics"]{--tag:var(--tag-logistics)}
+  [data-topic="agriculture"]{--tag:var(--tag-agri)}
+  [data-topic="energy"]{--tag:var(--tag-energy)}
+  [data-topic="industry"]{--tag:var(--tag-industry)}
+  [data-topic="auto"]{--tag:var(--tag-auto)}
+  [data-topic="pharma"]{--tag:var(--tag-pharma)}
+  .card[data-topic] .tag .dot,.card[data-topic]::before,.section h2[data-topic] .topic-dot,.modal[data-topic] .modal-tag .dot{background:var(--tag)}
+  .card[data-topic]::before{background:var(--tag)}
+
+  @media (max-width:600px){
+    .wrap{padding:20px 14px 48px}
+    header.hero h1{font-size:22px}
+    .grid{grid-template-columns:1fr}
+    .modal{padding:22px 18px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>News Dashboard</h1>
+    <p>Tổng hợp các bài viết tóm tắt từ thư mục <code>news/</code> — mỗi đoạn mở đầu bằng câu chủ đề và luận điểm.</p>
+    <div class="meta">
+      <span><strong>Ngày báo cáo:</strong> 13/05/2026</span>
+      <span><strong>Tổng số bài:</strong> <span id="totalCount">8</span></span>
+      <span><strong>Chủ đề:</strong> 8</span>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="searchInput" type="text" placeholder="Tìm theo tiêu đề, từ khóa hoặc nội dung..." />
+    </div>
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">Tất cả</button>
+    </div>
+  </div>
+
+  <div id="sections"></div>
+  <div id="empty" class="empty" style="display:none">Không có bài viết phù hợp với bộ lọc.</div>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true">
+  <div class="modal" id="modal" data-topic="">
+    <button class="close" aria-label="Đóng">&times;</button>
+    <div class="modal-tag"><span class="dot"></span><span id="m-topic-label"></span></div>
+    <h2 id="m-title"></h2>
+    <div class="modal-meta" id="m-meta"></div>
+    <div class="content" id="m-content"></div>
+    <div class="modal-footer">
+      <span style="color:var(--muted);font-size:12px">Nhấn ESC hoặc click ngoài để đóng</span>
+      <a id="m-source" class="src-btn" target="_blank" rel="noopener">Đọc bài gốc →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+const TOPICS = {
+  realestate: {label:"Bất động sản", color:"var(--tag-realestate)"},
+  tourism:    {label:"Du lịch",      color:"var(--tag-tourism)"},
+  logistics:  {label:"Logistics",    color:"var(--tag-logistics)"},
+  agriculture:{label:"Nông nghiệp – Chăn nuôi", color:"var(--tag-agri)"},
+  energy:     {label:"Năng lượng",   color:"var(--tag-energy)"},
+  industry:   {label:"Sản xuất công nghiệp", color:"var(--tag-industry)"},
+  auto:       {label:"Ô tô",         color:"var(--tag-auto)"},
+  pharma:     {label:"Dược phẩm – M&A", color:"var(--tag-pharma)"}
+};
+
+const ARTICLES = [
+  {
+    id:"thailand-land",
+    topic:"realestate",
+    shortTitle:"Đất nền Thái Lan ảm đạm nhất 30 năm",
+    fullTitle:"Thị trường đất nền Thái Lan ảm đạm nhất trong 30 năm",
+    source:"VietnamBiz",
+    date:"2026-05-13",
+    url:"https://vietnambiz.vn/thi-truong-dat-nen-thai-lan-am-dam-nhat-trong-30-nam-2026513203655282.htm",
+    tease:"Cung tăng vọt, giao dịch tê liệt; nhiều lô đất Bangkok giảm 30-50% giá nhưng vẫn ế.",
+    sections:[
+      {h:"Cung tăng vọt nhưng cầu đóng băng", p:"Thị trường đất nền tại Bangkok và các thành phố lớn của Thái Lan đang trải qua giai đoạn biến động nặng nề nhất trong 30 năm kể từ khủng hoảng Tom Yum Kung. Theo ông Wasan Kongchan – Chủ tịch Hiệp hội Kinh doanh và Tiếp thị Bất động sản, một lượng lớn đất trống đang được chào bán bởi cả nhà môi giới và nhà phát triển nắm giữ quỹ đất lâu năm nhưng không có kế hoạch phát triển. Ngay cả các tập đoàn ngoài ngành bất động sản cũng buộc phải bán đất để quản lý danh mục và dòng tiền, song hầu như không có giao dịch nào hoàn tất – cho thấy thị trường tràn cung trong khi cầu gần như tê liệt."},
+      {h:"Nguyên nhân: thuế nặng và kinh tế suy thoái", p:"Sự suy thoái phản ánh trực diện áp lực thuế đất, thuế xây dựng cùng môi trường kinh tế khó khăn khiến các nhà phát triển ngừng mua đất và hoãn đầu tư mới. Một số lô đất phải giảm giá 30–50% để đẩy nhanh thanh khoản: đất gần ga BTS Punnawithi (Sukhumvit) giảm từ 1,3 triệu xuống 1 triệu baht/m²; đất Thonglor từ 2–2,5 triệu xuống 1,5–1,7 triệu baht/m²; đất Bang Khae lao dốc từ 300.000 baht/m² (2024) xuống 150.000 baht/m² sau thương lượng. Ông Issara Boonyang bổ sung rằng thuế đất bỏ không buộc các chủ đất sẵn sàng cho thuê dài hạn 10–15 năm – mở ra cơ hội cho chuỗi cửa hàng tiện lợi mở rộng mạng lưới."},
+      {h:"Chỉ một số khu vực \"có chọn lọc\" còn hấp dẫn", p:"Trong bối cảnh chung ảm đạm, sự tăng trưởng vẫn diễn ra có chọn lọc dựa trên vị trí và phân khúc khách hàng cụ thể. Các nhà phát triển ưu tiên những khu vực có nhu cầu rõ ràng như giao lộ Bangna với phức hợp Bangkok Mall, đường Bangkok Kreetha gần sân bay – trường quốc tế, các khu vực Halal (Srinakarin, Ramkhamhaeng, Min Buri) và các điểm đến ngôi nhà thứ hai cho người nước ngoài (Pattaya, Hua Hin, Phuket, Samui). Đây có thể là tình trạng tạm thời, và khi kinh tế cải thiện giá đất sẽ tăng trở lại – nghĩa là hiện tại là cơ hội cho người mua nếu chọn đúng vị trí."}
+    ]
+  },
+  {
+    id:"vn-tourism",
+    topic:"tourism",
+    shortTitle:"Việt Nam dẫn đầu ĐNÁ về tăng trưởng khách quốc tế",
+    fullTitle:"Vượt Thái Lan và Singapore, Việt Nam dẫn đầu Đông Nam Á về tăng trưởng khách quốc tế",
+    source:"VietnamBiz",
+    date:"2026-05-11",
+    url:"https://vietnambiz.vn/vuot-thai-lan-va-singapore-viet-nam-dan-dau-dong-nam-a-ve-tang-truong-khach-quoc-te-2026511105555324.htm",
+    tease:"4 tháng đón 8,8 triệu lượt khách (+14,6%), khách Nga tăng gần 300%; mục tiêu năm 25 triệu lượt.",
+    sections:[
+      {h:"Việt Nam là điểm sáng tăng trưởng hai con số duy nhất trong khu vực", p:"Bốn tháng đầu năm 2026, Việt Nam đón 8,8 triệu lượt khách quốc tế, tăng 14,6% và là quốc gia Đông Nam Á duy nhất duy trì tăng trưởng hai con số. Riêng tháng 4 đạt 2,03 triệu lượt, đánh dấu lần đầu tiên ngành du lịch có bốn tháng liên tiếp vượt 2 triệu lượt khách/tháng. So với khu vực, Thái Lan giảm 3,4% (11,3 triệu lượt), Singapore chỉ tăng nhẹ 2,8% trong quý I, Indonesia đạt 3,51 triệu lượt và Philippines 1,83 triệu lượt – khẳng định vị thế Việt Nam là điểm đến an toàn, ổn định và hấp dẫn."},
+      {h:"Cơ cấu thị trường khách dịch chuyển tích cực", p:"Sự đa dạng hóa thị trường nguồn đang tạo nền tảng tăng trưởng bền vững hơn cho du lịch Việt Nam. Khách Nga tăng gần 300%, Philippines lần đầu lọt top 10 thị trường gửi khách lớn nhất, cùng với sự tăng trưởng mạnh từ Ấn Độ và các nước Đông Nam Á. Kết quả này càng có ý nghĩa trong bối cảnh thế giới đối mặt biến động địa chính trị và rủi ro an ninh kéo dài."},
+      {h:"Hai kịch bản tăng trưởng cho năm 2026", p:"Cục Du lịch Quốc gia Việt Nam xây dựng hai kịch bản tăng trưởng dựa trên diễn biến quốc tế. Kịch bản cao đặt mục tiêu 25 triệu lượt khách quốc tế, 150 triệu lượt khách nội địa và tổng thu 1,125 triệu tỷ đồng; kịch bản thấp đạt 22,5 triệu lượt khách quốc tế và 130 triệu lượt khách nội địa nếu xung đột kéo dài hoặc phát sinh thiên tai. Ngành đối mặt thách thức gồm giá nhiên liệu tăng, chi phí hàng không leo thang, nguy cơ gián đoạn đường bay và cạnh tranh thị thực gay gắt giữa các nước Đông Nam Á."},
+      {h:"Định hướng dài hạn 2026–2031", p:"Tầm nhìn đến 2030 chia làm ba kịch bản với mục tiêu tham vọng nhất là 45–50 triệu lượt khách quốc tế. Kịch bản thận trọng tăng 8–10%/năm (35–38 triệu lượt năm 2030), cơ sở 12–15%/năm (40–45 triệu lượt), và cao 15–18%/năm nếu có đột phá về thị thực, hàng không và chuyển đổi số. Để hiện thực hóa, ngành sẽ tập trung sửa Luật Du lịch 2017, đẩy mạnh chuyển đổi số, định vị thương hiệu điểm đến và nâng cao năng lực cạnh tranh – đặc biệt khi hơn 90% trong số 4.000 doanh nghiệp lữ hành quốc tế là doanh nghiệp nhỏ và siêu nhỏ."}
+    ]
+  },
+  {
+    id:"viettel-post",
+    topic:"logistics",
+    shortTitle:"Viettel Post (VTP) dồn lực cho logistics, hợp tác FedEx",
+    fullTitle:"Viettel Post (VTP): Dồn toàn lực cho mảng chuyển phát – logistics, thâm nhập chuỗi cung ứng toàn cầu",
+    source:"Tạp chí Công Thương",
+    date:"2026-05-08",
+    url:"https://tapchicongthuong.vn/viettel-post--vtp-don-toan-luc-cho-mang-chuyen-phat-logistics--tham-nhap-chuoi-cung-ung-toan-cau-516124.htm",
+    tease:"Hy sinh lợi nhuận ngắn hạn: đầu tư Đà Nẵng, mở công ty tại Quảng Tây, ký FedEx làm NNP tại VN.",
+    sections:[
+      {h:"Hy sinh lợi nhuận ngắn hạn để tái cấu trúc dài hạn", p:"Viettel Post đang chấp nhận đánh đổi lợi nhuận ngắn hạn để tập trung toàn lực cho mảng chuyển phát và logistics. Quý 1/2026, doanh thu thuần đạt 4.758 tỷ đồng (giảm 5,6%) do thu hẹp mảng thẻ cào, lãi ròng giảm 43% còn 39 tỷ đồng – mới hoàn thành 10% kế hoạch lợi nhuận năm. Tại ĐHĐCĐ 2026, ban lãnh đạo nhấn mạnh chiến lược ưu tiên mở rộng quy mô hệ thống logistics và nâng vị thế trong chuỗi cung ứng thay vì tối ưu lợi nhuận trước mắt."},
+      {h:"Thị trường logistics Việt Nam còn nhiều dư địa", p:"Tiềm năng tăng trưởng của ngành kho vận đến từ tốc độ phát triển của thuê ngoài logistics và sự bùng nổ của thương mại điện tử. Tỷ lệ thuê ngoài logistics dự báo đạt 40% trong 2026 (tăng 5% so với 2025); thị trường vận tải Việt Nam ước đạt 27,95 tỷ USD với CAGR 6,4% giai đoạn 2026–2030. Các doanh nghiệp đang mở rộng vai trò vào chuỗi cung ứng thông qua mô hình F2C, W2C và thương mại điện tử xuyên biên giới."},
+      {h:"Đầu tư hạ tầng quy mô lớn trong nước", p:"Bảng cân đối kế toán cho thấy chiến lược \"hy sinh ngắn hạn\" được thể hiện qua mức tăng đầu tư hạ tầng. Chi phí xây dựng cơ bản dở dang tăng gần 60% so với cùng kỳ lên 66 tỷ đồng, trong đó dự án trung tâm logistics Đà Nẵng tăng gấp đôi đạt 22 tỷ đồng. Dự án này được kỳ vọng rút ngắn thời gian xử lý đơn hàng và đưa Đà Nẵng thành trung tâm logistics của Vùng kinh tế trọng điểm miền Trung và hành lang kinh tế Đông – Tây."},
+      {h:"Chiến lược \"Go Global\" và hợp tác quốc tế", p:"Viettel Post liên tục mở rộng ra ngoài biên giới để khép kín chuỗi giá trị logistics quốc tế. Cuối tháng 3/2026, công ty hoàn tất góp 1,37 triệu USD lập công ty con tại Quảng Tây (Trung Quốc); trước đó đã vận hành Công viên Logistics Viettel tại Lạng Sơn quy mô 144 ha, vốn 3.300 tỷ đồng, công suất 1.500 xe thông quan/ngày. Đặc biệt, cuối tháng 4/2026 đã thiết lập quan hệ chiến lược với FedEx, đảm nhiệm vai trò National Network Provider tại Việt Nam – một bước tiến vào sâu chuỗi cung ứng toàn cầu. Tổng nợ phải trả đồng thời giảm gần 10% xuống 5.183 tỷ đồng."}
+    ]
+  },
+  {
+    id:"baf",
+    topic:"agriculture",
+    shortTitle:"BAF: lãi 2026 kỳ vọng x8, siêu dự án 12.000 tỷ",
+    fullTitle:"BAF Việt Nam (BAF): Kỳ vọng lãi năm nay tăng gấp 8 lần, sắp khởi công \"siêu\" dự án 12.000 tỷ",
+    source:"Tạp chí Công Thương",
+    date:"2026-04-15",
+    url:"https://tapchicongthuong.vn/baf-viet-nam--baf-ky-vong-lai-nam-nay-tang-gap-8-lan--sap-khoi-cong--sieu--du-an-12-000-ty-510373.htm",
+    tease:"Mục tiêu lãi 793 tỷ (+800%); hợp tác Muyuan xây nhà cao tầng chăn nuôi 12.000 tỷ tại Tây Ninh.",
+    sections:[
+      {h:"Mục tiêu lợi nhuận tham vọng nhờ chu kỳ giá heo và mô hình 3F", p:"BAF Việt Nam đặt mục tiêu lợi nhuận 2026 cao gấp 8 lần năm 2025, đạt 793 tỷ đồng trên nền doanh thu 8.431 tỷ đồng (+70%). Động lực chính đến từ chu kỳ phục hồi giá heo hơi cùng việc tối ưu chi phí qua mô hình chăn nuôi khép kín 3F (Feed – Farm – Food) và chăn nuôi công nghệ cao. Đặc biệt, các khoản đầu tư quy mô lớn trong những năm trước bắt đầu đi vào khai thác, kỳ vọng giúp biên lợi nhuận cải thiện rõ rệt."},
+      {h:"Mở rộng đàn và hệ thống trang trại", p:"Quy mô đàn nái dự kiến gần gấp đôi năm 2025, phản ánh tham vọng dẫn đầu ngành chăn nuôi chế biến hiện đại. Năm 2025 công ty triển khai 19 dự án lớn gồm Nhà máy thức ăn chăn nuôi Bình Định (Gia Lai – 300.000 tấn/năm) và 18 cụm trang trại, nổi bật là Cụm Gia Hân và Cụm Quảng Trị (mỗi cụm 108.000 heo thịt/năm). Năm 2026 dự kiến mở thêm 16 trang trại tập trung tại Tây Nguyên và miền Trung, nâng đàn nái lên 145.000 con và tổng đàn heo thịt vượt 1,14 triệu con."},
+      {h:"\"Siêu\" dự án 12.000 tỷ hợp tác cùng Muyuan", p:"Dự án chăn nuôi nhà cao tầng công nghệ cao tại Tây Ninh là điểm nhấn chiến lược, hợp tác với đối tác Trung Quốc Muyuan. Tổng vốn đầu tư 12.000 tỷ đồng, dự kiến khởi công tháng 4/2026, vận hành từ quý 3/2027, mang lại doanh thu 10.000 tỷ đồng/năm khi vận hành toàn bộ. Bên cạnh đó, BAF sẽ đưa vào vận hành nhà máy thức ăn chăn nuôi thứ 3 tại Bình Định, khởi công nhà máy thứ 4 và thứ 5 tại Tây Ninh và Hải Phòng, đồng thời triển khai tổ hợp giết mổ – chế biến tại Đồng Nai."},
+      {h:"Kế hoạch phát hành cổ phiếu và trái phiếu chuyển đổi", p:"Công ty củng cố nền tảng tài chính qua cổ tức cổ phiếu, ESOP và trái phiếu chuyển đổi. Cổ tức bằng cổ phiếu 10% + cổ phiếu thưởng 10% (tổng 20%); ESOP 8 triệu cổ phiếu (2,63%); phát hành trái phiếu chuyển đổi 1.200 tỷ đồng, kỳ hạn 36 tháng, lãi suất 10%/năm. Tổng số cổ phiếu dự kiến phát hành gần 69 triệu, nâng vốn điều lệ vượt 3.700 tỷ đồng. Tầm nhìn 2030: 450.000 nái và 10 triệu heo thương phẩm/năm."}
+    ]
+  },
+  {
+    id:"ree",
+    topic:"energy",
+    shortTitle:"REE chốt mua dự án điện gió 9.100 tỷ",
+    fullTitle:"Cơ Điện Lạnh (REE) chốt mua dự án điện gió quy mô 9.100 tỷ đồng",
+    source:"Tạp chí Công Thương",
+    date:"2026-03-04",
+    url:"https://tapchicongthuong.vn/co-dien-lanh--ree--chot-mua-du-an-dien-gio-quy-mo-9-100-ty-dong-469163.htm",
+    tease:"REE Energy mua 100% Điện gió Phú Cường (200 MW); mục tiêu 5.000 MW tái tạo vào 2035.",
+    sections:[
+      {h:"Thương vụ M&A củng cố mảng năng lượng tái tạo", p:"HĐQT REE đã chấp thuận cho công ty con REE Energy nhận chuyển nhượng tối đa 100% cổ phần Điện gió Phú Cường để triển khai dự án cụm nhà máy điện gió Phú Cường 1A và 1B (200 MW). Tổng vốn đầu tư dự án 9.140 tỷ đồng – trong đó vốn góp nhà đầu tư 1.828 tỷ, vốn huy động 7.312 tỷ. Dự án đặt tại xã Lai Hòa và phường Vĩnh Phước, TP. Cần Thơ (trước thuộc Sóc Trăng)."},
+      {h:"Tái định hướng danh mục: rời nhiệt điện, đẩy mạnh tái tạo", p:"REE đang chủ động chuyển dịch cơ cấu năng lượng theo hướng xanh hóa và tăng trưởng dài hạn. Hiện tập đoàn sở hữu 2.820 MW gồm thủy điện (1.436 MW), nhiệt điện (1.140 MW) và năng lượng tái tạo (244 MW); mảng điện đem lại nguồn doanh thu, lợi nhuận chính. Chủ tịch Nguyễn Thị Mai Thanh khẳng định sẽ thoái vốn nhiệt điện, đẩy mạnh tái tạo và thủy điện; mục tiêu nâng công suất 100 MW trong 2025, 500 MW trong 3 năm tới, đạt 2.000–3.000 MW vào cuối 2030 và gấp 5 lần lên 5.000 MW vào 2035."},
+      {h:"Tài chính vững – đầu tư mạnh tay", p:"Kết quả kinh doanh 2025 đạt kỷ lục, tạo nền tảng cho các thương vụ M&A quy mô lớn. Doanh thu thuần 10.012 tỷ đồng (+19%), lãi sau thuế 3.149 tỷ (+31%) – vượt 29,7% chỉ tiêu lợi nhuận đề ra. Tổng tài sản cuối 2025 đạt 40.076 tỷ đồng (+10%), trong đó tiền gửi ngân hàng tăng gấp 10,8 lần lên 3.566 tỷ; chi phí xây dựng cơ bản dở dang tăng 67,5% lên 2.433 tỷ chủ yếu phục vụ điện gió. Tổng nợ phải trả 15.280 tỷ (+10%), tập trung tại khoản vay tài chính 10.852 tỷ."}
+    ]
+  },
+  {
+    id:"bmp",
+    topic:"industry",
+    shortTitle:"Nhựa Bình Minh (BMP) tự tin lãi 2026 phá kỷ lục",
+    fullTitle:"Nhựa Bình Minh (BMP): Không cạnh tranh bằng giá, tự tin lãi năm nay tiếp tục phá kỷ lục",
+    source:"Tạp chí Công Thương",
+    date:"2026-05-06",
+    url:"https://tapchicongthuong.vn/nhua-binh-minh--bmp-khong-canh-tranh-bang-gia--tu-tin-lai-nam-nay-tiep-tuc-pha-ky-luc-515643.htm",
+    tease:"Mục tiêu lãi 1.278 tỷ (kỷ lục 50 năm); chuyển mình thành \"nhà cung cấp giải pháp\", mở rộng nông nghiệp.",
+    sections:[
+      {h:"Mục tiêu lợi nhuận kỷ lục mới năm 2026", p:"Nhựa Bình Minh đặt kế hoạch doanh thu 6.053 tỷ đồng (+8%) và lợi nhuận sau thuế 1.278 tỷ đồng (+4%) – nếu hoàn thành sẽ là mức cao nhất trong hơn 50 năm hoạt động. Năm 2025 đã lập kỷ lục lợi nhuận 1.229 tỷ đồng, công ty trình cổ đông kế hoạch chia cổ tức tiền mặt 99% (tương đương 14.860 đồng/cổ phiếu). Ban lãnh đạo thừa nhận thị trường nguyên liệu chịu áp lực địa chính trị nhưng tự tin nhờ quan hệ ổn định với đối tác và khả năng chủ động nguồn cung."},
+      {h:"Động lực tăng trưởng từ đầu tư công và hạ tầng", p:"Ngành nhựa xây dựng bước vào chu kỳ tăng trưởng mới nhờ phục hồi FDI, bất động sản và làn sóng đầu tư công lớn. Các dự án đường sắt, metro và khoảng 5.000 km cao tốc tạo nguồn cầu dài hạn ổn định hơn so với chu kỳ phụ thuộc bất động sản. Sau các đợt lũ lụt nghiêm trọng 2025, nhu cầu hệ thống cấp thoát nước, ống nhựa độ bền cao và khả năng kháng hóa chất gia tăng rõ rệt – tạo lợi thế cho doanh nghiệp có nền tảng công nghệ và thương hiệu mạnh."},
+      {h:"Chiến lược: không cạnh tranh bằng giá, dịch chuyển trung – cao cấp", p:"Doanh nghiệp đang chuyển dịch từ \"nhà sản xuất ống\" sang \"nhà cung cấp giải pháp\" với biên lợi nhuận cao hơn. BMP từ chối cạnh tranh hạ giá, thay vào đó đa dạng hóa sản phẩm, khách hàng và phân khúc giá; hợp tác trực tiếp với chủ đầu tư để kiểm soát chất lượng đầu ra. Công ty mở rộng sang lĩnh vực nông nghiệp (nuôi trồng thủy sản, trồng trọt quy mô lớn), đã ký hợp đồng với một số đối tác lớn tại miền Tây. Tại miền Bắc, nhà máy mới mới đạt 60% công suất với mức cạnh tranh cao, công ty tập trung mở rộng kênh bán lẻ thay vì lao vào mảng dự án rủi ro cao."},
+      {h:"Quản trị chu kỳ giá PVC và đầu tư tự động hóa", p:"Giá nguyên liệu PVC được nhận định khó về mức thấp như trước do tác động kép từ giá dầu, xung đột địa chính trị và đứt gãy chuỗi cung ứng. BMP áp dụng tư duy quản trị chu kỳ thay vì phản ứng ngắn hạn: chi phí đầu vào tăng → giá bán điều chỉnh phù hợp; chi phí giảm → cân nhắc thận trọng. Doanh nghiệp đa dạng hóa nguồn PVC (không phụ thuộc Trung Quốc), ưu tiên chất lượng và an toàn sản phẩm; song song đẩy mạnh tự động hóa, ứng dụng AI trong sản xuất để dịch chuyển lợi thế cạnh tranh từ quy mô sang công nghệ và hiệu quả vận hành."}
+    ]
+  },
+  {
+    id:"vinfast",
+    topic:"auto",
+    shortTitle:"VinFast lên tiếng về nghi vấn từ bỏ ngành ô tô",
+    fullTitle:"Lãnh đạo VinFast nói gì về nghi vấn từ bỏ ngành ô tô?",
+    source:"CafeF",
+    date:"2026-05-13",
+    url:"https://cafef.vn/lanh-dao-vinfast-noi-gi-ve-nghi-van-tu-bo-nganh-o-to-188260513172732651.chn",
+    tease:"Bán 2 nhà máy + chuyển 182.000 tỷ nợ sang công ty của ông Phạm Nhật Vượng; VinFast dự kiến có lãi từ 2027.",
+    sections:[
+      {h:"Bản chất giao dịch tái cấu trúc", p:"Việc tái cấu trúc thực chất là chuyển nhượng tài sản sản xuất, không phải rút lui khỏi ngành ô tô như đồn đoán. Theo bà Thái Thị Thanh Hải – Phó Tổng Giám đốc VinFast, Công ty CP NC Đầu tư và Phát triển Tương Lai cùng ông Phạm Nhật Vượng sẽ mua lại hai nhà máy của VinFast tại Hải Phòng và Hà Tĩnh với giá 13.309,6 tỷ đồng. Bên mua đồng thời nhận lại đại đa số tổng nợ và nghĩa vụ phải trả khoảng 182 nghìn tỷ đồng (tại 31/3/2026), và sẽ sản xuất ô tô theo đơn đặt hàng của VinFast."},
+      {h:"Cấu trúc mới: asset-light tại Việt Nam, giữ sản xuất toàn cầu", p:"Sau tái cấu trúc, VinFast Việt Nam không còn mảng sản xuất nhưng giữ nguyên R&D, thiết kế, kinh doanh và hậu mãi. Tại Việt Nam công ty sẽ thuê Tương Lai sản xuất; trong khi đó VinFast vẫn duy trì sản xuất ở quy mô toàn cầu. Nhờ chuyển giao nợ cùng tài sản, VinFast Việt Nam cơ bản hết nợ, chỉ còn một con số nhỏ – mở đường để có lãi sớm hơn dự kiến, dự kiến từ năm 2027."},
+      {h:"Cam kết chất lượng và phản ứng cổ đông", p:"Lãnh đạo khẳng định khách hàng và cổ đông không bị ảnh hưởng tiêu cực bởi tái cấu trúc. Các nhà máy vẫn sản xuất cho VinFast theo tiêu chuẩn hiện hành; toàn bộ hệ thống bán hàng, bảo hành, hậu mãi và chăm sóc khách hàng vận hành bình thường và tiếp tục được nâng cấp. Cổ đông Vingroup được \"trấn an\" vì không còn gánh 50% nợ VinFast theo tỷ lệ sở hữu; VinFast được tối ưu chi phí tài chính, khấu hao – đúng định hướng \"VinFast là tài sản mang lại giá trị cho Vingroup, không phải nơi tiêu tiền\"."}
+    ]
+  },
+  {
+    id:"pharma",
+    topic:"pharma",
+    shortTitle:"Top doanh nghiệp dược VN đã vào tay nước ngoài",
+    fullTitle:"Những doanh nghiệp dược lớn nhất Việt Nam đã nằm trong tay nước ngoài",
+    source:"CafeF",
+    date:"2026-05-13",
+    url:"https://cafef.vn/nhung-doanh-nghiep-duoc-lon-nhat-viet-nam-da-nam-trong-tay-nuoc-ngoai-188260513073308816.chn",
+    tease:"Taisho giữ >51% DHG; Livzon mua 67,87% IMP với 6.000 tỷ; Abbott nắm 51,7% DMC; thị trường hướng tới 16 tỷ USD.",
+    sections:[
+      {h:"Dòng vốn ngoại chi phối nhóm dẫn đầu", p:"Ba doanh nghiệp dược có vốn hóa lớn nhất Việt Nam đều dưới sự kiểm soát hoặc tham gia chiến lược của cổ đông nước ngoài. Taisho Pharmaceutical (Nhật) duy trì trên 51% sở hữu DHG (vốn hóa 12.709 tỷ đồng) từ 2019; đầu tháng 5/2026, Livzon Pharmaceutical (Trung Quốc) qua Lian SGP hoàn tất mua 67,87% IMP với giao dịch ~6.000 tỷ đồng; ASKA Pharmaceutical (Nhật) liên tục nâng sở hữu DHT lên xấp xỉ 40%. Xu hướng tương tự diễn ra tại DMC (Abbott Mỹ nắm 51,7%), TRA (liên minh Daewoong – Mirae Asset Hàn Quốc giữ 40,12%), và PME đã bị STADA (Đức) thâu tóm 99,5% rồi hủy niêm yết từ 2021."},
+      {h:"Tài sản hấp dẫn: EU-GMP và hệ thống phân phối", p:"Động cơ chính của các tập đoàn ngoại là tiếp cận chuỗi sản xuất chuẩn quốc tế và mạng lưới phân phối nội địa sẵn có. Trong thương vụ Imexpharm, tài sản cốt lõi là 12 dây chuyền sản xuất đạt chuẩn EU-GMP – yếu tố cạnh tranh quyết định trong mảng đấu thầu thuốc bệnh viện (ETC). Đây cũng là lý do dòng vốn quốc tế kiên trì gia tăng hiện diện tại các doanh nghiệp có năng lực sản xuất tốt."},
+      {h:"Quy mô thị trường 16 tỷ USD là động lực M&A", p:"Quá trình chuyển dịch sở hữu diễn ra song hành với đà tăng trưởng mạnh của thị trường dược Việt Nam. Quy mô ngành đã tăng từ 4–5 tỷ USD (2015) lên 8–9 tỷ USD (2024–2025) và dự báo đạt 16 tỷ USD vào 2032. Để bảo vệ môi trường cạnh tranh nội địa, Ủy ban Cạnh tranh Quốc gia yêu cầu Livzon không phân biệt đối xử trong cung cấp nguyên liệu, đảm bảo nguồn cung thuốc kháng sinh và thực hiện lộ trình chuyển giao công nghệ định kỳ cho Imexpharm – một biện pháp ràng buộc điển hình trong các thương vụ tập trung kinh tế."}
+    ]
+  }
+];
+
+// State
+let currentFilter = "all";
+let currentSearch = "";
+
+// --- Render ---
+function renderFilters(){
+  const filters = document.getElementById("filters");
+  Object.entries(TOPICS).forEach(([key, t]) => {
+    const count = ARTICLES.filter(a => a.topic === key).length;
+    if (!count) return;
+    const btn = document.createElement("button");
+    btn.className = "filter-btn";
+    btn.dataset.filter = key;
+    btn.innerHTML = `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${t.color};margin-right:6px;vertical-align:middle"></span>${t.label} <span style="opacity:.6">${count}</span>`;
+    btn.addEventListener("click", () => setFilter(key));
+    filters.appendChild(btn);
+  });
+  document.querySelector('[data-filter="all"]').addEventListener("click", () => setFilter("all"));
+}
+
+function setFilter(f){
+  currentFilter = f;
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === f));
+  renderSections();
+}
+
+function renderSections(){
+  const container = document.getElementById("sections");
+  container.innerHTML = "";
+  const q = currentSearch.trim().toLowerCase();
+
+  const filtered = ARTICLES.filter(a => {
+    if (currentFilter !== "all" && a.topic !== currentFilter) return false;
+    if (!q) return true;
+    const haystack = (a.shortTitle + " " + a.fullTitle + " " + a.tease + " " + a.sections.map(s => s.h + " " + s.p).join(" ")).toLowerCase();
+    return haystack.includes(q);
+  });
+
+  if (!filtered.length){
+    document.getElementById("empty").style.display = "block";
+    return;
+  }
+  document.getElementById("empty").style.display = "none";
+
+  // group by topic
+  const order = Object.keys(TOPICS);
+  order.forEach(topicKey => {
+    const items = filtered.filter(a => a.topic === topicKey);
+    if (!items.length) return;
+    const t = TOPICS[topicKey];
+    const section = document.createElement("section");
+    section.className = "section";
+    section.innerHTML = `
+      <h2 data-topic="${topicKey}"><span class="topic-dot" style="background:${t.color}"></span>${t.label} <span class="count">${items.length}</span></h2>
+      <div class="grid"></div>
+    `;
+    const grid = section.querySelector(".grid");
+    items.forEach(a => grid.appendChild(makeCard(a)));
+    container.appendChild(section);
+  });
+}
+
+function makeCard(a){
+  const t = TOPICS[a.topic];
+  const card = document.createElement("article");
+  card.className = "card";
+  card.dataset.topic = a.topic;
+  card.innerHTML = `
+    <div class="tag"><span class="dot"></span>${t.label}</div>
+    <h3>${a.shortTitle}</h3>
+    <p class="tease">${a.tease}</p>
+    <div class="footer"><span>${a.source} · ${a.date}</span><span class="read">Xem chi tiết →</span></div>
+  `;
+  card.addEventListener("click", () => openModal(a));
+  return card;
+}
+
+// --- Modal ---
+function openModal(a){
+  const t = TOPICS[a.topic];
+  const backdrop = document.getElementById("modalBackdrop");
+  const modal = document.getElementById("modal");
+  modal.dataset.topic = a.topic;
+  document.getElementById("m-topic-label").textContent = t.label;
+  document.getElementById("m-title").textContent = a.fullTitle;
+  document.getElementById("m-meta").innerHTML = `<strong>Nguồn:</strong> ${a.source} · <strong>Ngày đăng:</strong> ${a.date}`;
+  const content = document.getElementById("m-content");
+  content.innerHTML = a.sections.map(s => `<section><h4>${s.h}</h4><p>${s.p}</p></section>`).join("");
+  document.getElementById("m-source").href = a.url;
+  backdrop.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(){
+  document.getElementById("modalBackdrop").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+document.getElementById("modalBackdrop").addEventListener("click", e => { if (e.target.id === "modalBackdrop") closeModal(); });
+document.querySelector("#modal .close").addEventListener("click", closeModal);
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+
+document.getElementById("searchInput").addEventListener("input", e => { currentSearch = e.target.value; renderSections(); });
+
+// init
+document.getElementById("totalCount").textContent = ARTICLES.length;
+renderFilters();
+renderSections();
+</script>
+</body>
+</html>

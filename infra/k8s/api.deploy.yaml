@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+  namespace: atlas
+spec:
+  replicas: 3
+  selector: { matchLabels: { app: api } }
+  template:
+    metadata:
+      labels: { app: api }
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/atlas/api:latest
+          ports: [{ containerPort: 8000 }]
+          envFrom: [{ secretRef: { name: atlas-secrets } }]
+          readinessProbe: { httpGet: { path: /readyz, port: 8000 }, initialDelaySeconds: 5 }
+          livenessProbe:  { httpGet: { path: /healthz, port: 8000 }, initialDelaySeconds: 15 }
+          resources:
+            requests: { cpu: 500m, memory: 1Gi }
+            limits:   { cpu: 2,    memory: 2Gi }
+---
+apiVersion: v1
+kind: Service
+metadata: { name: api, namespace: atlas }
+spec:
+  selector: { app: api }
+  ports: [{ port: 8000, targetPort: 8000 }]
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: { name: api, namespace: atlas }
+spec:
+  scaleTargetRef: { apiVersion: apps/v1, kind: Deployment, name: api }
+  minReplicas: 3
+  maxReplicas: 12
+  metrics:
+    - type: Resource
+      resource: { name: cpu, target: { type: Utilization, averageUtilization: 70 } }

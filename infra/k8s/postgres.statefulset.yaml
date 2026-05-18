@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres
+  namespace: atlas
+spec:
+  serviceName: postgres
+  replicas: 1
+  selector: { matchLabels: { app: postgres } }
+  template:
+    metadata: { labels: { app: postgres } }
+    spec:
+      containers:
+        - name: postgres
+          image: pgvector/pgvector:pg16
+          ports: [{ containerPort: 5432 }]
+          envFrom: [{ secretRef: { name: atlas-secrets } }]
+          volumeMounts:
+            - { name: data, mountPath: /var/lib/postgresql/data }
+          resources:
+            requests: { cpu: 1, memory: 2Gi }
+            limits:   { cpu: 4, memory: 8Gi }
+  volumeClaimTemplates:
+    - metadata: { name: data }
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources: { requests: { storage: 100Gi } }
+---
+apiVersion: v1
+kind: Service
+metadata: { name: postgres, namespace: atlas }
+spec:
+  clusterIP: None
+  selector: { app: postgres }
+  ports: [{ port: 5432 }]

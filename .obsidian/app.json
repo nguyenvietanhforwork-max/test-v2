@@ -1,0 +1,18 @@
+{
+  "attachmentFolderPath": "raw/need proceeding",
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "alwaysUpdateLinks": true,
+  "promptDelete": true,
+  "showLineNumber": true,
+  "spellcheck": false,
+  "strictLineBreaks": false,
+  "userIgnoreFilters": [
+    ".cache/",
+    "outputs/dashboard-data.json",
+    "outputs/metrics.jsonl",
+    "outputs/healthcheck.json"
+  ],
+  "newFileLocation": "current",
+  "newFileFolderPath": "raw/need proceeding"
+}
