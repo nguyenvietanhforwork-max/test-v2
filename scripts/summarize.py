@@ -248,18 +248,76 @@ def _llm_pipeline_real(title: str, body: str) -> dict[str, Any]:
     }
 
 
+def _format_anthropic_error(e: Exception) -> str:
+    """Pull as much detail as possible from an Anthropic SDK error for CI logs."""
+    parts = [type(e).__name__]
+    msg = str(e)
+    if msg:
+        parts.append(msg[:400])
+    # SDK 0.40+ attaches .status_code + .body / .response
+    for attr in ("status_code", "code"):
+        val = getattr(e, attr, None)
+        if val is not None:
+            parts.append(f"{attr}={val}")
+    body = getattr(e, "body", None)
+    if body is None:
+        resp = getattr(e, "response", None)
+        if resp is not None:
+            try:
+                body = resp.text
+            except Exception:
+                body = repr(resp)[:300]
+    if body is not None:
+        parts.append("body=" + str(body)[:500])
+    return " | ".join(parts)
+
+
+# Models to try in order. The first is the "best" model from $DEFAULT_MODEL.
+# If Anthropic rejects it (bad model name, capacity), fall through to known-good
+# date-stamped names. This makes summarize.py resilient to API model-string changes.
+_FALLBACK_MODELS = [
+    "claude-sonnet-4-5-20250929",
+    "claude-3-5-sonnet-20241022",
+    "claude-3-5-sonnet-latest",
+]
+
+
 def _llm_pipeline(title: str, body: str) -> dict[str, Any]:
     """Dispatch: real LLM if ANTHROPIC_API_KEY is set, else schema-valid stub."""
+    global DEFAULT_MODEL
     if not os.environ.get("ANTHROPIC_API_KEY"):
         return _llm_pipeline_stub(body, reason="ANTHROPIC_API_KEY not set")
-    try:
-        result = _llm_pipeline_real(title, body)
-    except ImportError as e:
-        print("  ! anthropic SDK not installed (" + str(e) + ") - using stub", file=sys.stderr)
-        return _llm_pipeline_stub(body, reason="anthropic SDK missing")
-    except Exception as e:  # noqa: BLE001 - fail soft, never break the whole pipeline
-        print("  ! LLM call failed: " + type(e).__name__ + ": " + str(e) + " - using stub", file=sys.stderr)
-        return _llm_pipeline_stub(body, reason="LLM call failed (" + type(e).__name__ + ")")
+
+    # Build model trial list: primary first, then fallbacks (dedup, keep order)
+    primary = os.environ.get("DEFAULT_MODEL", DEFAULT_MODEL)
+    trial = []
+    for m in [primary] + _FALLBACK_MODELS:
+        if m and m not in trial:
+            trial.append(m)
+
+    last_err: str = ""
+    for idx, model in enumerate(trial):
+        # Mutate module-global so _llm_pipeline_real picks up the model
+        DEFAULT_MODEL = model
+        try:
+            result = _llm_pipeline_real(title, body)
+            if idx > 0:
+                print("  + LLM succeeded on fallback model: " + model, file=sys.stderr)
+            break
+        except ImportError as e:
+            print("  ! anthropic SDK not installed (" + str(e) + ") - using stub", file=sys.stderr)
+            return _llm_pipeline_stub(body, reason="anthropic SDK missing")
+        except Exception as e:  # noqa: BLE001 - fail soft per model trial
+            detail = _format_anthropic_error(e)
+            last_err = detail
+            print("  ! LLM attempt " + str(idx + 1) + "/" + str(len(trial)) + " (" + model + ") failed: " + detail, file=sys.stderr)
+            # On BadRequest with invalid model name, try next model.
+            # On other errors (auth, network), still try next as a best effort.
+            continue
+    else:
+        # All trials exhausted
+        print("  ! All LLM models failed - using stub. Last: " + last_err, file=sys.stderr)
+        return _llm_pipeline_stub(body, reason="LLM call failed (all models)")
 
     # Post-validate: if the model produced an empty or too-short response, fall back.
     mr = result["mini_report"]
