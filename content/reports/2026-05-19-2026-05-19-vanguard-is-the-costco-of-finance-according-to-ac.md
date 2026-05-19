@@ -15,7 +15,7 @@ confidence: "low"
 prompt_version: "summarization/topic-sentence-bullets@v3"
 model: "claude-sonnet-4-6"
 template_version: "intelligence-letter@v2"
-generated_at: "2026-05-19T11:24:11.519690+00:00"
+generated_at: "2026-05-19T11:30:43.878435+00:00"
 mini_report:
   topic_sentence: ""
   bullets: []
