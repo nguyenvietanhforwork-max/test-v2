@@ -1,0 +1,23 @@
+# Force LF line endings for shell scripts so Vercel/Linux runs them correctly
+*.sh        text eol=lf
+*.bash      text eol=lf
+
+# Normalize common text formats
+*.md        text
+*.json      text
+*.yml       text
+*.yaml      text
+*.py        text
+*.html      text
+*.css       text
+*.js        text
+
+# Binary
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.pdf       binary
+*.xlsx      binary
+*.docx      binary
+*.pptx      binary
