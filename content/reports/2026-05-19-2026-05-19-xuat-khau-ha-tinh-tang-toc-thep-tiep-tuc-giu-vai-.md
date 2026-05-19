@@ -1,25 +1,23 @@
 ---
-id: report-2026-05-19-2026-05-19-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-
-type: report
-kind: daily-brief
-date: 2026-05-19
-title: 2026 05 19 Xuat Khau Ha Tinh Tang Toc Thep Tiep Tuc Giu Vai Tro Tru Cot
+id: "report-2026-05-19-2026-05-19-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-"
+type: "report"
+kind: "daily-brief"
+date: "2026-05-19"
+title: "2026 05 19 Xuat Khau Ha Tinh Tang Toc Thep Tiep Tuc Giu Vai Tro Tru Cot"
 sources:
-  - 'raw/news/Xuất khẩu Hà Tĩnh tăng tốc, thép tiếp tục giữ vai trò “trụ cột”.md'
-industry: 
+  - "raw/news/Xuất khẩu Hà Tĩnh tăng tốc, thép tiếp tục giữ vai trò “trụ cột”.md"
+industry: ""
 themes: []
 topics: []
 geography: []
 entities: []
-signal_score: null
-novelty_score: null
-confidence: low
-prompt_version: summarization/topic-sentence-bullets@v3
-model: claude-sonnet-4-6
-template_version: intelligence-letter@v2
-generated_at: "2026-05-19T10:58:45.143176+00:00"
+confidence: "low"
+prompt_version: "summarization/topic-sentence-bullets@v3"
+model: "claude-sonnet-4-6"
+template_version: "intelligence-letter@v2"
+generated_at: "2026-05-19T11:24:11.520615+00:00"
 mini_report:
-  topic_sentence: 
+  topic_sentence: ""
   bullets: []
 ---
 

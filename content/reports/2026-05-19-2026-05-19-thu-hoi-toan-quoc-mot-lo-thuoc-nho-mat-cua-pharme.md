@@ -1,25 +1,23 @@
 ---
-id: report-2026-05-19-2026-05-19-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme
-type: report
-kind: daily-brief
-date: 2026-05-19
-title: 2026 05 19 Thu Hoi Toan Quoc Mot Lo Thuoc Nho Mat Cua Pharmedic Co Phieu Pmc Giam Gan 10
+id: "report-2026-05-19-2026-05-19-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme"
+type: "report"
+kind: "daily-brief"
+date: "2026-05-19"
+title: "2026 05 19 Thu Hoi Toan Quoc Mot Lo Thuoc Nho Mat Cua Pharmedic Co Phieu Pmc Giam Gan 10"
 sources:
-  - 'raw/news/Thu hồi toàn quốc một lô thuốc nhỏ mắt của Pharmedic, cổ phiếu PMC giảm gần 10%.md'
-industry: 
+  - "raw/news/Thu hồi toàn quốc một lô thuốc nhỏ mắt của Pharmedic, cổ phiếu PMC giảm gần 10%.md"
+industry: ""
 themes: []
 topics: []
 geography: []
 entities: []
-signal_score: null
-novelty_score: null
-confidence: low
-prompt_version: summarization/topic-sentence-bullets@v3
-model: claude-sonnet-4-6
-template_version: intelligence-letter@v2
-generated_at: "2026-05-19T10:58:45.139659+00:00"
+confidence: "low"
+prompt_version: "summarization/topic-sentence-bullets@v3"
+model: "claude-sonnet-4-6"
+template_version: "intelligence-letter@v2"
+generated_at: "2026-05-19T11:24:11.518421+00:00"
 mini_report:
-  topic_sentence: 
+  topic_sentence: ""
   bullets: []
 ---
 

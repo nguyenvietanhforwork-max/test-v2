@@ -1,25 +1,23 @@
 ---
-id: report-2026-05-19-2026-05-19-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne
-type: report
-kind: daily-brief
-date: 2026-05-19
-title: 2026 05 19 Datvietvac Va Cuoc Ua Khai Thac Ip 360 O Trong Nen Kinh Te Fandom
+id: "report-2026-05-19-2026-05-19-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne"
+type: "report"
+kind: "daily-brief"
+date: "2026-05-19"
+title: "2026 05 19 Datvietvac Va Cuoc Ua Khai Thac Ip 360 O Trong Nen Kinh Te Fandom"
 sources:
-  - 'raw/news/DatVietVAC và cuộc đua khai thác IP 360 độ trong nền kinh tế fandom.md'
-industry: 
+  - "raw/news/DatVietVAC và cuộc đua khai thác IP 360 độ trong nền kinh tế fandom.md"
+industry: ""
 themes: []
 topics: []
 geography: []
 entities: []
-signal_score: null
-novelty_score: null
-confidence: low
-prompt_version: summarization/topic-sentence-bullets@v3
-model: claude-sonnet-4-6
-template_version: intelligence-letter@v2
-generated_at: "2026-05-19T10:58:45.132488+00:00"
+confidence: "low"
+prompt_version: "summarization/topic-sentence-bullets@v3"
+model: "claude-sonnet-4-6"
+template_version: "intelligence-letter@v2"
+generated_at: "2026-05-19T11:24:11.513861+00:00"
 mini_report:
-  topic_sentence: 
+  topic_sentence: ""
   bullets: []
 ---
 

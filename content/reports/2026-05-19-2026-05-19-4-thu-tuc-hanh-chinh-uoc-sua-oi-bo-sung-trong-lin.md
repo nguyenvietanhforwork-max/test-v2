@@ -1,25 +1,23 @@
 ---
-id: report-2026-05-19-2026-05-19-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin
-type: report
-kind: daily-brief
-date: 2026-05-19
-title: 2026 05 19 4 Thu Tuc Hanh Chinh Uoc Sua Oi Bo Sung Trong Linh Vuc Xay Dung
+id: "report-2026-05-19-2026-05-19-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin"
+type: "report"
+kind: "daily-brief"
+date: "2026-05-19"
+title: "2026 05 19 4 Thu Tuc Hanh Chinh Uoc Sua Oi Bo Sung Trong Linh Vuc Xay Dung"
 sources:
-  - 'raw/news/4 thủ tục hành chính được sửa đổi, bổ sung trong lĩnh vực xây dựng.md'
-industry: 
+  - "raw/news/4 thủ tục hành chính được sửa đổi, bổ sung trong lĩnh vực xây dựng.md"
+industry: ""
 themes: []
 topics: []
 geography: []
 entities: []
-signal_score: null
-novelty_score: null
-confidence: low
-prompt_version: summarization/topic-sentence-bullets@v3
-model: claude-sonnet-4-6
-template_version: intelligence-letter@v2
-generated_at: "2026-05-19T10:58:45.130314+00:00"
+confidence: "low"
+prompt_version: "summarization/topic-sentence-bullets@v3"
+model: "claude-sonnet-4-6"
+template_version: "intelligence-letter@v2"
+generated_at: "2026-05-19T11:24:11.512333+00:00"
 mini_report:
-  topic_sentence: 
+  topic_sentence: ""
   bullets: []
 ---
 

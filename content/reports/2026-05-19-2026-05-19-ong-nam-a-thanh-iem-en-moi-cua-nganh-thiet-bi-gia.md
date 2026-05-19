@@ -1,25 +1,23 @@
 ---
-id: report-2026-05-19-2026-05-19-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia
-type: report
-kind: daily-brief
-date: 2026-05-19
-title: 2026 05 19 Ong Nam A Thanh Iem En Moi Cua Nganh Thiet Bi Giat La
+id: "report-2026-05-19-2026-05-19-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia"
+type: "report"
+kind: "daily-brief"
+date: "2026-05-19"
+title: "2026 05 19 Ong Nam A Thanh Iem En Moi Cua Nganh Thiet Bi Giat La"
 sources:
-  - 'raw/news/Đông Nam Á thành điểm đến mới của ngành thiết bị giặt là.md'
-industry: 
+  - "raw/news/Đông Nam Á thành điểm đến mới của ngành thiết bị giặt là.md"
+industry: ""
 themes: []
 topics: []
 geography: []
 entities: []
-signal_score: null
-novelty_score: null
-confidence: low
-prompt_version: summarization/topic-sentence-bullets@v3
-model: claude-sonnet-4-6
-template_version: intelligence-letter@v2
-generated_at: "2026-05-19T10:58:45.135598+00:00"
+confidence: "low"
+prompt_version: "summarization/topic-sentence-bullets@v3"
+model: "claude-sonnet-4-6"
+template_version: "intelligence-letter@v2"
+generated_at: "2026-05-19T11:24:11.515826+00:00"
 mini_report:
-  topic_sentence: 
+  topic_sentence: ""
   bullets: []
 ---
 

@@ -1,25 +1,23 @@
 ---
-id: report-2026-05-19-2026-05-19-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-
-type: report
-kind: daily-brief
-date: 2026-05-19
-title: 2026 05 19 Xuat Khau Nong Lam Thuy San At Hon 23 Ty Usd Giu Vung A Tang Truong
+id: "report-2026-05-19-2026-05-19-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-"
+type: "report"
+kind: "daily-brief"
+date: "2026-05-19"
+title: "2026 05 19 Xuat Khau Nong Lam Thuy San At Hon 23 Ty Usd Giu Vung A Tang Truong"
 sources:
-  - 'raw/news/Xuất khẩu nông lâm thủy sản đạt hơn 23 tỷ USD, giữ vững đà tăng trưởng.md'
-industry: 
+  - "raw/news/Xuất khẩu nông lâm thủy sản đạt hơn 23 tỷ USD, giữ vững đà tăng trưởng.md"
+industry: ""
 themes: []
 topics: []
 geography: []
 entities: []
-signal_score: null
-novelty_score: null
-confidence: low
-prompt_version: summarization/topic-sentence-bullets@v3
-model: claude-sonnet-4-6
-template_version: intelligence-letter@v2
-generated_at: "2026-05-19T10:58:45.143673+00:00"
+confidence: "low"
+prompt_version: "summarization/topic-sentence-bullets@v3"
+model: "claude-sonnet-4-6"
+template_version: "intelligence-letter@v2"
+generated_at: "2026-05-19T11:24:11.520927+00:00"
 mini_report:
-  topic_sentence: 
+  topic_sentence: ""
   bullets: []
 ---
 

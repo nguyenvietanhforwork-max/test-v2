@@ -1,25 +1,23 @@
 ---
-id: report-2026-05-19-2026-05-19-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep
-type: report
-kind: daily-brief
-date: 2026-05-19
-title: 2026 05 19 Ua Uong Dan Loi Cho Trai Phieu Doanh Nghiep
+id: "report-2026-05-19-2026-05-19-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep"
+type: "report"
+kind: "daily-brief"
+date: "2026-05-19"
+title: "2026 05 19 Ua Uong Dan Loi Cho Trai Phieu Doanh Nghiep"
 sources:
-  - 'raw/news/‘Đưa đường, dẫn lối’ cho trái phiếu doanh nghiệp.md'
-industry: 
+  - "raw/news/‘Đưa đường, dẫn lối’ cho trái phiếu doanh nghiệp.md"
+industry: ""
 themes: []
 topics: []
 geography: []
 entities: []
-signal_score: null
-novelty_score: null
-confidence: low
-prompt_version: summarization/topic-sentence-bullets@v3
-model: claude-sonnet-4-6
-template_version: intelligence-letter@v2
-generated_at: "2026-05-19T10:58:45.141193+00:00"
+confidence: "low"
+prompt_version: "summarization/topic-sentence-bullets@v3"
+model: "claude-sonnet-4-6"
+template_version: "intelligence-letter@v2"
+generated_at: "2026-05-19T11:24:11.519393+00:00"
 mini_report:
-  topic_sentence: 
+  topic_sentence: ""
   bullets: []
 ---
 

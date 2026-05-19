@@ -1,25 +1,23 @@
 ---
-id: report-2026-05-19-2026-05-19-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k
-type: report
-kind: daily-brief
-date: 2026-05-19
-title: 2026 05 19 Pho Tg Vietnam Airlines Nam 2026 Du Kien Lo Luy Ke Khoang 30 000 Ty Neu Giu Nguy
+id: "report-2026-05-19-2026-05-19-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k"
+type: "report"
+kind: "daily-brief"
+date: "2026-05-19"
+title: "2026 05 19 Pho Tg Vietnam Airlines Nam 2026 Du Kien Lo Luy Ke Khoang 30 000 Ty Neu Giu Nguy"
 sources:
-  - 'raw/news/Phó TGĐ Vietnam Airlines Năm 2026 dự kiến lỗ luỹ kế khoảng 30.000 tỷ nếu giữ nguyên sản lượng khai thác như kế hoạch.md'
-industry: 
+  - "raw/news/Phó TGĐ Vietnam Airlines Năm 2026 dự kiến lỗ luỹ kế khoảng 30.000 tỷ nếu giữ nguyên sản lượng khai thác như kế hoạch.md"
+industry: ""
 themes: []
 topics: []
 geography: []
 entities: []
-signal_score: null
-novelty_score: null
-confidence: low
-prompt_version: summarization/topic-sentence-bullets@v3
-model: claude-sonnet-4-6
-template_version: intelligence-letter@v2
-generated_at: "2026-05-19T10:58:45.136144+00:00"
+confidence: "low"
+prompt_version: "summarization/topic-sentence-bullets@v3"
+model: "claude-sonnet-4-6"
+template_version: "intelligence-letter@v2"
+generated_at: "2026-05-19T11:24:11.516176+00:00"
 mini_report:
-  topic_sentence: 
+  topic_sentence: ""
   bullets: []
 ---
 

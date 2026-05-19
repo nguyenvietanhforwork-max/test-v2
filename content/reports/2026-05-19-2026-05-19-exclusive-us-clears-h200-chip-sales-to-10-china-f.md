@@ -1,25 +1,23 @@
 ---
-id: report-2026-05-19-2026-05-19-exclusive-us-clears-h200-chip-sales-to-10-china-f
-type: report
-kind: daily-brief
-date: 2026-05-19
-title: 2026 05 19 Exclusive Us Clears H200 Chip Sales To 10 China Firms As Nvidia Ceo Looks For Br
+id: "report-2026-05-19-2026-05-19-exclusive-us-clears-h200-chip-sales-to-10-china-f"
+type: "report"
+kind: "daily-brief"
+date: "2026-05-19"
+title: "2026 05 19 Exclusive Us Clears H200 Chip Sales To 10 China Firms As Nvidia Ceo Looks For Br"
 sources:
-  - 'raw/news/Exclusive US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough.md'
-industry: 
+  - "raw/news/Exclusive US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough.md"
+industry: ""
 themes: []
 topics: []
 geography: []
 entities: []
-signal_score: null
-novelty_score: null
-confidence: low
-prompt_version: summarization/topic-sentence-bullets@v3
-model: claude-sonnet-4-6
-template_version: intelligence-letter@v2
-generated_at: "2026-05-19T10:58:45.133537+00:00"
+confidence: "low"
+prompt_version: "summarization/topic-sentence-bullets@v3"
+model: "claude-sonnet-4-6"
+template_version: "intelligence-letter@v2"
+generated_at: "2026-05-19T11:24:11.514540+00:00"
 mini_report:
-  topic_sentence: 
+  topic_sentence: ""
   bullets: []
 ---
 

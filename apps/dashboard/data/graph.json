@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T10:58:45.508684+00:00",
+  "generated_at": "2026-05-19T11:24:11.812101+00:00",
   "schema_version": 1,
   "nodes": [
     {
@@ -155,7 +155,7 @@
     {
       "data": {
         "id": "report-2026-05-19-2026-05-19-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
-        "label": "2026 05 19 Tap Oan Ien Luc Viet Nam Evn Co The Se Tang Gia Ien E Xu Ly Khoan Lo Luy Ke Gan",
+        "label": "2026 05 19 Tap Oan Ien Luc Viet Nam Evn Co The Se Tang Gia Ien E Xu Ly Khoan Lo Luy Ke Gan ",
         "type": "report",
         "date": "2026-05-19",
         "signal_score": null,
