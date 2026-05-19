@@ -1,11 +1,6 @@
 """
 scripts/summarize.py — cleaned/ → content/reports/.
 
-Composes the same LangGraph nodes that packages/automation/pipeline/graph.py
-runs in production, but synchronously, one document at a time, with no Celery
-or Redis dependency. The idea: anyone with an API key can run this script and
-get reports.
-
 For each cleaned document:
   1. Run extraction (entities) — prompts/extraction/extract-entities.md
   2. Run classification (theme, industry) — prompts/extraction/* (TBD)
@@ -19,16 +14,18 @@ USAGE
     python scripts/summarize.py --date 2026-05-18         # only that date
     python scripts/summarize.py --file cleaned/foo.md     # specific file
     python scripts/summarize.py --dry-run                 # print the report, don't write
+    python scripts/summarize.py --force                   # re-summarize even if content/reports/ output exists
 
-This is a SCAFFOLD. The LLM wiring is delegated to packages/agents/models/
-which wraps Anthropic / OpenAI clients. Until ANTHROPIC_API_KEY is set,
-the script writes a stub report with empty mini_report fields so the rest
-of the pipeline can still be exercised.
+When ANTHROPIC_API_KEY is set the script calls Claude (model = $DEFAULT_MODEL,
+default `claude-sonnet-4-6`) using the prompt files under `prompts/`. Without
+the key it falls back to a schema-valid stub so the rest of the pipeline can
+still be exercised end-to-end (build_index → graph → dashboard cards).
 """
 
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import pathlib
 import re
@@ -43,7 +40,9 @@ CONTENT_REPORTS = REPO_ROOT / "content" / "reports"
 PROMPTS = REPO_ROOT / "prompts"
 
 TEMPLATE_VERSION = "intelligence-letter@v2"
+PROMPT_VERSION = "summarization/topic-sentence-bullets@v3"
 DEFAULT_MODEL = os.environ.get("DEFAULT_MODEL", "claude-sonnet-4-6")
+MAX_BODY_CHARS = 12000  # truncate very long sources so the LLM call stays bounded
 
 
 def _slug(s: str) -> str:
@@ -54,34 +53,65 @@ def _slug(s: str) -> str:
 
 
 def _load_cleaned(path: pathlib.Path) -> tuple[dict[str, str], str]:
-    raw = path.read_text(encoding="utf-8")
+    raw = path.read_text(encoding="utf-8", errors="replace")
     fm: dict[str, str] = {}
     body = raw
     if raw.startswith("---"):
         try:
             _, fm_block, body = raw.split("---", 2)
+            in_orig = False
+            orig_indent = None
             for line in fm_block.splitlines():
-                line = line.strip()
-                if line.startswith("#") or ":" not in line:
+                stripped = line.strip()
+                # Detect the start of the commented-out original frontmatter block
+                if stripped.startswith("# original frontmatter"):
+                    in_orig = True
                     continue
-                k, _, v = line.partition(":")
-                fm[k.strip()] = v.strip()
+                if in_orig:
+                    # Lines look like '#   title: "..."'  -- pull title/source/description if present
+                    if not stripped.startswith("#"):
+                        in_orig = False
+                    else:
+                        inner = stripped.lstrip("#").strip()
+                        if ":" in inner:
+                            k, _, v = inner.partition(":")
+                            key = k.strip()
+                            val = v.strip().strip('"')
+                            if key in ("title", "source", "description", "published", "created") and key not in fm:
+                                fm["orig_" + key] = val
+                        continue
+                if stripped.startswith("#") or ":" not in stripped:
+                    continue
+                k, _, v = stripped.partition(":")
+                fm[k.strip()] = v.strip().strip('"')
         except ValueError:
             pass
     return fm, body.strip()
 
 
-def _llm_pipeline_stub(body: str) -> dict[str, Any]:
-    """
-    Placeholder for the actual extraction / classification / summarization /
-    scoring chain. Returns the same shape the real pipeline does, with empty
-    semantic content if no API key is available.
+def _read_prompt(rel_path: str) -> str:
+    """Read prompts/<rel_path> and strip frontmatter so only the body is returned."""
+    p = PROMPTS / rel_path
+    if not p.exists():
+        return ""
+    text = p.read_text(encoding="utf-8")
+    if text.startswith("---"):
+        try:
+            _, _fm, body = text.split("---", 2)
+            return body.strip()
+        except ValueError:
+            return text
+    return text
 
-    Wire this to packages.automation.pipeline.graph when ready:
-        from packages.automation.pipeline.graph import build_graph
-        result = build_graph().invoke({"text": body, ...})
+
+# stub fallback
+
+def _llm_pipeline_stub(body: str, reason: str = "no API key configured") -> dict[str, Any]:
+    """Schema-valid placeholder used when the real LLM call is unavailable.
+
+    The topic_sentence + each bullet meet the minLength constraints in
+    schemas/report.schema.json so build_index --validate-only still passes.
     """
-    has_key = bool(os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("OPENAI_API_KEY"))
     return {
         "entities": [],
         "themes": [],
@@ -89,11 +119,14 @@ def _llm_pipeline_stub(body: str) -> dict[str, Any]:
         "industry": "",
         "geography": [],
         "mini_report": {
-            "topic_sentence": "" if has_key else "(stub — wire packages.automation.pipeline to populate)",
-            "bullets": [] if has_key else [
-                "<b>Stub:</b> connect this script to packages.automation.pipeline.graph.build_graph() to populate.",
-                "<b>API key required:</b> set ANTHROPIC_API_KEY in .env",
-                "<b>See:</b> prompts/summarization/topic-sentence-bullets.md for the editorial pattern.",
+            "topic_sentence": (
+                "(stub - " + reason + "; wire ANTHROPIC_API_KEY or check the LLM call. "
+                "This card will populate on the next pipeline run.)"
+            ),
+            "bullets": [
+                "<b>Stub mode:</b> the pipeline ran without a real LLM response (" + reason + ").",
+                "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+                "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern.",
             ],
         },
         "signal_score": None,
@@ -102,14 +135,175 @@ def _llm_pipeline_stub(body: str) -> dict[str, Any]:
     }
 
 
-def summarize_one(cleaned_path: pathlib.Path, *, dry_run: bool = False) -> pathlib.Path | None:
+# real Anthropic call
+
+_OUTPUT_TEMPLATE = """
+Return EXACTLY ONE JSON object - no markdown fence, no commentary before or after.
+Schema (minLength rules MUST be met, otherwise the report is rejected):
+
+{
+  "topic_sentence": "string, >= 40 chars, follows topic-sentence rules above (thesis, not headline-recap)",
+  "bullets": [
+    "<b>Ten luan diem:</b> sentence... (>= 20 chars; 3-6 bullets total)",
+    "<b>Ten luan diem:</b> ...",
+    "<b>Ten luan diem:</b> ..."
+  ],
+  "entities": [
+    {"name": "string", "type": "company|government|person|location|sector|organization", "confidence": 0.9}
+  ],
+  "industry": "single short slug e.g. real-estate | construction | agriculture | finance | energy | manufacturing | tech | trade | macro (empty if not classifiable)",
+  "themes": ["short string", "..."],
+  "topics": ["short string", "..."],
+  "geography": ["Vietnam", "..."],
+  "signal_score": 0.0,
+  "novelty_score": 0.0,
+  "confidence": "high|medium|low"
+}
+"""
+
+
+def _build_user_prompt(title: str, body: str) -> str:
+    sum_prompt = _read_prompt("summarization/topic-sentence-bullets.md")
+    ent_prompt = _read_prompt("extraction/extract-entities.md")
+    score_prompt = _read_prompt("scoring/signal-novelty.md")
+
+    body_trimmed = body[:MAX_BODY_CHARS]
+    if len(body) > MAX_BODY_CHARS:
+        body_trimmed += "\n\n[... source truncated for prompt-size budget ...]"
+
+    parts = [
+        "You are processing a single news article. Produce ONE structured intelligence-letter "
+        "card by applying the rules below. Vietnamese sources -> Vietnamese output (editorial register).",
+        "",
+        "================== SUMMARIZATION RULES ==================",
+        sum_prompt,
+        "",
+        "================== ENTITY EXTRACTION RULES ==================",
+        ent_prompt,
+        "",
+        "================== SIGNAL / NOVELTY RULES ==================",
+        score_prompt,
+        "",
+        "================== ARTICLE TITLE ==================",
+        title,
+        "",
+        "================== ARTICLE BODY ==================",
+        body_trimmed,
+        "",
+        "================== OUTPUT ==================",
+        _OUTPUT_TEMPLATE.strip(),
+    ]
+    return "\n".join(parts)
+
+
+def _llm_pipeline_real(title: str, body: str) -> dict[str, Any]:
+    """Call Anthropic Messages API. Returns the same dict shape as the stub.
+
+    Raises on any error - caller is expected to fall back to stub.
+    """
+    import anthropic  # imported lazily so script still runs without the SDK
+
+    system = _read_prompt("system/identity.md")
+    user_msg = _build_user_prompt(title, body)
+
+    client = anthropic.Anthropic()  # picks up ANTHROPIC_API_KEY from env
+    resp = client.messages.create(
+        model=DEFAULT_MODEL,
+        max_tokens=2000,
+        system=system,
+        messages=[{"role": "user", "content": user_msg}],
+    )
+
+    # Concatenate any text blocks (Anthropic SDK 0.40+ returns a list)
+    text = ""
+    for block in resp.content:
+        t = getattr(block, "text", None)
+        if t:
+            text += t
+
+    # Strip code fences if the model wrapped JSON in ```json ... ```
+    fence = re.search(r"```(?:json)?\s*([\s\S]+?)\s*```", text)
+    candidate = fence.group(1) if fence else text
+
+    # Fall back to first {...} block if there's still surrounding prose
+    m = re.search(r"\{[\s\S]*\}", candidate)
+    if not m:
+        raise ValueError("LLM response contained no JSON object. First 200 chars: " + repr(text[:200]))
+    data = json.loads(m.group(0))
+
+    # Normalize to internal shape; tolerate missing keys
+    return {
+        "entities": data.get("entities") or [],
+        "themes": data.get("themes") or [],
+        "topics": data.get("topics") or [],
+        "industry": data.get("industry") or "",
+        "geography": data.get("geography") or [],
+        "mini_report": {
+            "topic_sentence": (data.get("topic_sentence") or "").strip(),
+            "bullets": [b for b in (data.get("bullets") or []) if isinstance(b, str) and b.strip()],
+        },
+        "signal_score": data.get("signal_score"),
+        "novelty_score": data.get("novelty_score"),
+        "confidence": data.get("confidence") or "medium",
+    }
+
+
+def _llm_pipeline(title: str, body: str) -> dict[str, Any]:
+    """Dispatch: real LLM if ANTHROPIC_API_KEY is set, else schema-valid stub."""
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        return _llm_pipeline_stub(body, reason="ANTHROPIC_API_KEY not set")
+    try:
+        result = _llm_pipeline_real(title, body)
+    except ImportError as e:
+        print("  ! anthropic SDK not installed (" + str(e) + ") - using stub", file=sys.stderr)
+        return _llm_pipeline_stub(body, reason="anthropic SDK missing")
+    except Exception as e:  # noqa: BLE001 - fail soft, never break the whole pipeline
+        print("  ! LLM call failed: " + type(e).__name__ + ": " + str(e) + " - using stub", file=sys.stderr)
+        return _llm_pipeline_stub(body, reason="LLM call failed (" + type(e).__name__ + ")")
+
+    # Post-validate: if the model produced an empty or too-short response, fall back.
+    mr = result["mini_report"]
+    if (
+        not mr["topic_sentence"]
+        or len(mr["topic_sentence"]) < 40
+        or len(mr["bullets"]) < 3
+    ):
+        print(
+            "  ! LLM returned content below schema minLength - using stub. "
+            "(topic_sentence len=" + str(len(mr["topic_sentence"])) + ", bullets=" + str(len(mr["bullets"])) + ")",
+            file=sys.stderr,
+        )
+        return _llm_pipeline_stub(body, reason="LLM output failed minLength check")
+    return result
+
+
+# report writer
+
+def summarize_one(cleaned_path: pathlib.Path, *, dry_run: bool = False, force: bool = False) -> pathlib.Path | None:
     fm, body = _load_cleaned(cleaned_path)
-    pipeline = _llm_pipeline_stub(body)
 
     date = fm.get("cleaned_at", datetime.now(timezone.utc).isoformat())[:10]
-    title = fm.get("title") or cleaned_path.stem.replace("-", " ").title()
-    slug = _slug(title)
-    report_id = f"report-{date}-{slug}"
+    # Title displayed in frontmatter -- prefer the original Vietnamese title from raw/.
+    title = fm.get("orig_title") or fm.get("title") or cleaned_path.stem.replace("-", " ").title()
+    # Slug used in filename / id -- keep the SAME algorithm previously-committed reports used,
+    # so a regen overwrites in place rather than creating orphans.
+    slug_basis = fm.get("title") or cleaned_path.stem.replace("-", " ").title()
+    slug = _slug(slug_basis)
+    report_id = "report-" + date + "-" + slug
+    out_path = CONTENT_REPORTS / (date + "-" + slug + ".md")
+
+    # Skip if a non-stub report already exists. A regen is forced when the previous
+    # output was just a stub (e.g. an earlier CI run had no ANTHROPIC_API_KEY).
+    if out_path.exists() and not force and not dry_run:
+        try:
+            existing = out_path.read_text(encoding="utf-8", errors="replace")
+            if "(stub" not in existing[:600] and "<b>Stub mode:</b>" not in existing[:1500]:
+                print("  . skip (exists): " + str(out_path.relative_to(REPO_ROOT)), file=sys.stderr)
+                return None
+        except OSError:
+            pass
+
+    pipeline = _llm_pipeline(title, body)
 
     frontmatter = {
         "id": report_id,
@@ -126,7 +320,7 @@ def summarize_one(cleaned_path: pathlib.Path, *, dry_run: bool = False) -> pathl
         "signal_score": pipeline["signal_score"],
         "novelty_score": pipeline["novelty_score"],
         "confidence": pipeline["confidence"],
-        "prompt_version": "summarization/topic-sentence-bullets@v3",
+        "prompt_version": PROMPT_VERSION,
         "model": DEFAULT_MODEL,
         "template_version": TEMPLATE_VERSION,
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -146,40 +340,39 @@ def summarize_one(cleaned_path: pathlib.Path, *, dry_run: bool = False) -> pathl
             if v is None:
                 continue
             if isinstance(v, dict):
-                lines.append(f"{pad}{k}:")
+                lines.append(pad + str(k) + ":")
                 lines.append(_yaml_dump(v, indent + 1))
             elif isinstance(v, list):
                 if not v:
-                    lines.append(f"{pad}{k}: []")
+                    lines.append(pad + str(k) + ": []")
                 else:
-                    lines.append(f"{pad}{k}:")
+                    lines.append(pad + str(k) + ":")
                     for item in v:
                         if isinstance(item, dict):
-                            lines.append(f"{pad}  -")
+                            lines.append(pad + "  -")
                             lines.append(_yaml_dump(item, indent + 2))
                         else:
-                            lines.append(f"{pad}  - {_quote(item)}")
+                            lines.append(pad + "  - " + _quote(item))
             elif isinstance(v, bool):
-                lines.append(f"{pad}{k}: {str(v).lower()}")
+                lines.append(pad + str(k) + ": " + str(v).lower())
             elif isinstance(v, (int, float)):
-                lines.append(f"{pad}{k}: {v}")
+                lines.append(pad + str(k) + ": " + str(v))
             else:
-                # Always quote strings — protects dates, empty strings, special chars, etc.
-                lines.append(f"{pad}{k}: {_quote(v)}")
+                # Always quote strings - protects dates, empty strings, special chars, etc.
+                lines.append(pad + str(k) + ": " + _quote(v))
         return "\n".join(lines)
 
     yaml_block = _yaml_dump(frontmatter)
-    md = f"---\n{yaml_block}\n---\n\n# {title}\n\n{pipeline['mini_report']['topic_sentence']}\n\n"
+    md = "---\n" + yaml_block + "\n---\n\n# " + title + "\n\n" + pipeline["mini_report"]["topic_sentence"] + "\n\n"
     for b in pipeline["mini_report"]["bullets"]:
-        md += f"- {b}\n"
-    md += f"\n---\n\n**Source:** {frontmatter['sources'][0]}\n**Generated by:** `{frontmatter['prompt_version']}` on `{frontmatter['model']}`\n"
+        md += "- " + b + "\n"
+    md += "\n---\n\n**Source:** " + frontmatter["sources"][0] + "\n**Generated by:** `" + frontmatter["prompt_version"] + "` on `" + frontmatter["model"] + "`\n"
 
     if dry_run:
         print(md)
         return None
 
     CONTENT_REPORTS.mkdir(parents=True, exist_ok=True)
-    out_path = CONTENT_REPORTS / f"{date}-{slug}.md"
     out_path.write_text(md, encoding="utf-8")
     return out_path
 
@@ -189,27 +382,31 @@ def main() -> int:
     parser.add_argument("--date", help="Only process cleaned files where the embedded date matches YYYY-MM-DD")
     parser.add_argument("--file", help="Process a specific cleaned/ file")
     parser.add_argument("--dry-run", action="store_true", help="Print report, don't write")
+    parser.add_argument("--force", action="store_true", help="Re-summarize even if content/reports/ output exists")
     args = parser.parse_args()
 
     if not CLEANED.exists():
-        print(f"ERROR: {CLEANED} does not exist. Run `python scripts/clean.py` first.", file=sys.stderr)
+        print("ERROR: " + str(CLEANED) + " does not exist. Run `python scripts/clean.py` first.", file=sys.stderr)
         return 1
 
     if args.file:
         paths = [pathlib.Path(args.file)]
     else:
-        paths = sorted(CLEANED.glob("*.md"))
+        paths = sorted(p for p in CLEANED.glob("*.md") if p.name.lower() != "readme.md")
         if args.date:
             paths = [p for p in paths if p.name.startswith(args.date)]
 
-    count = 0
+    written = 0
+    skipped = 0
     for p in paths:
-        out = summarize_one(p, dry_run=args.dry_run)
+        out = summarize_one(p, dry_run=args.dry_run, force=args.force)
         if out:
-            print(f"  → {out.relative_to(REPO_ROOT)}", file=sys.stderr)
-        count += 1
+            print("  -> " + str(out.relative_to(REPO_ROOT)), file=sys.stderr)
+            written += 1
+        else:
+            skipped += 1
 
-    print(f"Processed {count} cleaned files.", file=sys.stderr)
+    print("Processed " + str(len(paths)) + " cleaned files - " + str(written) + " written, " + str(skipped) + " skipped.", file=sys.stderr)
     return 0
 
 

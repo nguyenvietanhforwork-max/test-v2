@@ -377,7 +377,9 @@ function Invoke-SyncCycle {
         }
     }
 
-    # 8) Push with retry + exponential backoff
+    # 8) Push with retry + exponential backoff. On non-fast-forward we re-pull
+    #    before each retry so the next push sits on top of the latest origin tip
+    #    (otherwise we just re-attempt the same stale push and burn retries).
     $pushOk = $false
     for ($i = 1; $i -le $MaxRetries; $i++) {
         $r = Invoke-Git 'push',$cfg.RemoteName,$script:State.Branch
@@ -387,7 +389,16 @@ function Invoke-SyncCycle {
             break
         }
         $delay = [int]($RetryBase * [Math]::Pow(2, $i - 1))
-        Write-Log ("Push that bai (lan {0}/{1}). Thu lai sau {2}s. Output: {3}" -f $i, $MaxRetries, $delay, $r.Output) 'WARN'
+        $isNonFF = ($r.Output -match 'non-fast-forward|rejected|fetch first')
+        if ($isNonFF) {
+            Write-Log ("Push reject non-fast-forward (lan {0}/{1}). Pull --rebase, thu lai sau {2}s." -f $i, $MaxRetries, $delay) 'WARN'
+            $pull = Invoke-Git 'pull','--rebase','--autostash',$cfg.RemoteName,$script:State.Branch
+            if ($pull.ExitCode -ne 0) {
+                Write-Log ("Re-pull that bai (exit {0}): {1}" -f $pull.ExitCode, $pull.Output) 'WARN'
+            }
+        } else {
+            Write-Log ("Push that bai (lan {0}/{1}). Thu lai sau {2}s. Output: {3}" -f $i, $MaxRetries, $delay, $r.Output) 'WARN'
+        }
         if ($i -lt $MaxRetries) { Start-Sleep -Seconds $delay }
     }
 

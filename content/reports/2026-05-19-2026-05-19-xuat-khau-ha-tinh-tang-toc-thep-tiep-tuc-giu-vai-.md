@@ -3,7 +3,7 @@ id: "report-2026-05-19-2026-05-19-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-v
 type: "report"
 kind: "daily-brief"
 date: "2026-05-19"
-title: "2026 05 19 Xuat Khau Ha Tinh Tang Toc Thep Tiep Tuc Giu Vai Tro Tru Cot"
+title: "Xuất khẩu Hà Tĩnh tăng tốc, thép tiếp tục giữ vai trò “trụ cột”"
 sources:
   - "raw/news/Xuất khẩu Hà Tĩnh tăng tốc, thép tiếp tục giữ vai trò “trụ cột”.md"
 industry: ""
@@ -15,16 +15,22 @@ confidence: "low"
 prompt_version: "summarization/topic-sentence-bullets@v3"
 model: "claude-sonnet-4-6"
 template_version: "intelligence-letter@v2"
-generated_at: "2026-05-19T11:30:43.879947+00:00"
+generated_at: "2026-05-19T11:56:58.613924+00:00"
 mini_report:
-  topic_sentence: ""
-  bullets: []
+  topic_sentence: "(stub - ANTHROPIC_API_KEY not set; wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)"
+  bullets:
+    - "<b>Stub mode:</b> the pipeline ran without a real LLM response (ANTHROPIC_API_KEY not set)."
+    - "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally."
+    - "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
 ---
 
-# 2026 05 19 Xuat Khau Ha Tinh Tang Toc Thep Tiep Tuc Giu Vai Tro Tru Cot
+# Xuất khẩu Hà Tĩnh tăng tốc, thép tiếp tục giữ vai trò “trụ cột”
 
+(stub - ANTHROPIC_API_KEY not set; wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)
 
-
+- <b>Stub mode:</b> the pipeline ran without a real LLM response (ANTHROPIC_API_KEY not set).
+- <b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.
+- <b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern.
 
 ---
 

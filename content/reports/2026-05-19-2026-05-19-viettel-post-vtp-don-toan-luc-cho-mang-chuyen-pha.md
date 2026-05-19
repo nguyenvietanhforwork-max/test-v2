@@ -3,7 +3,7 @@ id: "report-2026-05-19-2026-05-19-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-
 type: "report"
 kind: "daily-brief"
 date: "2026-05-19"
-title: "2026 05 19 Viettel Post Vtp Don Toan Luc Cho Mang Chuyen Phat   Logistics Tham Nhap Chuoi C"
+title: "Viettel Post (VTP): Dồn toàn lực cho mảng chuyển phát - logistics, thâm nhập chuỗi cung ứng toàn cầu"
 sources:
   - "raw/news/Viettel Post (VTP) Dồn toàn lực cho mảng chuyển phát - logistics, thâm nhập chuỗi cung ứng toàn cầu.md"
 industry: ""
@@ -15,16 +15,22 @@ confidence: "low"
 prompt_version: "summarization/topic-sentence-bullets@v3"
 model: "claude-sonnet-4-6"
 template_version: "intelligence-letter@v2"
-generated_at: "2026-05-19T11:30:43.878953+00:00"
+generated_at: "2026-05-19T11:56:58.601938+00:00"
 mini_report:
-  topic_sentence: ""
-  bullets: []
+  topic_sentence: "(stub - ANTHROPIC_API_KEY not set; wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)"
+  bullets:
+    - "<b>Stub mode:</b> the pipeline ran without a real LLM response (ANTHROPIC_API_KEY not set)."
+    - "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally."
+    - "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
 ---
 
-# 2026 05 19 Viettel Post Vtp Don Toan Luc Cho Mang Chuyen Phat   Logistics Tham Nhap Chuoi C
+# Viettel Post (VTP): Dồn toàn lực cho mảng chuyển phát - logistics, thâm nhập chuỗi cung ứng toàn cầu
 
+(stub - ANTHROPIC_API_KEY not set; wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)
 
-
+- <b>Stub mode:</b> the pipeline ran without a real LLM response (ANTHROPIC_API_KEY not set).
+- <b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.
+- <b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern.
 
 ---
 

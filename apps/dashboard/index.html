@@ -650,13 +650,15 @@
     transition: background .2s ease;
   }
   .rating-save:hover { background: var(--accent); }
-  .rating-export, .rating-clear {
+  .rating-export, .rating-clear, .rating-submit {
     background: transparent; border: 1px solid var(--ink);
     padding: 10px 16px; font-family: var(--cond); font-size: 11px;
     font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--ink); transition: all .2s ease;
   }
   .rating-export:hover { background: var(--ink); color: var(--paper); }
+  .rating-submit { border-color: var(--accent); color: var(--accent); }
+  .rating-submit:hover { background: var(--accent); color: var(--paper); }
   .rating-clear { border-color: var(--rule); color: var(--ink-muted); }
   .rating-clear:hover { border-color: var(--accent); color: var(--accent); }
   .rating-status {
@@ -859,6 +861,14 @@
 // Paste your Vercel Deploy Hook URL here when you have one
 // (Vercel → Project Settings → Git → Deploy Hooks → Create Hook)
 const VERCEL_DEPLOY_HOOK = ""; // e.g. "https://api.vercel.com/v1/integrations/deploy/prj_xxx/yyy"
+
+// ════════ FEEDBACK API CONFIG ════════
+// Paste the base URL of the Atlas FastAPI deployment (no trailing slash).
+// Example values:
+//   - Render: "https://atlas-api.onrender.com"
+//   - Local dev: "http://localhost:8000"
+// When this is empty the rating UI silently falls back to file export only.
+const API_BASE_URL = ""; // e.g. "https://atlas-api.onrender.com"
 
 // ════════ TAXONOMY ════════
 const TOPICS = {
@@ -2030,6 +2040,7 @@ function renderRatingBlock(it) {
     <textarea class="rating-note" placeholder="Ghi chú cho AI: muốn giữ gì? muốn đổi gì? (ví dụ: 'Bullet 2 dài quá, thiếu số tăng trưởng YoY')">${escapeHtml(saved.note || "")}</textarea>
     <div class="rating-action">
       <button type="button" class="rating-save">Lưu đánh giá</button>
+      <button type="button" class="rating-submit" title="Gửi rating này lên Atlas API (cần API_BASE_URL)">↑ Submit to server</button>
       <button type="button" class="rating-export">⤓ Export preferences.json</button>
       <button type="button" class="rating-clear">Xóa đánh giá này</button>
       <span class="rating-status"></span>
@@ -2109,6 +2120,41 @@ function attachRatingHandlers(articleId) {
   // Export
   block.querySelector(".rating-export").addEventListener("click", () => {
     exportPreferences();
+  });
+
+  // Submit to server (POST /api/v1/feedback) — ADR-007 path #2
+  block.querySelector(".rating-submit").addEventListener("click", async () => {
+    if (!API_BASE_URL) {
+      toast("⚠ Chưa cấu hình API_BASE_URL. Mở code, dán URL Render/local vào API_BASE_URL.", "error");
+      return;
+    }
+    // Build the dashboard-bulk-export shape; the API endpoint accepts it directly.
+    const payload = buildPreferencesPayload();
+    if (!payload.n_rated || payload.n_rated === 0) {
+      toast("⚠ Chưa có đánh giá nào để gửi. Chấm ít nhất 1 bài trước.", "error");
+      return;
+    }
+    flashStatus("⇡ đang gửi…", false);
+    try {
+      const res = await fetch(`${API_BASE_URL}/api/v1/feedback`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const txt = await res.text().catch(() => "");
+        throw new Error(`HTTP ${res.status}: ${txt.slice(0, 200)}`);
+      }
+      const data = await res.json().catch(() => ({}));
+      const added = data.added ?? "?";
+      const skipped = data.skipped_duplicates ?? "?";
+      const total = data.total_ratings_now ?? "?";
+      flashStatus(`✓ Gửi xong — +${added} mới, ${skipped} trùng (server có ${total})`);
+      toast(`✓ Đã đẩy lên server: +${added} mới, ${skipped} dup, total=${total}. Pipeline kế sẽ aggregate.`, "success");
+    } catch (err) {
+      flashStatus("✗ Gửi lỗi: " + err.message, true);
+      toast("✗ Submit lỗi: " + err.message, "error");
+    }
   });
 
   // Clear

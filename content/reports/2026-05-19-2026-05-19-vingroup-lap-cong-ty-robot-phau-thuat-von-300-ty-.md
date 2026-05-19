@@ -3,7 +3,7 @@ id: "report-2026-05-19-2026-05-19-vingroup-lap-cong-ty-robot-phau-thuat-von-300-
 type: "report"
 kind: "daily-brief"
 date: "2026-05-19"
-title: "2026 05 19 Vingroup Lap Cong Ty Robot Phau Thuat Von 300 Ty Ong"
+title: "Vingroup lập công ty robot phẫu thuật vốn 300 tỷ đồng"
 sources:
   - "raw/news/Vingroup lập công ty robot phẫu thuật vốn 300 tỷ đồng.md"
 industry: ""
@@ -15,16 +15,22 @@ confidence: "low"
 prompt_version: "summarization/topic-sentence-bullets@v3"
 model: "claude-sonnet-4-6"
 template_version: "intelligence-letter@v2"
-generated_at: "2026-05-19T11:30:43.879432+00:00"
+generated_at: "2026-05-19T11:56:58.607946+00:00"
 mini_report:
-  topic_sentence: ""
-  bullets: []
+  topic_sentence: "(stub - ANTHROPIC_API_KEY not set; wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)"
+  bullets:
+    - "<b>Stub mode:</b> the pipeline ran without a real LLM response (ANTHROPIC_API_KEY not set)."
+    - "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally."
+    - "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
 ---
 
-# 2026 05 19 Vingroup Lap Cong Ty Robot Phau Thuat Von 300 Ty Ong
+# Vingroup lập công ty robot phẫu thuật vốn 300 tỷ đồng
 
+(stub - ANTHROPIC_API_KEY not set; wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)
 
-
+- <b>Stub mode:</b> the pipeline ran without a real LLM response (ANTHROPIC_API_KEY not set).
+- <b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.
+- <b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern.
 
 ---
 

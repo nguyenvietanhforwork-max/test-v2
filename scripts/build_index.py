@@ -183,6 +183,9 @@ def main() -> int:
         print("WARNING: no reports directory found — emitting empty index.", file=sys.stderr)
 
     for md_path in sorted(reports_dir.rglob("*.md")) if reports_dir.exists() else []:
+        # Skip empty / placeholder files (orphans left over from older slug schemes).
+        if md_path.stat().st_size == 0:
+            continue
         meta, body = _parse_frontmatter(md_path)
         if args.date and meta.get("date") != args.date:
             continue

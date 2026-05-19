@@ -3,7 +3,7 @@ id: "report-2026-05-19-2026-05-19-exclusive-us-clears-h200-chip-sales-to-10-chin
 type: "report"
 kind: "daily-brief"
 date: "2026-05-19"
-title: "2026 05 19 Exclusive Us Clears H200 Chip Sales To 10 China Firms As Nvidia Ceo Looks For Br"
+title: "Exclusive: US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough"
 sources:
   - "raw/news/Exclusive US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough.md"
 industry: ""
@@ -15,16 +15,22 @@ confidence: "low"
 prompt_version: "summarization/topic-sentence-bullets@v3"
 model: "claude-sonnet-4-6"
 template_version: "intelligence-letter@v2"
-generated_at: "2026-05-19T11:30:43.870378+00:00"
+generated_at: "2026-05-19T11:56:58.478250+00:00"
 mini_report:
-  topic_sentence: ""
-  bullets: []
+  topic_sentence: "(stub - ANTHROPIC_API_KEY not set; wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)"
+  bullets:
+    - "<b>Stub mode:</b> the pipeline ran without a real LLM response (ANTHROPIC_API_KEY not set)."
+    - "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally."
+    - "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
 ---
 
-# 2026 05 19 Exclusive Us Clears H200 Chip Sales To 10 China Firms As Nvidia Ceo Looks For Br
+# Exclusive: US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough
 
+(stub - ANTHROPIC_API_KEY not set; wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)
 
-
+- <b>Stub mode:</b> the pipeline ran without a real LLM response (ANTHROPIC_API_KEY not set).
+- <b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.
+- <b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern.
 
 ---
 
