@@ -83,7 +83,9 @@ jobs:
           echo "stages=$STAGES" >> "$GITHUB_OUTPUT"
           echo "date_filter=$DATE_FILTER" >> "$GITHUB_OUTPUT"
           echo "Running stages: $STAGES"
-          [ -n "$DATE_FILTER" ] && echo "Date filter: $DATE_FILTER"
+          if [ -n "$DATE_FILTER" ]; then
+            echo "Date filter: $DATE_FILTER"
+          fi
 
       - name: Stage 1 — clean
         if: contains(steps.stages.outputs.stages, 'clean')
