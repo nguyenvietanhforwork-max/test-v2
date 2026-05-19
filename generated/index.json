@@ -1,5 +1,843 @@
 {
-  "generated_at": "2026-05-19T11:30:44.105749+00:00",
+  "generated_at": "2026-05-19T16:23:04.588997+00:00",
   "schema_version": 1,
-  "items": []
+  "items": [
+    {
+      "id": "report-2026-05-19-2026-05-19-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
+      "topic": "unknown",
+      "industry": "",
+      "title": "4 thủ tục hành chính được sửa đổi, bổ sung trong lĩnh vực xây dựng",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:00.509944+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Áp lực tồn kho và đường nhập lậu đang gây áp lực lớn lên ngành mía đường",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:00.638121+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Chubb Life Việt Nam báo lỗ hơn 171 tỷ năm 2025, lợi nhuận gộp bảo hiểm lao dốc 90%",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:00.766962+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Cơ quan thuế chỉ rõ 6 chiêu hộ kinh doanh né thanh toán, cảnh báo rủi ro pháp lý",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:00.930000+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
+      "topic": "unknown",
+      "industry": "",
+      "title": "DatVietVAC và cuộc đua khai thác IP 360 độ trong nền kinh tế fandom",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:01.056468+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Doanh nghiệp phân đạm tỏa sáng khi giá dầu “nhảy múa”",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:01.181516+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-exclusive-us-clears-h200-chip-sales-to-10-china-f",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Exclusive: US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-exclusive-us-clears-h200-chip-sales-to-10-china-f.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:01.324780+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Luật thuế mới sắp có hiệu lực: 10 hành vi dễ bị quy là trốn thuế",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:01.458077+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Nâng cấp chuỗi cung ứng toàn cầu tại Việt Nam, nhìn từ câu chuyện “hợp lực” giữa Intel và Fab 9",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:01.592868+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Nông sản Việt cần thích ứng với Nghị định 280 của Trung Quốc và quy định RCEP mới",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:01.723409+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Đông Nam Á thành điểm đến mới của ngành thiết bị giặt là",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:01.875127+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Phó TGĐ Vietnam Airlines: Năm 2026 dự kiến lỗ luỹ kế khoảng 30.000 tỷ nếu giữ nguyên sản lượng khai thác như kế hoạch",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:02.015197+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Quy định thời điểm xuất hóa đơn: Cần tháo gỡ vướng mắc",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:02.199184+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-readme",
+      "topic": "unknown",
+      "industry": "",
+      "title": "2026 05 19 Readme",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-readme.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:02.331017+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Sửa Luật Điện lực (năm 2026) - Phân tích bài toán hài hòa lợi ích ngành điện và người tiêu dùng điện",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:02.455609+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Tập đoàn Điện lực Việt Nam (EVN) có thể sẽ tăng giá điện để xử lý khoản lỗ lũy kế gần 45.000 tỷ đồng",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:02.589081+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Tax refunds help to lift US retail sales; drag from rising inflation looms",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-tax-refunds-help-to-lift-us-retail-sales-drag-fro.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:02.721067+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-thach-thuc-voi-sandbox-cho-fintech",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Thách thức với sandbox cho FinTech",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-thach-thuc-voi-sandbox-cho-fintech.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:02.845793+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Thu hồi toàn quốc một lô thuốc nhỏ mắt của Pharmedic, cổ phiếu PMC giảm gần 10%",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:02.969990+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Thuế VAT 'mỗi nơi một kiểu', doanh nghiệp gỗ lo đứt nguồn cung gỗ rừng trồng",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:03.118864+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Trump siết điện gió ngoài khơi, Trung Quốc tăng tốc dẫn đầu",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:03.368463+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
+      "topic": "unknown",
+      "industry": "",
+      "title": "‘Đưa đường, dẫn lối’ cho trái phiếu doanh nghiệp",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:03.504511+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-vanguard-is-the-costco-of-finance-according-to-ac",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Vanguard Is the Costco of Finance, According to ‘Acquired’ Podcast Ho…",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-vanguard-is-the-costco-of-finance-according-to-ac.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:03.629464+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Viettel Post (VTP): Dồn toàn lực cho mảng chuyển phát - logistics, thâm nhập chuỗi cung ứng toàn cầu",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:03.764246+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Vingroup lập công ty robot phẫu thuật vốn 300 tỷ đồng",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:03.986010+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Xuất khẩu Hà Tĩnh tăng tốc, thép tiếp tục giữ vai trò “trụ cột”",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:04.114189+00:00"
+    },
+    {
+      "id": "report-2026-05-19-2026-05-19-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Xuất khẩu nông lâm thủy sản đạt hơn 23 tỷ USD, giữ vững đà tăng trưởng",
+      "desc": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-19",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-19-2026-05-19-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-sonnet-4-6",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-19T16:23:04.247743+00:00"
+    }
+  ]
 }

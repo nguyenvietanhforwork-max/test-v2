@@ -1,5 +1,141 @@
 {
-  "generated_at": "2026-05-19T11:30:44.105749+00:00",
+  "generated_at": "2026-05-19T16:23:04.588997+00:00",
   "schema_version": 1,
-  "queue": []
+  "queue": [
+    {
+      "report_id": "report-2026-05-19-2026-05-19-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
+      "report_path": "content/reports/2026-05-19-2026-05-19-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin.md",
+      "queued_at": "2026-05-19T16:23:04.509983+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
+      "report_path": "content/reports/2026-05-19-2026-05-19-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo.md",
+      "queued_at": "2026-05-19T16:23:04.513117+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
+      "report_path": "content/reports/2026-05-19-2026-05-19-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo.md",
+      "queued_at": "2026-05-19T16:23:04.516051+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
+      "report_path": "content/reports/2026-05-19-2026-05-19-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than.md",
+      "queued_at": "2026-05-19T16:23:04.519107+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
+      "report_path": "content/reports/2026-05-19-2026-05-19-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne.md",
+      "queued_at": "2026-05-19T16:23:04.522020+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
+      "report_path": "content/reports/2026-05-19-2026-05-19-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu.md",
+      "queued_at": "2026-05-19T16:23:04.524897+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-exclusive-us-clears-h200-chip-sales-to-10-china-f",
+      "report_path": "content/reports/2026-05-19-2026-05-19-exclusive-us-clears-h200-chip-sales-to-10-china-f.md",
+      "queued_at": "2026-05-19T16:23:04.527781+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
+      "report_path": "content/reports/2026-05-19-2026-05-19-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu.md",
+      "queued_at": "2026-05-19T16:23:04.530731+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
+      "report_path": "content/reports/2026-05-19-2026-05-19-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi.md",
+      "queued_at": "2026-05-19T16:23:04.533680+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
+      "report_path": "content/reports/2026-05-19-2026-05-19-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-.md",
+      "queued_at": "2026-05-19T16:23:04.536658+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
+      "report_path": "content/reports/2026-05-19-2026-05-19-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia.md",
+      "queued_at": "2026-05-19T16:23:04.539516+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
+      "report_path": "content/reports/2026-05-19-2026-05-19-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k.md",
+      "queued_at": "2026-05-19T16:23:04.542539+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
+      "report_path": "content/reports/2026-05-19-2026-05-19-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma.md",
+      "queued_at": "2026-05-19T16:23:04.545370+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-readme",
+      "report_path": "content/reports/2026-05-19-2026-05-19-readme.md",
+      "queued_at": "2026-05-19T16:23:04.548110+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
+      "report_path": "content/reports/2026-05-19-2026-05-19-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-.md",
+      "queued_at": "2026-05-19T16:23:04.551011+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
+      "report_path": "content/reports/2026-05-19-2026-05-19-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i.md",
+      "queued_at": "2026-05-19T16:23:04.554005+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
+      "report_path": "content/reports/2026-05-19-2026-05-19-tax-refunds-help-to-lift-us-retail-sales-drag-fro.md",
+      "queued_at": "2026-05-19T16:23:04.556804+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-thach-thuc-voi-sandbox-cho-fintech",
+      "report_path": "content/reports/2026-05-19-2026-05-19-thach-thuc-voi-sandbox-cho-fintech.md",
+      "queued_at": "2026-05-19T16:23:04.559569+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
+      "report_path": "content/reports/2026-05-19-2026-05-19-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme.md",
+      "queued_at": "2026-05-19T16:23:04.562431+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
+      "report_path": "content/reports/2026-05-19-2026-05-19-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n.md",
+      "queued_at": "2026-05-19T16:23:04.566290+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
+      "report_path": "content/reports/2026-05-19-2026-05-19-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc.md",
+      "queued_at": "2026-05-19T16:23:04.569115+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
+      "report_path": "content/reports/2026-05-19-2026-05-19-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep.md",
+      "queued_at": "2026-05-19T16:23:04.571988+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-vanguard-is-the-costco-of-finance-according-to-ac",
+      "report_path": "content/reports/2026-05-19-2026-05-19-vanguard-is-the-costco-of-finance-according-to-ac.md",
+      "queued_at": "2026-05-19T16:23:04.574845+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
+      "report_path": "content/reports/2026-05-19-2026-05-19-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha.md",
+      "queued_at": "2026-05-19T16:23:04.577814+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
+      "report_path": "content/reports/2026-05-19-2026-05-19-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-.md",
+      "queued_at": "2026-05-19T16:23:04.580663+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
+      "report_path": "content/reports/2026-05-19-2026-05-19-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-.md",
+      "queued_at": "2026-05-19T16:23:04.583606+00:00"
+    },
+    {
+      "report_id": "report-2026-05-19-2026-05-19-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
+      "report_path": "content/reports/2026-05-19-2026-05-19-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-.md",
+      "queued_at": "2026-05-19T16:23:04.586502+00:00"
+    }
+  ]
 }

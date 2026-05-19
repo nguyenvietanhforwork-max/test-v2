@@ -15,20 +15,20 @@ confidence: "low"
 prompt_version: "summarization/topic-sentence-bullets@v3"
 model: "claude-sonnet-4-6"
 template_version: "intelligence-letter@v2"
-generated_at: "2026-05-19T11:56:58.457761+00:00"
+generated_at: "2026-05-19T16:23:00.766962+00:00"
 mini_report:
-  topic_sentence: "(stub - ANTHROPIC_API_KEY not set; wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)"
+  topic_sentence: "(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)"
   bullets:
-    - "<b>Stub mode:</b> the pipeline ran without a real LLM response (ANTHROPIC_API_KEY not set)."
+    - "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError))."
     - "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally."
     - "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
 ---
 
 # Chubb Life Việt Nam báo lỗ hơn 171 tỷ năm 2025, lợi nhuận gộp bảo hiểm lao dốc 90%
 
-(stub - ANTHROPIC_API_KEY not set; wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)
+(stub - LLM call failed (BadRequestError); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)
 
-- <b>Stub mode:</b> the pipeline ran without a real LLM response (ANTHROPIC_API_KEY not set).
+- <b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (BadRequestError)).
 - <b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.
 - <b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern.
 
