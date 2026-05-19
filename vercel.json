@@ -4,7 +4,7 @@
   "installCommand": "echo skip",
   "buildCommand": "bash scripts/vercel-build.sh",
   "outputDirectory": "apps/dashboard",
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- apps/dashboard/ generated/ news-dashboard-v2.html",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- apps/dashboard/ generated/ vercel.json scripts/vercel-build.sh",
   "headers": [
     {
       "source": "/(.*)",
