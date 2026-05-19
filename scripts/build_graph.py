@@ -129,7 +129,7 @@ def main() -> int:
         return 0
 
     GENERATED.mkdir(parents=True, exist_ok=True)
-    (GENERATED / "graph.json").write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    (GENERATED / "graph.json").write_text(json.dumps(out, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
     print(f"Wrote generated/graph.json — {out['stats']}", file=sys.stderr)
     return 0
 

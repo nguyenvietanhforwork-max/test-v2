@@ -115,27 +115,55 @@ def _report_to_item(meta: dict[str, Any], body: str, path: pathlib.Path) -> dict
     }
 
 
+def _soft_check(meta: dict[str, Any], path: pathlib.Path) -> list[str]:
+    """Structural fallback when jsonschema is unavailable or schema can't load."""
+    required = ["id", "type", "date", "title", "sources", "generated_at"]
+    return [f"{path.name}: missing {k}" for k in required if k not in meta]
+
+
+def _build_schema_store() -> tuple[dict[str, Any], dict[str, dict[str, Any]]]:
+    """Load report.schema.json + all sibling schemas into a local store so
+    jsonschema's RefResolver doesn't try to HTTP-fetch atlas.local URLs."""
+    schema_path = SCHEMAS / "report.schema.json"
+    if not schema_path.exists():
+        return {}, {}
+    root = json.loads(schema_path.read_text(encoding="utf-8"))
+    store: dict[str, dict[str, Any]] = {}
+    for sf in SCHEMAS.glob("*.schema.json"):
+        try:
+            s = json.loads(sf.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if isinstance(s, dict) and isinstance(s.get("$id"), str):
+            store[s["$id"]] = s
+    return root, store
+
+
 def _validate(meta: dict[str, Any], path: pathlib.Path) -> list[str]:
     """Validate a report frontmatter against schemas/report.schema.json.
 
     Returns a list of error strings (empty if valid). Falls back to a soft
-    structural check if jsonschema isn't installed.
+    structural check if jsonschema isn't installed or schema resolution fails.
     """
-    schema_path = SCHEMAS / "report.schema.json"
-    if not schema_path.exists():
-        return []
     try:
         import jsonschema  # type: ignore
-        schema = json.loads(schema_path.read_text(encoding="utf-8"))
-        try:
-            jsonschema.validate(meta, schema)
-            return []
-        except jsonschema.ValidationError as e:
-            return [f"{path.name}: {e.message}"]
+        from jsonschema import RefResolver  # type: ignore
     except ImportError:
-        # Soft fallback: check just the required keys.
-        required = ["id", "type", "date", "title", "sources", "generated_at"]
-        return [f"{path.name}: missing {k}" for k in required if k not in meta]
+        return _soft_check(meta, path)
+
+    schema, store = _build_schema_store()
+    if not schema:
+        return []
+
+    try:
+        resolver = RefResolver.from_schema(schema, store=store)
+        validator_cls = jsonschema.validators.validator_for(schema)
+        validator = validator_cls(schema, resolver=resolver)
+        errors = list(validator.iter_errors(meta))
+        return [f"{path.name}: {e.message}" for e in errors]
+    except Exception as e:
+        print(f"WARN: schema validation degraded for {path.name} ({type(e).__name__}: {e}); using soft check.", file=sys.stderr)
+        return _soft_check(meta, path)
 
 
 def main() -> int:
@@ -189,7 +217,7 @@ def main() -> int:
         "generated_at": now,
         "schema_version": SCHEMA_VERSION,
         "items": items,
-    }, ensure_ascii=False, indent=2), encoding="utf-8")
+    }, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
 
     (GENERATED / "search-index.json").write_text(json.dumps({
         "generated_at": now,
@@ -207,13 +235,13 @@ def main() -> int:
             }
             for it in items
         ],
-    }, ensure_ascii=False, indent=2), encoding="utf-8")
+    }, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
 
     (GENERATED / "embeddings-ready.json").write_text(json.dumps({
         "generated_at": now,
         "schema_version": SCHEMA_VERSION,
         "queue": embeddings_queue,
-    }, ensure_ascii=False, indent=2), encoding="utf-8")
+    }, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
 
     print(f"Wrote {len(items)} items to generated/index.json", file=sys.stderr)
     print(f"Queued {len(embeddings_queue)} reports for embedding", file=sys.stderr)
