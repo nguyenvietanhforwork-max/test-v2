@@ -134,10 +134,17 @@ def summarize_one(cleaned_path: pathlib.Path, *, dry_run: bool = False) -> pathl
     }
 
     # Render YAML by hand to avoid a yaml dep at runtime.
+    def _quote(s: Any) -> str:
+        """Always double-quote string values so YAML loaders don't auto-cast dates/bools."""
+        return '"' + str(s).replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ") + '"'
+
     def _yaml_dump(d: dict[str, Any], indent: int = 0) -> str:
         lines: list[str] = []
         pad = "  " * indent
         for k, v in d.items():
+            # Skip None entirely so jsonschema doesn't reject null-typed Score etc.
+            if v is None:
+                continue
             if isinstance(v, dict):
                 lines.append(f"{pad}{k}:")
                 lines.append(_yaml_dump(v, indent + 1))
@@ -151,17 +158,14 @@ def summarize_one(cleaned_path: pathlib.Path, *, dry_run: bool = False) -> pathl
                             lines.append(f"{pad}  -")
                             lines.append(_yaml_dump(item, indent + 2))
                         else:
-                            lines.append(f"{pad}  - {item!r}")
-            elif v is None:
-                lines.append(f"{pad}{k}: null")
-            elif isinstance(v, (int, float, bool)):
+                            lines.append(f"{pad}  - {_quote(item)}")
+            elif isinstance(v, bool):
+                lines.append(f"{pad}{k}: {str(v).lower()}")
+            elif isinstance(v, (int, float)):
                 lines.append(f"{pad}{k}: {v}")
             else:
-                # Quote strings that contain : or # to be safe
-                s = str(v).replace("\n", " ")
-                if any(c in s for c in ":#'\""):
-                    s = '"' + s.replace('"', '\\"') + '"'
-                lines.append(f"{pad}{k}: {s}")
+                # Always quote strings — protects dates, empty strings, special chars, etc.
+                lines.append(f"{pad}{k}: {_quote(v)}")
         return "\n".join(lines)
 
     yaml_block = _yaml_dump(frontmatter)
