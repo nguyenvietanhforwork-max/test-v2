@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T10:36:56.751802+00:00",
+  "generated_at": "2026-05-20T17:00:15.163419+00:00",
   "schema_version": 1,
   "nodes": [
     {
@@ -344,6 +344,16 @@
     },
     {
       "data": {
+        "id": "report-2026-05-20-2026-05-20-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
+        "label": "Dùng AI ghép ảnh bánh mì, cửa hàng nhận 'bão một sao'",
+        "type": "report",
+        "date": "2026-05-20",
+        "signal_score": null,
+        "novelty_score": null
+      }
+    },
+    {
+      "data": {
         "id": "report-2026-05-20-2026-05-20-exclusive-us-clears-h200-chip-sales-to-10-china-f",
         "label": "Exclusive: US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough",
         "type": "report",
@@ -565,7 +575,7 @@
   ],
   "edges": [],
   "stats": {
-    "reports": 56,
+    "reports": 57,
     "entities": 0,
     "themes": 0,
     "edges": 0

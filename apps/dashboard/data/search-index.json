@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T10:36:56.577915+00:00",
+  "generated_at": "2026-05-20T17:00:14.992228+00:00",
   "schema_version": 1,
   "documents": [
     {
@@ -453,6 +453,20 @@
     {
       "id": "report-2026-05-20-2026-05-20-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
       "title": "Doanh nghiệp phân đạm tỏa sáng khi giá dầu “nhảy múa”",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-05-20"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
+      "title": "Dùng AI ghép ảnh bánh mì, cửa hàng nhận 'bão một sao'",
       "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
       "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
       "bullets": [
