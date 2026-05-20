@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T16:37:26.793128+00:00",
+  "generated_at": "2026-05-20T05:25:47.014775+00:00",
   "schema_version": 1,
   "items": [
     {
@@ -31,7 +31,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:08.915483+00:00"
+      "generated_at": "2026-05-20T05:25:12.926583+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -62,7 +62,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:09.430877+00:00"
+      "generated_at": "2026-05-20T05:25:13.325581+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -93,7 +93,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:09.995722+00:00"
+      "generated_at": "2026-05-20T05:25:13.865607+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -124,7 +124,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:10.797341+00:00"
+      "generated_at": "2026-05-20T05:25:14.318934+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -155,7 +155,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:11.390394+00:00"
+      "generated_at": "2026-05-20T05:25:14.716036+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -186,7 +186,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:11.939677+00:00"
+      "generated_at": "2026-05-20T05:25:15.228160+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -217,7 +217,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:12.695394+00:00"
+      "generated_at": "2026-05-20T05:25:15.778221+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -248,7 +248,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:13.222309+00:00"
+      "generated_at": "2026-05-20T05:25:16.284652+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -279,7 +279,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:13.752687+00:00"
+      "generated_at": "2026-05-20T05:25:16.735684+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -310,7 +310,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:14.451208+00:00"
+      "generated_at": "2026-05-20T05:25:17.149050+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -341,7 +341,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:15.093373+00:00"
+      "generated_at": "2026-05-20T05:25:18.702662+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -372,7 +372,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:15.636185+00:00"
+      "generated_at": "2026-05-20T05:25:19.094248+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -403,7 +403,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:16.320385+00:00"
+      "generated_at": "2026-05-20T05:25:19.763242+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-readme",
@@ -434,7 +434,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:16.876284+00:00"
+      "generated_at": "2026-05-20T05:25:20.213366+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -465,7 +465,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:17.455084+00:00"
+      "generated_at": "2026-05-20T05:25:20.705873+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -496,7 +496,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:18.023853+00:00"
+      "generated_at": "2026-05-20T05:25:21.092562+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -527,7 +527,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:18.940597+00:00"
+      "generated_at": "2026-05-20T05:25:21.510890+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-thach-thuc-voi-sandbox-cho-fintech",
@@ -558,7 +558,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:19.512404+00:00"
+      "generated_at": "2026-05-20T05:25:26.999504+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -589,7 +589,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:20.162511+00:00"
+      "generated_at": "2026-05-20T05:25:27.732782+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -620,7 +620,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:21.265321+00:00"
+      "generated_at": "2026-05-20T05:25:28.207614+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -651,7 +651,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:22.191403+00:00"
+      "generated_at": "2026-05-20T05:25:28.632904+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -682,7 +682,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:22.943986+00:00"
+      "generated_at": "2026-05-20T05:25:29.400414+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -713,7 +713,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:23.454220+00:00"
+      "generated_at": "2026-05-20T05:25:29.783254+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -744,7 +744,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:23.996350+00:00"
+      "generated_at": "2026-05-20T05:25:30.172491+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -775,7 +775,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:24.678636+00:00"
+      "generated_at": "2026-05-20T05:25:30.663648+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -806,7 +806,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:25.275795+00:00"
+      "generated_at": "2026-05-20T05:25:31.130342+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -837,7 +837,875 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-05-19T16:37:26.481604+00:00"
+      "generated_at": "2026-05-20T05:25:31.664299+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
+      "topic": "unknown",
+      "industry": "",
+      "title": "4 thủ tục hành chính được sửa đổi, bổ sung trong lĩnh vực xây dựng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:32.063305+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Áp lực tồn kho và đường nhập lậu đang gây áp lực lớn lên ngành mía đường",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:32.534718+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Chubb Life Việt Nam báo lỗ hơn 171 tỷ năm 2025, lợi nhuận gộp bảo hiểm lao dốc 90%",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:33.234217+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Cơ quan thuế chỉ rõ 6 chiêu hộ kinh doanh né thanh toán, cảnh báo rủi ro pháp lý",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:33.710468+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
+      "topic": "unknown",
+      "industry": "",
+      "title": "DatVietVAC và cuộc đua khai thác IP 360 độ trong nền kinh tế fandom",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:34.105975+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Doanh nghiệp phân đạm tỏa sáng khi giá dầu “nhảy múa”",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:34.714851+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-exclusive-us-clears-h200-chip-sales-to-10-china-f",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Exclusive: US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-exclusive-us-clears-h200-chip-sales-to-10-china-f.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:35.154789+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Khung chính sách cho lưu trữ năng lượng (BESS) - Góc nhìn của Tạp chí Năng lượng Việt Nam",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:35.855785+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Luật thuế mới sắp có hiệu lực: 10 hành vi dễ bị quy là trốn thuế",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:36.517996+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Nâng cấp chuỗi cung ứng toàn cầu tại Việt Nam, nhìn từ câu chuyện “hợp lực” giữa Intel và Fab 9",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:36.959341+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Nông sản Việt cần thích ứng với Nghị định 280 của Trung Quốc và quy định RCEP mới",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:37.395081+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Đông Nam Á thành điểm đến mới của ngành thiết bị giặt là",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:37.874795+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Phó TGĐ Vietnam Airlines: Năm 2026 dự kiến lỗ luỹ kế khoảng 30.000 tỷ nếu giữ nguyên sản lượng khai thác như kế hoạch",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:38.332246+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Quy định thời điểm xuất hóa đơn: Cần tháo gỡ vướng mắc",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:38.721621+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-readme",
+      "topic": "unknown",
+      "industry": "",
+      "title": "2026 05 20 Readme",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-readme.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:39.247211+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Sửa Luật Điện lực (năm 2026) - Phân tích bài toán hài hòa lợi ích ngành điện và người tiêu dùng điện",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:39.647409+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Tập đoàn Điện lực Việt Nam (EVN) có thể sẽ tăng giá điện để xử lý khoản lỗ lũy kế gần 45.000 tỷ đồng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:40.342852+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Tax refunds help to lift US retail sales; drag from rising inflation looms",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-tax-refunds-help-to-lift-us-retail-sales-drag-fro.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:41.137036+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-thach-thuc-voi-sandbox-cho-fintech",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Thách thức với sandbox cho FinTech",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-thach-thuc-voi-sandbox-cho-fintech.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:41.705268+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Thu hồi toàn quốc một lô thuốc nhỏ mắt của Pharmedic, cổ phiếu PMC giảm gần 10%",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:42.205939+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Thuế VAT 'mỗi nơi một kiểu', doanh nghiệp gỗ lo đứt nguồn cung gỗ rừng trồng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:42.591001+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Trump siết điện gió ngoài khơi, Trung Quốc tăng tốc dẫn đầu",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:43.032308+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
+      "topic": "unknown",
+      "industry": "",
+      "title": "‘Đưa đường, dẫn lối’ cho trái phiếu doanh nghiệp",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:43.722206+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-vanguard-is-the-costco-of-finance-according-to-ac",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Vanguard Is the Costco of Finance, According to ‘Acquired’ Podcast Ho…",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-vanguard-is-the-costco-of-finance-according-to-ac.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:44.103689+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Viettel Post (VTP): Dồn toàn lực cho mảng chuyển phát - logistics, thâm nhập chuỗi cung ứng toàn cầu",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:44.930635+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Vingroup lập công ty robot phẫu thuật vốn 300 tỷ đồng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:45.695597+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Xuất khẩu Hà Tĩnh tăng tốc, thép tiếp tục giữ vai trò “trụ cột”",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:46.097415+00:00"
+    },
+    {
+      "id": "report-2026-05-20-2026-05-20-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Xuất khẩu nông lâm thủy sản đạt hơn 23 tỷ USD, giữ vững đà tăng trưởng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-05-20",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-05-20-2026-05-20-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-05-20T05:25:46.498842+00:00"
     }
   ]
 }
