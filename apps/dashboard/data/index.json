@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T19:28:42.951160+00:00",
+  "generated_at": "2026-06-02T12:57:52.517975+00:00",
   "schema_version": 1,
   "items": [
     {
@@ -31,7 +31,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:22.898919+00:00"
+      "generated_at": "2026-06-02T12:52:59.019944+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -62,7 +62,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:23.418227+00:00"
+      "generated_at": "2026-06-02T12:53:00.870812+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -93,7 +93,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:23.942608+00:00"
+      "generated_at": "2026-06-02T12:53:01.418639+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -124,7 +124,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:24.504889+00:00"
+      "generated_at": "2026-06-02T12:53:02.240692+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -155,7 +155,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:25.425658+00:00"
+      "generated_at": "2026-06-02T12:53:03.143174+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -186,7 +186,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:26.012575+00:00"
+      "generated_at": "2026-06-02T12:53:03.699268+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -217,7 +217,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:26.613013+00:00"
+      "generated_at": "2026-06-02T12:53:04.912454+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -248,7 +248,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:27.114328+00:00"
+      "generated_at": "2026-06-02T12:53:05.736812+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -279,7 +279,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:27.608236+00:00"
+      "generated_at": "2026-06-02T12:53:06.277755+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -310,7 +310,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:28.121625+00:00"
+      "generated_at": "2026-06-02T12:53:07.068444+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -341,7 +341,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:28.644768+00:00"
+      "generated_at": "2026-06-02T12:53:07.802087+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -372,7 +372,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:29.132401+00:00"
+      "generated_at": "2026-06-02T12:53:08.627797+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -403,7 +403,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:29.838813+00:00"
+      "generated_at": "2026-06-02T12:53:09.144671+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-readme",
@@ -434,7 +434,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:30.324442+00:00"
+      "generated_at": "2026-06-02T12:53:09.692599+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -465,7 +465,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:30.883447+00:00"
+      "generated_at": "2026-06-02T12:53:10.202633+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -496,7 +496,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:31.405491+00:00"
+      "generated_at": "2026-06-02T12:53:11.003946+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -527,7 +527,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:31.915318+00:00"
+      "generated_at": "2026-06-02T12:53:11.651399+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-thach-thuc-voi-sandbox-cho-fintech",
@@ -558,7 +558,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:32.474823+00:00"
+      "generated_at": "2026-06-02T12:53:15.118327+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -589,7 +589,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:33.001706+00:00"
+      "generated_at": "2026-06-02T12:53:15.647252+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -620,7 +620,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:33.499016+00:00"
+      "generated_at": "2026-06-02T12:53:16.165645+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -651,7 +651,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:34.023738+00:00"
+      "generated_at": "2026-06-02T12:53:16.756473+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -682,7 +682,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:34.557747+00:00"
+      "generated_at": "2026-06-02T12:53:17.699779+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -713,7 +713,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:35.170898+00:00"
+      "generated_at": "2026-06-02T12:53:18.253680+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -744,7 +744,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:36.013966+00:00"
+      "generated_at": "2026-06-02T12:53:18.810137+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -775,7 +775,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:36.535344+00:00"
+      "generated_at": "2026-06-02T12:53:19.951560+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -806,7 +806,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:37.320112+00:00"
+      "generated_at": "2026-06-02T12:53:20.459812+00:00"
     },
     {
       "id": "report-2026-05-19-2026-05-19-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -837,7 +837,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:38.352792+00:00"
+      "generated_at": "2026-06-02T12:53:21.032643+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -868,7 +868,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:38.903787+00:00"
+      "generated_at": "2026-06-02T12:53:21.622810+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -899,7 +899,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:39.407795+00:00"
+      "generated_at": "2026-06-02T12:53:22.464463+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -930,7 +930,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:39.944094+00:00"
+      "generated_at": "2026-06-02T12:53:22.981398+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -961,7 +961,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:40.441608+00:00"
+      "generated_at": "2026-06-02T12:53:26.389026+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -992,7 +992,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:41.382599+00:00"
+      "generated_at": "2026-06-02T12:53:26.958467+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -1023,7 +1023,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:45.491023+00:00"
+      "generated_at": "2026-06-02T12:53:27.591483+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -1054,7 +1054,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:46.034558+00:00"
+      "generated_at": "2026-06-02T12:53:28.193065+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -1085,7 +1085,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:47.656157+00:00"
+      "generated_at": "2026-06-02T12:53:28.814459+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -1116,7 +1116,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:48.261062+00:00"
+      "generated_at": "2026-06-02T12:53:29.401490+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -1147,7 +1147,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:48.921300+00:00"
+      "generated_at": "2026-06-02T12:53:30.002141+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -1178,7 +1178,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:49.666208+00:00"
+      "generated_at": "2026-06-02T12:53:30.512159+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -1209,7 +1209,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:50.166520+00:00"
+      "generated_at": "2026-06-02T12:53:31.205165+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -1240,7 +1240,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:50.702314+00:00"
+      "generated_at": "2026-06-02T12:53:31.841628+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -1271,7 +1271,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:51.351194+00:00"
+      "generated_at": "2026-06-02T12:53:32.386875+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -1302,7 +1302,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:51.899512+00:00"
+      "generated_at": "2026-06-02T12:53:33.116770+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-readme",
@@ -1333,7 +1333,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:52.772169+00:00"
+      "generated_at": "2026-06-02T12:53:33.701307+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -1364,7 +1364,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:53.263992+00:00"
+      "generated_at": "2026-06-02T12:53:34.525647+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -1395,7 +1395,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:53.984106+00:00"
+      "generated_at": "2026-06-02T12:53:35.037343+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -1426,7 +1426,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:54.533173+00:00"
+      "generated_at": "2026-06-02T12:53:35.929847+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-thach-thuc-voi-sandbox-cho-fintech",
@@ -1457,7 +1457,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:55.089127+00:00"
+      "generated_at": "2026-06-02T12:53:36.525266+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -1488,7 +1488,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:55.681120+00:00"
+      "generated_at": "2026-06-02T12:53:37.171208+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -1519,7 +1519,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:56.182957+00:00"
+      "generated_at": "2026-06-02T12:53:38.026364+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -1550,7 +1550,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:56.767436+00:00"
+      "generated_at": "2026-06-02T12:53:38.629395+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -1581,7 +1581,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:57.457675+00:00"
+      "generated_at": "2026-06-02T12:53:39.315909+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -1612,7 +1612,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:57.982592+00:00"
+      "generated_at": "2026-06-02T12:53:41.068326+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -1643,7 +1643,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:58.593907+00:00"
+      "generated_at": "2026-06-02T12:53:41.583592+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -1674,7 +1674,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:24:59.190358+00:00"
+      "generated_at": "2026-06-02T12:53:42.707505+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -1705,7 +1705,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:00.056549+00:00"
+      "generated_at": "2026-06-02T12:53:43.340370+00:00"
     },
     {
       "id": "report-2026-05-20-2026-05-20-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -1736,7 +1736,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:00.652831+00:00"
+      "generated_at": "2026-06-02T12:53:44.880405+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -1767,7 +1767,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:01.342316+00:00"
+      "generated_at": "2026-06-02T12:53:45.507682+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -1798,7 +1798,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:01.862687+00:00"
+      "generated_at": "2026-06-02T12:53:46.047406+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -1829,7 +1829,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:02.426236+00:00"
+      "generated_at": "2026-06-02T12:53:46.578764+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -1860,7 +1860,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:02.967321+00:00"
+      "generated_at": "2026-06-02T12:53:47.118573+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -1891,7 +1891,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:03.508293+00:00"
+      "generated_at": "2026-06-02T12:53:47.786435+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -1922,7 +1922,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:04.010787+00:00"
+      "generated_at": "2026-06-02T12:53:48.595071+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -1953,7 +1953,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:04.569377+00:00"
+      "generated_at": "2026-06-02T12:53:49.217832+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -1984,7 +1984,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:05.183814+00:00"
+      "generated_at": "2026-06-02T12:53:49.806405+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -2015,7 +2015,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:05.992079+00:00"
+      "generated_at": "2026-06-02T12:53:50.834151+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -2046,7 +2046,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:06.542050+00:00"
+      "generated_at": "2026-06-02T12:53:51.413443+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -2077,7 +2077,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:07.162900+00:00"
+      "generated_at": "2026-06-02T12:53:51.925243+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -2108,7 +2108,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:07.854142+00:00"
+      "generated_at": "2026-06-02T12:53:52.477646+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -2139,7 +2139,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:08.467335+00:00"
+      "generated_at": "2026-06-02T12:53:53.256936+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -2170,7 +2170,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:09.053195+00:00"
+      "generated_at": "2026-06-02T12:53:53.860921+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -2201,7 +2201,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:09.781746+00:00"
+      "generated_at": "2026-06-02T12:53:54.442733+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-readme",
@@ -2232,7 +2232,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:10.648057+00:00"
+      "generated_at": "2026-06-02T12:53:54.945759+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -2263,7 +2263,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:11.443249+00:00"
+      "generated_at": "2026-06-02T12:53:55.472817+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -2294,7 +2294,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:11.969214+00:00"
+      "generated_at": "2026-06-02T12:53:56.045432+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -2325,7 +2325,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:12.541567+00:00"
+      "generated_at": "2026-06-02T12:53:56.737495+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-thach-thuc-voi-sandbox-cho-fintech",
@@ -2356,7 +2356,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:13.091725+00:00"
+      "generated_at": "2026-06-02T12:53:57.252834+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -2387,7 +2387,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:13.602033+00:00"
+      "generated_at": "2026-06-02T12:53:58.115201+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -2418,7 +2418,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:14.135133+00:00"
+      "generated_at": "2026-06-02T12:53:58.650940+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -2449,7 +2449,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:14.664112+00:00"
+      "generated_at": "2026-06-02T12:53:59.212906+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -2480,7 +2480,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:15.155598+00:00"
+      "generated_at": "2026-06-02T12:53:59.856624+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -2511,7 +2511,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:15.821486+00:00"
+      "generated_at": "2026-06-02T12:54:00.493168+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -2542,7 +2542,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:16.456350+00:00"
+      "generated_at": "2026-06-02T12:54:01.403010+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -2573,7 +2573,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:17.030585+00:00"
+      "generated_at": "2026-06-02T12:54:03.184181+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -2604,7 +2604,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:17.664734+00:00"
+      "generated_at": "2026-06-02T12:54:03.758675+00:00"
     },
     {
       "id": "report-2026-05-21-2026-05-21-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -2635,7 +2635,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:18.155779+00:00"
+      "generated_at": "2026-06-02T12:54:04.315659+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -2666,7 +2666,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:18.849749+00:00"
+      "generated_at": "2026-06-02T12:54:05.283216+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -2697,7 +2697,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:19.340784+00:00"
+      "generated_at": "2026-06-02T12:54:06.308136+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -2728,7 +2728,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:19.842940+00:00"
+      "generated_at": "2026-06-02T12:54:06.989768+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -2759,7 +2759,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:20.423996+00:00"
+      "generated_at": "2026-06-02T12:54:07.522884+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -2790,7 +2790,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:20.953709+00:00"
+      "generated_at": "2026-06-02T12:54:08.098864+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -2821,7 +2821,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:21.488796+00:00"
+      "generated_at": "2026-06-02T12:54:08.898896+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -2852,7 +2852,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:22.095990+00:00"
+      "generated_at": "2026-06-02T12:54:09.411073+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -2883,7 +2883,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:22.594724+00:00"
+      "generated_at": "2026-06-02T12:54:10.165860+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -2914,7 +2914,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:23.100429+00:00"
+      "generated_at": "2026-06-02T12:54:10.823417+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -2945,7 +2945,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:26.204760+00:00"
+      "generated_at": "2026-06-02T12:54:11.553675+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -2976,7 +2976,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:27.034061+00:00"
+      "generated_at": "2026-06-02T12:54:12.173130+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -3007,7 +3007,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:27.601012+00:00"
+      "generated_at": "2026-06-02T12:54:12.701749+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -3038,7 +3038,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:28.103267+00:00"
+      "generated_at": "2026-06-02T12:54:13.220967+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -3069,7 +3069,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:28.602129+00:00"
+      "generated_at": "2026-06-02T12:54:13.939101+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -3100,7 +3100,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:29.094283+00:00"
+      "generated_at": "2026-06-02T12:54:14.995607+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-readme",
@@ -3131,7 +3131,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:29.696293+00:00"
+      "generated_at": "2026-06-02T12:54:15.819825+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -3162,7 +3162,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:30.345335+00:00"
+      "generated_at": "2026-06-02T12:54:16.346205+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -3193,7 +3193,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:30.865660+00:00"
+      "generated_at": "2026-06-02T12:54:17.209375+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -3224,7 +3224,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:31.354295+00:00"
+      "generated_at": "2026-06-02T12:54:17.743941+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-thach-thuc-voi-sandbox-cho-fintech",
@@ -3255,7 +3255,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:32.048545+00:00"
+      "generated_at": "2026-06-02T12:54:18.277599+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -3286,7 +3286,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:32.642694+00:00"
+      "generated_at": "2026-06-02T12:54:18.799123+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -3317,7 +3317,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:33.143063+00:00"
+      "generated_at": "2026-06-02T12:54:19.377684+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -3348,7 +3348,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:33.680355+00:00"
+      "generated_at": "2026-06-02T12:54:19.997770+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -3379,7 +3379,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:34.171464+00:00"
+      "generated_at": "2026-06-02T12:54:20.553145+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -3410,7 +3410,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:34.833262+00:00"
+      "generated_at": "2026-06-02T12:54:21.077682+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -3441,7 +3441,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:35.499179+00:00"
+      "generated_at": "2026-06-02T12:54:21.674880+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -3472,7 +3472,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:36.035574+00:00"
+      "generated_at": "2026-06-02T12:54:22.366074+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -3503,7 +3503,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:36.557813+00:00"
+      "generated_at": "2026-06-02T12:54:22.955867+00:00"
     },
     {
       "id": "report-2026-05-22-2026-05-22-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -3534,7 +3534,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:37.159037+00:00"
+      "generated_at": "2026-06-02T12:54:24.185486+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -3565,7 +3565,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:37.684932+00:00"
+      "generated_at": "2026-06-02T12:54:24.688537+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -3596,7 +3596,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:38.703973+00:00"
+      "generated_at": "2026-06-02T12:54:26.281208+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -3627,7 +3627,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:39.192444+00:00"
+      "generated_at": "2026-06-02T12:54:26.791079+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -3658,7 +3658,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:39.719141+00:00"
+      "generated_at": "2026-06-02T12:54:27.335958+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -3689,7 +3689,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:40.395181+00:00"
+      "generated_at": "2026-06-02T12:54:27.870139+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -3720,7 +3720,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:40.909016+00:00"
+      "generated_at": "2026-06-02T12:54:28.500755+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -3751,7 +3751,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:41.519008+00:00"
+      "generated_at": "2026-06-02T12:54:29.038668+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -3782,7 +3782,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:42.054816+00:00"
+      "generated_at": "2026-06-02T12:54:30.123221+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -3813,7 +3813,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:42.597803+00:00"
+      "generated_at": "2026-06-02T12:54:30.881423+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -3844,7 +3844,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:43.132680+00:00"
+      "generated_at": "2026-06-02T12:54:31.472060+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -3875,7 +3875,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:43.638061+00:00"
+      "generated_at": "2026-06-02T12:54:32.334903+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -3906,7 +3906,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:44.712782+00:00"
+      "generated_at": "2026-06-02T12:54:32.995476+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -3937,7 +3937,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:45.263717+00:00"
+      "generated_at": "2026-06-02T12:54:33.729048+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -3968,7 +3968,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:45.979009+00:00"
+      "generated_at": "2026-06-02T12:54:34.238598+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -3999,7 +3999,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:46.746505+00:00"
+      "generated_at": "2026-06-02T12:54:34.886057+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-readme",
@@ -4030,7 +4030,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:47.311707+00:00"
+      "generated_at": "2026-06-02T12:54:35.994894+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -4061,7 +4061,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:51.332620+00:00"
+      "generated_at": "2026-06-02T12:54:36.721331+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -4092,7 +4092,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:51.856324+00:00"
+      "generated_at": "2026-06-02T12:54:37.458018+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -4123,7 +4123,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:52.462050+00:00"
+      "generated_at": "2026-06-02T12:54:38.008948+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-thach-thuc-voi-sandbox-cho-fintech",
@@ -4154,7 +4154,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:53.021012+00:00"
+      "generated_at": "2026-06-02T12:54:38.604653+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -4185,7 +4185,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:53.565477+00:00"
+      "generated_at": "2026-06-02T12:54:39.444588+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -4216,7 +4216,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:54.412397+00:00"
+      "generated_at": "2026-06-02T12:54:39.966716+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -4247,7 +4247,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:54.951135+00:00"
+      "generated_at": "2026-06-02T12:54:40.584212+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -4278,7 +4278,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:55.514434+00:00"
+      "generated_at": "2026-06-02T12:54:41.096766+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -4309,7 +4309,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:56.153281+00:00"
+      "generated_at": "2026-06-02T12:54:41.624989+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -4340,7 +4340,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:56.682883+00:00"
+      "generated_at": "2026-06-02T12:54:42.450452+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -4371,7 +4371,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:57.998089+00:00"
+      "generated_at": "2026-06-02T12:54:43.002315+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -4402,7 +4402,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:58.497689+00:00"
+      "generated_at": "2026-06-02T12:54:43.745855+00:00"
     },
     {
       "id": "report-2026-05-23-2026-05-23-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -4433,7 +4433,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:59.106770+00:00"
+      "generated_at": "2026-06-02T12:54:44.477715+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -4464,7 +4464,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:25:59.642556+00:00"
+      "generated_at": "2026-06-02T12:54:45.090000+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -4495,7 +4495,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:00.294091+00:00"
+      "generated_at": "2026-06-02T12:54:45.600047+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -4526,7 +4526,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:01.169742+00:00"
+      "generated_at": "2026-06-02T12:54:46.193091+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -4557,7 +4557,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:01.883869+00:00"
+      "generated_at": "2026-06-02T12:54:46.721746+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -4588,7 +4588,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:02.403266+00:00"
+      "generated_at": "2026-06-02T12:54:47.480431+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -4619,7 +4619,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:05.813504+00:00"
+      "generated_at": "2026-06-02T12:54:48.017790+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -4650,7 +4650,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:06.311655+00:00"
+      "generated_at": "2026-06-02T12:54:48.584108+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -4681,7 +4681,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:07.262029+00:00"
+      "generated_at": "2026-06-02T12:54:50.077697+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -4712,7 +4712,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:08.009436+00:00"
+      "generated_at": "2026-06-02T12:54:50.577300+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -4743,7 +4743,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:08.526386+00:00"
+      "generated_at": "2026-06-02T12:54:51.295132+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -4774,7 +4774,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:09.452491+00:00"
+      "generated_at": "2026-06-02T12:54:52.004332+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -4805,7 +4805,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:09.984977+00:00"
+      "generated_at": "2026-06-02T12:54:52.510682+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -4836,7 +4836,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:10.590473+00:00"
+      "generated_at": "2026-06-02T12:54:53.024707+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -4867,7 +4867,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:11.336607+00:00"
+      "generated_at": "2026-06-02T12:54:53.599984+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -4898,7 +4898,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:11.833715+00:00"
+      "generated_at": "2026-06-02T12:54:54.221390+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-readme",
@@ -4929,7 +4929,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:12.695027+00:00"
+      "generated_at": "2026-06-02T12:54:54.805863+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -4960,7 +4960,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:13.437317+00:00"
+      "generated_at": "2026-06-02T12:54:56.759938+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -4991,7 +4991,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:14.154779+00:00"
+      "generated_at": "2026-06-02T12:54:57.268749+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -5022,7 +5022,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:14.668262+00:00"
+      "generated_at": "2026-06-02T12:54:58.026854+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-thach-thuc-voi-sandbox-cho-fintech",
@@ -5053,7 +5053,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:15.339348+00:00"
+      "generated_at": "2026-06-02T12:54:58.556916+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -5084,7 +5084,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:16.036967+00:00"
+      "generated_at": "2026-06-02T12:54:59.131381+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -5115,7 +5115,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:16.599195+00:00"
+      "generated_at": "2026-06-02T12:54:59.809850+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -5146,7 +5146,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:17.106127+00:00"
+      "generated_at": "2026-06-02T12:55:00.410305+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -5177,7 +5177,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:17.602598+00:00"
+      "generated_at": "2026-06-02T12:55:01.322242+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -5208,7 +5208,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:18.166595+00:00"
+      "generated_at": "2026-06-02T12:55:01.978504+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -5239,7 +5239,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:18.750683+00:00"
+      "generated_at": "2026-06-02T12:55:02.530250+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -5270,7 +5270,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:19.409538+00:00"
+      "generated_at": "2026-06-02T12:55:03.063384+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -5301,7 +5301,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:19.925320+00:00"
+      "generated_at": "2026-06-02T12:55:03.589530+00:00"
     },
     {
       "id": "report-2026-05-24-2026-05-24-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -5332,7 +5332,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:20.522422+00:00"
+      "generated_at": "2026-06-02T12:55:04.109976+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -5363,7 +5363,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:21.110772+00:00"
+      "generated_at": "2026-06-02T12:55:04.679337+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -5394,7 +5394,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:21.635904+00:00"
+      "generated_at": "2026-06-02T12:55:05.504918+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -5425,7 +5425,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:24.746776+00:00"
+      "generated_at": "2026-06-02T12:55:06.114961+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -5456,7 +5456,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:25.320569+00:00"
+      "generated_at": "2026-06-02T12:55:06.756200+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -5487,7 +5487,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:25.823763+00:00"
+      "generated_at": "2026-06-02T12:55:07.365009+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -5518,7 +5518,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:26.698077+00:00"
+      "generated_at": "2026-06-02T12:55:08.814176+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -5549,7 +5549,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:27.296435+00:00"
+      "generated_at": "2026-06-02T12:55:09.336471+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -5580,7 +5580,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:27.843183+00:00"
+      "generated_at": "2026-06-02T12:55:10.275937+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -5611,7 +5611,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:28.333518+00:00"
+      "generated_at": "2026-06-02T12:55:10.890732+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -5642,7 +5642,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:29.031471+00:00"
+      "generated_at": "2026-06-02T12:55:11.766372+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -5673,7 +5673,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:30.169136+00:00"
+      "generated_at": "2026-06-02T12:55:12.257591+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -5704,7 +5704,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:30.674467+00:00"
+      "generated_at": "2026-06-02T12:55:12.951757+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -5735,7 +5735,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:31.235757+00:00"
+      "generated_at": "2026-06-02T12:55:14.175828+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -5766,7 +5766,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:31.780515+00:00"
+      "generated_at": "2026-06-02T12:55:14.822452+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -5797,7 +5797,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:32.290199+00:00"
+      "generated_at": "2026-06-02T12:55:16.440098+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-readme",
@@ -5828,7 +5828,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:32.863029+00:00"
+      "generated_at": "2026-06-02T12:55:16.946162+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -5859,7 +5859,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:33.464934+00:00"
+      "generated_at": "2026-06-02T12:55:17.657090+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -5890,7 +5890,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:34.160628+00:00"
+      "generated_at": "2026-06-02T12:55:18.362367+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -5921,7 +5921,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:34.672628+00:00"
+      "generated_at": "2026-06-02T12:55:19.596940+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-thach-thuc-voi-sandbox-cho-fintech",
@@ -5952,7 +5952,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:35.391578+00:00"
+      "generated_at": "2026-06-02T12:55:20.493901+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -5983,7 +5983,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:35.990595+00:00"
+      "generated_at": "2026-06-02T12:55:22.227187+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -6014,7 +6014,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:36.722252+00:00"
+      "generated_at": "2026-06-02T12:55:22.830749+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -6045,7 +6045,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:37.264045+00:00"
+      "generated_at": "2026-06-02T12:55:23.359340+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -6076,7 +6076,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:37.809034+00:00"
+      "generated_at": "2026-06-02T12:55:23.872587+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -6107,7 +6107,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:38.393529+00:00"
+      "generated_at": "2026-06-02T12:55:24.681951+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -6138,7 +6138,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:38.966665+00:00"
+      "generated_at": "2026-06-02T12:55:25.226971+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -6169,7 +6169,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:39.482184+00:00"
+      "generated_at": "2026-06-02T12:55:25.951502+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -6200,7 +6200,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:40.044335+00:00"
+      "generated_at": "2026-06-02T12:55:26.464501+00:00"
     },
     {
       "id": "report-2026-05-25-2026-05-25-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -6231,7 +6231,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:40.549032+00:00"
+      "generated_at": "2026-06-02T12:55:29.042802+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -6262,7 +6262,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:41.159062+00:00"
+      "generated_at": "2026-06-02T12:55:30.115352+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -6293,7 +6293,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:41.667489+00:00"
+      "generated_at": "2026-06-02T12:55:30.659962+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -6324,7 +6324,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:42.217792+00:00"
+      "generated_at": "2026-06-02T12:55:31.203664+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -6355,7 +6355,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:42.803371+00:00"
+      "generated_at": "2026-06-02T12:55:31.700668+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -6386,7 +6386,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:43.301258+00:00"
+      "generated_at": "2026-06-02T12:55:32.207213+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -6417,7 +6417,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:43.810290+00:00"
+      "generated_at": "2026-06-02T12:55:33.132917+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -6448,7 +6448,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:44.382369+00:00"
+      "generated_at": "2026-06-02T12:55:34.133021+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -6479,7 +6479,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:44.940110+00:00"
+      "generated_at": "2026-06-02T12:55:34.713198+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -6510,7 +6510,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:45.459091+00:00"
+      "generated_at": "2026-06-02T12:55:35.238023+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -6541,7 +6541,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:45.963913+00:00"
+      "generated_at": "2026-06-02T12:55:35.915761+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -6572,7 +6572,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:46.579960+00:00"
+      "generated_at": "2026-06-02T12:55:36.400220+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -6603,7 +6603,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:47.360418+00:00"
+      "generated_at": "2026-06-02T12:55:37.448250+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -6634,7 +6634,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:47.913160+00:00"
+      "generated_at": "2026-06-02T12:55:37.995866+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -6665,7 +6665,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:48.446831+00:00"
+      "generated_at": "2026-06-02T12:55:38.527274+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -6696,7 +6696,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:49.254000+00:00"
+      "generated_at": "2026-06-02T12:55:41.448023+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-readme",
@@ -6727,7 +6727,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:49.828227+00:00"
+      "generated_at": "2026-06-02T12:55:41.962017+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -6758,7 +6758,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:50.349505+00:00"
+      "generated_at": "2026-06-02T12:55:42.560227+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -6789,7 +6789,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:50.878728+00:00"
+      "generated_at": "2026-06-02T12:55:43.161738+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -6820,7 +6820,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:51.401186+00:00"
+      "generated_at": "2026-06-02T12:55:43.965428+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-thach-thuc-voi-sandbox-cho-fintech",
@@ -6851,7 +6851,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:51.921037+00:00"
+      "generated_at": "2026-06-02T12:55:44.683760+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -6882,7 +6882,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:52.452119+00:00"
+      "generated_at": "2026-06-02T12:55:45.220412+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -6913,7 +6913,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:53.037141+00:00"
+      "generated_at": "2026-06-02T12:55:45.801851+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -6944,7 +6944,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:53.594481+00:00"
+      "generated_at": "2026-06-02T12:55:46.421325+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -6975,7 +6975,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:54.759338+00:00"
+      "generated_at": "2026-06-02T12:55:46.952528+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -7006,7 +7006,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:55.535931+00:00"
+      "generated_at": "2026-06-02T12:55:47.542240+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -7037,7 +7037,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:56.345291+00:00"
+      "generated_at": "2026-06-02T12:55:48.105142+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -7068,7 +7068,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:56.842281+00:00"
+      "generated_at": "2026-06-02T12:55:48.619148+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -7099,7 +7099,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:57.448735+00:00"
+      "generated_at": "2026-06-02T12:55:49.212959+00:00"
     },
     {
       "id": "report-2026-05-27-2026-05-27-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -7130,7 +7130,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:58.619227+00:00"
+      "generated_at": "2026-06-02T12:55:49.952067+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -7161,7 +7161,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:59.378894+00:00"
+      "generated_at": "2026-06-02T12:55:50.512482+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -7192,7 +7192,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:26:59.971877+00:00"
+      "generated_at": "2026-06-02T12:55:51.254535+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -7223,7 +7223,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:00.507444+00:00"
+      "generated_at": "2026-06-02T12:55:51.835780+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -7254,7 +7254,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:01.009938+00:00"
+      "generated_at": "2026-06-02T12:55:52.866070+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -7285,7 +7285,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:01.546768+00:00"
+      "generated_at": "2026-06-02T12:55:53.375209+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -7316,7 +7316,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:02.076066+00:00"
+      "generated_at": "2026-06-02T12:55:54.099083+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -7347,7 +7347,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:02.588869+00:00"
+      "generated_at": "2026-06-02T12:55:54.626970+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -7378,7 +7378,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:03.141214+00:00"
+      "generated_at": "2026-06-02T12:55:55.478454+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -7409,7 +7409,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:03.815107+00:00"
+      "generated_at": "2026-06-02T12:55:56.656236+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -7440,7 +7440,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:04.571735+00:00"
+      "generated_at": "2026-06-02T12:55:57.170275+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -7471,7 +7471,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:07.711403+00:00"
+      "generated_at": "2026-06-02T12:55:57.680110+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -7502,7 +7502,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:08.314344+00:00"
+      "generated_at": "2026-06-02T12:55:58.191513+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -7533,7 +7533,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:08.826653+00:00"
+      "generated_at": "2026-06-02T12:55:59.266056+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -7564,7 +7564,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:09.345313+00:00"
+      "generated_at": "2026-06-02T12:55:59.931087+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -7595,7 +7595,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:09.914133+00:00"
+      "generated_at": "2026-06-02T12:56:00.477192+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-readme",
@@ -7626,7 +7626,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:10.448137+00:00"
+      "generated_at": "2026-06-02T12:56:01.259020+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -7657,7 +7657,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:10.949044+00:00"
+      "generated_at": "2026-06-02T12:56:01.848324+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -7688,7 +7688,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:11.488239+00:00"
+      "generated_at": "2026-06-02T12:56:02.788529+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -7719,7 +7719,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:12.001958+00:00"
+      "generated_at": "2026-06-02T12:56:03.381466+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-thach-thuc-voi-sandbox-cho-fintech",
@@ -7750,7 +7750,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:12.790912+00:00"
+      "generated_at": "2026-06-02T12:56:03.891408+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -7781,7 +7781,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:13.318726+00:00"
+      "generated_at": "2026-06-02T12:56:04.421216+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -7812,7 +7812,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:13.921306+00:00"
+      "generated_at": "2026-06-02T12:56:05.153340+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -7843,7 +7843,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:14.547650+00:00"
+      "generated_at": "2026-06-02T12:56:05.834412+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -7874,7 +7874,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:16.018539+00:00"
+      "generated_at": "2026-06-02T12:56:06.337145+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -7905,7 +7905,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:16.649564+00:00"
+      "generated_at": "2026-06-02T12:56:06.878621+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -7936,7 +7936,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:17.150828+00:00"
+      "generated_at": "2026-06-02T12:56:07.410032+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -7967,7 +7967,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:17.648525+00:00"
+      "generated_at": "2026-06-02T12:56:08.016273+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -7998,7 +7998,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:18.357896+00:00"
+      "generated_at": "2026-06-02T12:56:08.541165+00:00"
     },
     {
       "id": "report-2026-05-28-2026-05-28-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -8029,7 +8029,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:18.846428+00:00"
+      "generated_at": "2026-06-02T12:56:09.044521+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -8060,7 +8060,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:19.340431+00:00"
+      "generated_at": "2026-06-02T12:56:09.616541+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -8091,7 +8091,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:19.866836+00:00"
+      "generated_at": "2026-06-02T12:56:10.335720+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -8122,7 +8122,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:20.346430+00:00"
+      "generated_at": "2026-06-02T12:56:10.960239+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -8153,7 +8153,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:21.181436+00:00"
+      "generated_at": "2026-06-02T12:56:11.688556+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -8184,7 +8184,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:21.775624+00:00"
+      "generated_at": "2026-06-02T12:56:12.274269+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -8215,7 +8215,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:22.851892+00:00"
+      "generated_at": "2026-06-02T12:56:12.869414+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -8246,7 +8246,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:23.404876+00:00"
+      "generated_at": "2026-06-02T12:56:13.440430+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -8277,7 +8277,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:23.914038+00:00"
+      "generated_at": "2026-06-02T12:56:13.956448+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -8308,7 +8308,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:24.566100+00:00"
+      "generated_at": "2026-06-02T12:56:14.612561+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -8339,7 +8339,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:25.251446+00:00"
+      "generated_at": "2026-06-02T12:56:15.180603+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -8370,7 +8370,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:25.764120+00:00"
+      "generated_at": "2026-06-02T12:56:15.786667+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -8401,7 +8401,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:26.259377+00:00"
+      "generated_at": "2026-06-02T12:56:16.440487+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -8432,7 +8432,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:26.772797+00:00"
+      "generated_at": "2026-06-02T12:56:17.116192+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -8463,7 +8463,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:30.184037+00:00"
+      "generated_at": "2026-06-02T12:56:17.634016+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -8494,7 +8494,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:31.106606+00:00"
+      "generated_at": "2026-06-02T12:56:18.683578+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-readme",
@@ -8525,7 +8525,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:32.074090+00:00"
+      "generated_at": "2026-06-02T12:56:19.750546+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -8556,7 +8556,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:32.621597+00:00"
+      "generated_at": "2026-06-02T12:56:20.289712+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -8587,7 +8587,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:33.131970+00:00"
+      "generated_at": "2026-06-02T12:56:21.006638+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -8618,7 +8618,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:33.630057+00:00"
+      "generated_at": "2026-06-02T12:56:21.655775+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-thach-thuc-voi-sandbox-cho-fintech",
@@ -8649,7 +8649,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:34.396336+00:00"
+      "generated_at": "2026-06-02T12:56:22.368620+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -8680,7 +8680,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:34.894912+00:00"
+      "generated_at": "2026-06-02T12:56:22.880574+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -8711,7 +8711,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:35.625873+00:00"
+      "generated_at": "2026-06-02T12:56:23.388466+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -8742,7 +8742,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:36.182937+00:00"
+      "generated_at": "2026-06-02T12:56:23.920108+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -8773,7 +8773,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:36.683365+00:00"
+      "generated_at": "2026-06-02T12:56:24.436105+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -8804,7 +8804,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:37.203138+00:00"
+      "generated_at": "2026-06-02T12:56:24.956455+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -8835,7 +8835,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:37.916556+00:00"
+      "generated_at": "2026-06-02T12:56:25.558257+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -8866,7 +8866,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:41.171463+00:00"
+      "generated_at": "2026-06-02T12:56:26.306766+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -8897,7 +8897,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:41.678582+00:00"
+      "generated_at": "2026-06-02T12:56:26.943838+00:00"
     },
     {
       "id": "report-2026-05-29-2026-05-29-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -8928,7 +8928,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:42.174301+00:00"
+      "generated_at": "2026-06-02T12:56:27.720877+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -8959,7 +8959,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:42.705970+00:00"
+      "generated_at": "2026-06-02T12:56:28.247668+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -8990,7 +8990,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:43.383601+00:00"
+      "generated_at": "2026-06-02T12:56:28.864412+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -9021,7 +9021,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:43.865354+00:00"
+      "generated_at": "2026-06-02T12:56:29.423693+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -9052,7 +9052,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:44.372019+00:00"
+      "generated_at": "2026-06-02T12:56:30.078170+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -9083,7 +9083,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:45.028151+00:00"
+      "generated_at": "2026-06-02T12:56:30.591372+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -9114,7 +9114,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:45.537770+00:00"
+      "generated_at": "2026-06-02T12:56:31.119442+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -9145,7 +9145,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:46.032128+00:00"
+      "generated_at": "2026-06-02T12:56:31.664279+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -9176,7 +9176,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:46.579186+00:00"
+      "generated_at": "2026-06-02T12:56:32.260179+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -9207,7 +9207,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:47.627357+00:00"
+      "generated_at": "2026-06-02T12:56:33.059736+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -9238,7 +9238,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:48.169578+00:00"
+      "generated_at": "2026-06-02T12:56:33.793836+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -9269,7 +9269,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:48.675102+00:00"
+      "generated_at": "2026-06-02T12:56:34.376639+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -9300,7 +9300,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:49.383700+00:00"
+      "generated_at": "2026-06-02T12:56:38.516709+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -9331,7 +9331,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:50.023359+00:00"
+      "generated_at": "2026-06-02T12:56:39.039372+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -9362,7 +9362,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:50.608960+00:00"
+      "generated_at": "2026-06-02T12:56:39.773544+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -9393,7 +9393,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:51.100160+00:00"
+      "generated_at": "2026-06-02T12:56:40.306880+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-readme",
@@ -9424,7 +9424,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:51.787020+00:00"
+      "generated_at": "2026-06-02T12:56:41.230068+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -9455,7 +9455,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:52.313309+00:00"
+      "generated_at": "2026-06-02T12:56:41.772083+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -9486,7 +9486,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:52.963733+00:00"
+      "generated_at": "2026-06-02T12:56:42.298540+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -9517,7 +9517,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:53.608747+00:00"
+      "generated_at": "2026-06-02T12:56:42.841365+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-thach-thuc-voi-sandbox-cho-fintech",
@@ -9548,7 +9548,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:54.174802+00:00"
+      "generated_at": "2026-06-02T12:56:43.490430+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -9579,7 +9579,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:55.242923+00:00"
+      "generated_at": "2026-06-02T12:56:44.139070+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -9610,7 +9610,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:55.931437+00:00"
+      "generated_at": "2026-06-02T12:56:44.672256+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -9641,7 +9641,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:56.496020+00:00"
+      "generated_at": "2026-06-02T12:56:45.264118+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -9672,7 +9672,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:57.052276+00:00"
+      "generated_at": "2026-06-02T12:56:45.952819+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -9703,7 +9703,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:57.796940+00:00"
+      "generated_at": "2026-06-02T12:56:46.784236+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -9734,7 +9734,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:58.274578+00:00"
+      "generated_at": "2026-06-02T12:56:47.303191+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -9765,7 +9765,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:58.769597+00:00"
+      "generated_at": "2026-06-02T12:56:47.829263+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -9796,7 +9796,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:27:59.440672+00:00"
+      "generated_at": "2026-06-02T12:56:48.481559+00:00"
     },
     {
       "id": "report-2026-05-30-2026-05-30-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -9827,7 +9827,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:00.487640+00:00"
+      "generated_at": "2026-06-02T12:56:49.402834+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -9858,7 +9858,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:03.567533+00:00"
+      "generated_at": "2026-06-02T12:56:50.065707+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -9889,7 +9889,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:04.128200+00:00"
+      "generated_at": "2026-06-02T12:56:50.585613+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -9920,7 +9920,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:05.052351+00:00"
+      "generated_at": "2026-06-02T12:56:52.003616+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -9951,7 +9951,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:05.666431+00:00"
+      "generated_at": "2026-06-02T12:56:52.601022+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -9982,7 +9982,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:06.499149+00:00"
+      "generated_at": "2026-06-02T12:56:53.408832+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -10013,7 +10013,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:07.033826+00:00"
+      "generated_at": "2026-06-02T12:56:53.924374+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -10044,7 +10044,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:07.550915+00:00"
+      "generated_at": "2026-06-02T12:56:54.630178+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -10075,7 +10075,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:08.047498+00:00"
+      "generated_at": "2026-06-02T12:56:55.364999+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -10106,7 +10106,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:09.011919+00:00"
+      "generated_at": "2026-06-02T12:56:55.869834+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -10137,7 +10137,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:09.500741+00:00"
+      "generated_at": "2026-06-02T12:56:56.825279+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -10168,7 +10168,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:11.249354+00:00"
+      "generated_at": "2026-06-02T12:56:57.349815+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -10199,7 +10199,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:12.152551+00:00"
+      "generated_at": "2026-06-02T12:56:58.242381+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -10230,7 +10230,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:12.668650+00:00"
+      "generated_at": "2026-06-02T12:56:58.763479+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -10261,7 +10261,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:13.194565+00:00"
+      "generated_at": "2026-06-02T12:56:59.286367+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -10292,7 +10292,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:13.802713+00:00"
+      "generated_at": "2026-06-02T12:57:00.262407+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-readme",
@@ -10323,7 +10323,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:14.769743+00:00"
+      "generated_at": "2026-06-02T12:57:00.773663+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -10354,7 +10354,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:15.502022+00:00"
+      "generated_at": "2026-06-02T12:57:01.669028+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -10385,7 +10385,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:16.051483+00:00"
+      "generated_at": "2026-06-02T12:57:02.207935+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -10416,7 +10416,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:16.534796+00:00"
+      "generated_at": "2026-06-02T12:57:02.720853+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-thach-thuc-voi-sandbox-cho-fintech",
@@ -10447,7 +10447,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:17.040886+00:00"
+      "generated_at": "2026-06-02T12:57:03.312351+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -10478,7 +10478,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:17.611035+00:00"
+      "generated_at": "2026-06-02T12:57:04.201562+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -10509,7 +10509,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:18.265900+00:00"
+      "generated_at": "2026-06-02T12:57:05.072447+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -10540,7 +10540,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:18.827183+00:00"
+      "generated_at": "2026-06-02T12:57:05.671365+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -10571,7 +10571,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:19.408889+00:00"
+      "generated_at": "2026-06-02T12:57:06.413060+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -10602,7 +10602,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:20.213016+00:00"
+      "generated_at": "2026-06-02T12:57:06.934645+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -10633,7 +10633,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:20.917979+00:00"
+      "generated_at": "2026-06-02T12:57:07.524987+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -10664,7 +10664,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:21.443911+00:00"
+      "generated_at": "2026-06-02T12:57:08.429879+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -10695,7 +10695,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:21.936241+00:00"
+      "generated_at": "2026-06-02T12:57:08.939475+00:00"
     },
     {
       "id": "report-2026-05-31-2026-05-31-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -10726,7 +10726,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:22.459814+00:00"
+      "generated_at": "2026-06-02T12:57:09.673471+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
@@ -10757,7 +10757,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:22.971246+00:00"
+      "generated_at": "2026-06-02T12:57:10.244028+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
@@ -10788,7 +10788,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:23.751386+00:00"
+      "generated_at": "2026-06-02T12:57:10.767281+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
@@ -10819,7 +10819,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:24.562680+00:00"
+      "generated_at": "2026-06-02T12:57:11.588521+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
@@ -10850,7 +10850,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:25.113298+00:00"
+      "generated_at": "2026-06-02T12:57:12.190367+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
@@ -10881,7 +10881,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:25.716317+00:00"
+      "generated_at": "2026-06-02T12:57:12.704791+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
@@ -10912,7 +10912,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:26.488468+00:00"
+      "generated_at": "2026-06-02T12:57:13.422236+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
@@ -10943,7 +10943,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:27.194799+00:00"
+      "generated_at": "2026-06-02T12:57:14.500254+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-exclusive-us-clears-h200-chip-sales-to-10-china-f",
@@ -10974,7 +10974,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:27.814282+00:00"
+      "generated_at": "2026-06-02T12:57:15.586894+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
@@ -11005,7 +11005,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:28.310958+00:00"
+      "generated_at": "2026-06-02T12:57:16.132890+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
@@ -11036,7 +11036,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:28.828367+00:00"
+      "generated_at": "2026-06-02T12:57:17.018644+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
@@ -11067,7 +11067,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:29.353790+00:00"
+      "generated_at": "2026-06-02T12:57:17.604998+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
@@ -11098,7 +11098,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:29.887069+00:00"
+      "generated_at": "2026-06-02T12:57:18.173887+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
@@ -11129,7 +11129,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:30.597307+00:00"
+      "generated_at": "2026-06-02T12:57:18.845406+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
@@ -11160,7 +11160,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:31.173466+00:00"
+      "generated_at": "2026-06-02T12:57:19.416146+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
@@ -11191,7 +11191,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:31.684616+00:00"
+      "generated_at": "2026-06-02T12:57:19.926782+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-readme",
@@ -11222,7 +11222,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:32.793600+00:00"
+      "generated_at": "2026-06-02T12:57:20.446361+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
@@ -11253,7 +11253,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:33.407598+00:00"
+      "generated_at": "2026-06-02T12:57:21.162540+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
@@ -11284,7 +11284,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:33.925862+00:00"
+      "generated_at": "2026-06-02T12:57:21.877796+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
@@ -11315,7 +11315,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:34.408957+00:00"
+      "generated_at": "2026-06-02T12:57:22.420089+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-thach-thuc-voi-sandbox-cho-fintech",
@@ -11346,7 +11346,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:35.134893+00:00"
+      "generated_at": "2026-06-02T12:57:23.153391+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
@@ -11377,7 +11377,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:35.690542+00:00"
+      "generated_at": "2026-06-02T12:57:23.686425+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
@@ -11408,7 +11408,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:36.899549+00:00"
+      "generated_at": "2026-06-02T12:57:24.213598+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
@@ -11439,7 +11439,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:37.441978+00:00"
+      "generated_at": "2026-06-02T12:57:24.722663+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
@@ -11470,7 +11470,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:38.388830+00:00"
+      "generated_at": "2026-06-02T12:57:25.413859+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-vanguard-is-the-costco-of-finance-according-to-ac",
@@ -11501,7 +11501,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:38.925756+00:00"
+      "generated_at": "2026-06-02T12:57:26.065237+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
@@ -11532,7 +11532,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:39.547138+00:00"
+      "generated_at": "2026-06-02T12:57:26.588750+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
@@ -11563,7 +11563,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:40.137298+00:00"
+      "generated_at": "2026-06-02T12:57:27.596989+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
@@ -11594,7 +11594,7 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:40.637208+00:00"
+      "generated_at": "2026-06-02T12:57:28.140554+00:00"
     },
     {
       "id": "report-2026-06-01-2026-06-01-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
@@ -11625,7 +11625,906 @@
       "prompt_version": "summarization/topic-sentence-bullets@v3",
       "model": "claude-3-5-sonnet-latest",
       "template_version": "intelligence-letter@v2",
-      "generated_at": "2026-06-01T19:28:41.596828+00:00"
+      "generated_at": "2026-06-02T12:57:28.749558+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
+      "topic": "unknown",
+      "industry": "",
+      "title": "4 thủ tục hành chính được sửa đổi, bổ sung trong lĩnh vực xây dựng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:29.320138+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Áp lực tồn kho và đường nhập lậu đang gây áp lực lớn lên ngành mía đường",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:30.281897+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Chubb Life Việt Nam báo lỗ hơn 171 tỷ năm 2025, lợi nhuận gộp bảo hiểm lao dốc 90%",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:30.980532+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Cơ quan thuế chỉ rõ 6 chiêu hộ kinh doanh né thanh toán, cảnh báo rủi ro pháp lý",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:31.491521+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
+      "topic": "unknown",
+      "industry": "",
+      "title": "DatVietVAC và cuộc đua khai thác IP 360 độ trong nền kinh tế fandom",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:32.110620+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Doanh nghiệp phân đạm tỏa sáng khi giá dầu “nhảy múa”",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:32.664407+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Dùng AI ghép ảnh bánh mì, cửa hàng nhận 'bão một sao'",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:33.259440+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-exclusive-us-clears-h200-chip-sales-to-10-china-f",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Exclusive: US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-exclusive-us-clears-h200-chip-sales-to-10-china-f.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:33.779838+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Khung chính sách cho lưu trữ năng lượng (BESS) - Góc nhìn của Tạp chí Năng lượng Việt Nam",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:34.375483+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Luật thuế mới sắp có hiệu lực: 10 hành vi dễ bị quy là trốn thuế",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:34.990661+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Nâng cấp chuỗi cung ứng toàn cầu tại Việt Nam, nhìn từ câu chuyện “hợp lực” giữa Intel và Fab 9",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:35.641353+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Nông sản Việt cần thích ứng với Nghị định 280 của Trung Quốc và quy định RCEP mới",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:36.351379+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Đông Nam Á thành điểm đến mới của ngành thiết bị giặt là",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:36.906766+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Phó TGĐ Vietnam Airlines: Năm 2026 dự kiến lỗ luỹ kế khoảng 30.000 tỷ nếu giữ nguyên sản lượng khai thác như kế hoạch",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:37.733760+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Quy định thời điểm xuất hóa đơn: Cần tháo gỡ vướng mắc",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:38.349973+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-readme",
+      "topic": "unknown",
+      "industry": "",
+      "title": "2026 06 02 Readme",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-readme.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:39.025345+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Sửa Luật Điện lực (năm 2026) - Phân tích bài toán hài hòa lợi ích ngành điện và người tiêu dùng điện",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:39.650061+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Tập đoàn Điện lực Việt Nam (EVN) có thể sẽ tăng giá điện để xử lý khoản lỗ lũy kế gần 45.000 tỷ đồng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:40.186058+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Tax refunds help to lift US retail sales; drag from rising inflation looms",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-tax-refunds-help-to-lift-us-retail-sales-drag-fro.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:40.850903+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-thach-thuc-voi-sandbox-cho-fintech",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Thách thức với sandbox cho FinTech",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-thach-thuc-voi-sandbox-cho-fintech.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:41.504341+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Thu hồi toàn quốc một lô thuốc nhỏ mắt của Pharmedic, cổ phiếu PMC giảm gần 10%",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:42.404490+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Thuế VAT 'mỗi nơi một kiểu', doanh nghiệp gỗ lo đứt nguồn cung gỗ rừng trồng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:47.026156+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Trump siết điện gió ngoài khơi, Trung Quốc tăng tốc dẫn đầu",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:47.543244+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
+      "topic": "unknown",
+      "industry": "",
+      "title": "‘Đưa đường, dẫn lối’ cho trái phiếu doanh nghiệp",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:48.299062+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-vanguard-is-the-costco-of-finance-according-to-ac",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Vanguard Is the Costco of Finance, According to ‘Acquired’ Podcast Ho…",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-vanguard-is-the-costco-of-finance-according-to-ac.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:48.968511+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Viettel Post (VTP): Dồn toàn lực cho mảng chuyển phát - logistics, thâm nhập chuỗi cung ứng toàn cầu",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:49.522990+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Vingroup lập công ty robot phẫu thuật vốn 300 tỷ đồng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:50.055328+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Xuất khẩu Hà Tĩnh tăng tốc, thép tiếp tục giữ vai trò “trụ cột”",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:50.566759+00:00"
+    },
+    {
+      "id": "report-2026-06-02-2026-06-02-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
+      "topic": "unknown",
+      "industry": "",
+      "title": "Xuất khẩu nông lâm thủy sản đạt hơn 23 tỷ USD, giữ vững đà tăng trưởng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "author": "",
+      "source": "",
+      "published": "2026-06-02",
+      "url": "",
+      "mini_report": {
+        "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+        "bullets": [
+          "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+          "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+          "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+        ]
+      },
+      "report_path": "content/reports/2026-06-02-2026-06-02-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-.md",
+      "entities": [],
+      "themes": [],
+      "topics": [],
+      "tags": [],
+      "signal_score": null,
+      "novelty_score": null,
+      "confidence": "low",
+      "prompt_version": "summarization/topic-sentence-bullets@v3",
+      "model": "claude-3-5-sonnet-latest",
+      "template_version": "intelligence-letter@v2",
+      "generated_at": "2026-06-02T12:57:51.082872+00:00"
     }
   ]
 }
