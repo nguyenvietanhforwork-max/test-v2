@@ -15,7 +15,7 @@ confidence: "low"
 prompt_version: "summarization/topic-sentence-bullets@v3"
 model: "claude-3-5-sonnet-latest"
 template_version: "intelligence-letter@v2"
-generated_at: "2026-06-16T00:36:12.851509+00:00"
+generated_at: "2026-06-17T00:20:37.208371+00:00"
 mini_report:
   topic_sentence: "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)"
   bullets:
