@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T00:08:41.402680+00:00",
+  "generated_at": "2026-07-21T00:06:15.277233+00:00",
   "schema_version": 1,
   "documents": [
     {
@@ -22709,6 +22709,412 @@
       "themes": [],
       "industry": "",
       "published": "2026-07-19"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-4-thu-tuc-hanh-chinh-uoc-sua-oi-bo-sung-trong-lin",
+      "title": "4 thủ tục hành chính được sửa đổi, bổ sung trong lĩnh vực xây dựng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-ap-luc-ton-kho-va-uong-nhap-lau-ang-gay-ap-luc-lo",
+      "title": "Áp lực tồn kho và đường nhập lậu đang gây áp lực lớn lên ngành mía đường",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-chubb-life-viet-nam-bao-lo-hon-171-ty-nam-2025-lo",
+      "title": "Chubb Life Việt Nam báo lỗ hơn 171 tỷ năm 2025, lợi nhuận gộp bảo hiểm lao dốc 90%",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-co-quan-thue-chi-ro-6-chieu-ho-kinh-doanh-ne-than",
+      "title": "Cơ quan thuế chỉ rõ 6 chiêu hộ kinh doanh né thanh toán, cảnh báo rủi ro pháp lý",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-datvietvac-va-cuoc-ua-khai-thac-ip-360-o-trong-ne",
+      "title": "DatVietVAC và cuộc đua khai thác IP 360 độ trong nền kinh tế fandom",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-doanh-nghiep-phan-am-toa-sang-khi-gia-dau-nhay-mu",
+      "title": "Doanh nghiệp phân đạm tỏa sáng khi giá dầu “nhảy múa”",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-dung-ai-ghep-anh-banh-mi-cua-hang-nhan-bao-mot-sa",
+      "title": "Dùng AI ghép ảnh bánh mì, cửa hàng nhận 'bão một sao'",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-exclusive-us-clears-h200-chip-sales-to-10-china-f",
+      "title": "Exclusive: US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-khung-chinh-sach-cho-luu-tru-nang-luong-bess-goc-",
+      "title": "Khung chính sách cho lưu trữ năng lượng (BESS) - Góc nhìn của Tạp chí Năng lượng Việt Nam",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-luat-thue-moi-sap-co-hieu-luc-10-hanh-vi-de-bi-qu",
+      "title": "Luật thuế mới sắp có hiệu lực: 10 hành vi dễ bị quy là trốn thuế",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-nang-cap-chuoi-cung-ung-toan-cau-tai-viet-nam-nhi",
+      "title": "Nâng cấp chuỗi cung ứng toàn cầu tại Việt Nam, nhìn từ câu chuyện “hợp lực” giữa Intel và Fab 9",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-nong-san-viet-can-thich-ung-voi-nghi-inh-280-cua-",
+      "title": "Nông sản Việt cần thích ứng với Nghị định 280 của Trung Quốc và quy định RCEP mới",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-ong-nam-a-thanh-iem-en-moi-cua-nganh-thiet-bi-gia",
+      "title": "Đông Nam Á thành điểm đến mới của ngành thiết bị giặt là",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-pho-tg-vietnam-airlines-nam-2026-du-kien-lo-luy-k",
+      "title": "Phó TGĐ Vietnam Airlines: Năm 2026 dự kiến lỗ luỹ kế khoảng 30.000 tỷ nếu giữ nguyên sản lượng khai thác như kế hoạch",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-quy-inh-thoi-iem-xuat-hoa-on-can-thao-go-vuong-ma",
+      "title": "Quy định thời điểm xuất hóa đơn: Cần tháo gỡ vướng mắc",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-readme",
+      "title": "2026 07 20 Readme",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-sua-luat-ien-luc-nam-2026-phan-tich-bai-toan-hai-",
+      "title": "Sửa Luật Điện lực (năm 2026) - Phân tích bài toán hài hòa lợi ích ngành điện và người tiêu dùng điện",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-tap-oan-ien-luc-viet-nam-evn-co-the-se-tang-gia-i",
+      "title": "Tập đoàn Điện lực Việt Nam (EVN) có thể sẽ tăng giá điện để xử lý khoản lỗ lũy kế gần 45.000 tỷ đồng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-tax-refunds-help-to-lift-us-retail-sales-drag-fro",
+      "title": "Tax refunds help to lift US retail sales; drag from rising inflation looms",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-thach-thuc-voi-sandbox-cho-fintech",
+      "title": "Thách thức với sandbox cho FinTech",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-thu-hoi-toan-quoc-mot-lo-thuoc-nho-mat-cua-pharme",
+      "title": "Thu hồi toàn quốc một lô thuốc nhỏ mắt của Pharmedic, cổ phiếu PMC giảm gần 10%",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-thue-vat-moi-noi-mot-kieu-doanh-nghiep-go-lo-ut-n",
+      "title": "Thuế VAT 'mỗi nơi một kiểu', doanh nghiệp gỗ lo đứt nguồn cung gỗ rừng trồng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-trump-siet-ien-gio-ngoai-khoi-trung-quoc-tang-toc",
+      "title": "Trump siết điện gió ngoài khơi, Trung Quốc tăng tốc dẫn đầu",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-ua-uong-dan-loi-cho-trai-phieu-doanh-nghiep",
+      "title": "‘Đưa đường, dẫn lối’ cho trái phiếu doanh nghiệp",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-vanguard-is-the-costco-of-finance-according-to-ac",
+      "title": "Vanguard Is the Costco of Finance, According to ‘Acquired’ Podcast Ho…",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-viettel-post-vtp-don-toan-luc-cho-mang-chuyen-pha",
+      "title": "Viettel Post (VTP): Dồn toàn lực cho mảng chuyển phát - logistics, thâm nhập chuỗi cung ứng toàn cầu",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-vingroup-lap-cong-ty-robot-phau-thuat-von-300-ty-",
+      "title": "Vingroup lập công ty robot phẫu thuật vốn 300 tỷ đồng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-xuat-khau-ha-tinh-tang-toc-thep-tiep-tuc-giu-vai-",
+      "title": "Xuất khẩu Hà Tĩnh tăng tốc, thép tiếp tục giữ vai trò “trụ cột”",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
+    },
+    {
+      "id": "report-2026-07-20-2026-07-20-xuat-khau-nong-lam-thuy-san-at-hon-23-ty-usd-giu-",
+      "title": "Xuất khẩu nông lâm thủy sản đạt hơn 23 tỷ USD, giữ vững đà tăng trưởng",
+      "desc": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "topic_sentence": "(stub - LLM call failed (all models); wire ANTHROPIC_API_KEY or check the LLM call. This card will populate on the next pipeline run.)",
+      "bullets": [
+        "<b>Stub mode:</b> the pipeline ran without a real LLM response (LLM call failed (all models)).",
+        "<b>Next step:</b> set ANTHROPIC_API_KEY in CI secrets (GitHub Actions) or in .env locally.",
+        "<b>Prompt used:</b> prompts/summarization/topic-sentence-bullets.md defines the editorial pattern."
+      ],
+      "themes": [],
+      "industry": "",
+      "published": "2026-07-20"
     }
   ]
 }
